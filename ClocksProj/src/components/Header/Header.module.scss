@@ -1,0 +1,62 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 96px;
+
+    .logoName {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        height: 36px;
+        
+
+
+        .Heading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300; /* Light */
+            font-size: 28px;
+            line-height: normal;
+            letter-spacing: 0%;
+            
+            color: #000000;
+            opacity: 1;
+            margin: 0;
+            cursor: pointer;
+        }
+    }
+
+    .Numbers {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+
+        .number {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300; /* Light */
+            font-size: 14px;
+            line-height: normal;
+            letter-spacing: 0%;
+            
+            color: #000000;
+            opacity: 1;
+            margin: 0;
+        }
+    }
+
+    .contactInfo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20px;
+
+        .linkBtn {
+            display: block;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.ServicesWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 545px);
+    grid-template-rows: repeat(2, 490px);
+    grid-row-gap: 95px;
+    grid-column-gap: 20px;
+    margin-top: 112px;
+    place-content: center;
+    margin-bottom: 112px;
+}

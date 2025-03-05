@@ -1,0 +1,38 @@
+.cardPairWrapper {
+    width: 520px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    .cardWrapper {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        text-align: left;
+
+        .cardImg {
+            display: block;
+            width: 100%;
+            height: 221px;
+            object-fit: cover;
+            border-radius: 10px;
+            background-color: #D9D9D9;
+        }
+
+        .text {
+            height: 52px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900; /* Light */
+            font-size: 43px;
+            line-height: auto;
+            letter-spacing: 0%;
+            text-align: left;
+            
+            color: #000000;
+            opacity: 1;
+        }
+    }
+}

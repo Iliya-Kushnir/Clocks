@@ -1,0 +1,40 @@
+.SectionHeading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /* Light */
+    font-size: 51px;
+    line-height: auto;
+    letter-spacing: 0%;
+    text-align: center;
+    
+    color: #8B8B8B;
+    opacity: 1;
+    margin-top: 112px;
+    
+}
+
+.Delivery {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /* Light */
+    font-size: 36px;
+    line-height: auto;
+    letter-spacing: 0%;
+    text-align: center;
+    
+    color: #FD0000;
+    opacity: 1;
+    margin-top: 112px;
+    margin: 0;
+}
+
+.bigImage {
+    display: block;
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
+    margin: auto;
+}
+
+.sectionWrapper {
+    width: 1300px;
+    margin: auto;
+}

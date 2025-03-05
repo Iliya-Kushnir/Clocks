@@ -1,0 +1,46 @@
+.cardWrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    padding-left: 15px;
+    cursor: pointer;
+
+    .cardText {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: light; /* Light */
+        font-size: 32px;
+        line-height: auto;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 0;
+        width: 500px;
+        
+        color: #EAE7DE;
+        opacity: 1;
+    }
+
+    .vector {
+        display: block;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        bottom: 15px;
+        right: 13px;
+        cursor: pointer;
+    }
+
+    .backgroundCard {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: -1;
+    }
+}

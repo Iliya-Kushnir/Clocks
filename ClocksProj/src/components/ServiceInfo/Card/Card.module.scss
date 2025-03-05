@@ -1,0 +1,67 @@
+.cardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 80px;
+    margin-top: 60px;
+
+    .image {
+        display: block;
+        width: 560px;
+        height: 490px;
+        object-fit: cover;
+    }
+
+    .textWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        
+
+        .label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold; /* Light */
+            font-size: 32px;
+            line-height: auto;
+            letter-spacing: 0%;
+            color: #000000;
+            margin: 0;
+            width: 630px;
+            text-align: left;
+        }
+
+        .text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: lighter; /* Light */
+            font-size: 25px;
+            line-height: auto;
+            letter-spacing: 0%;
+            color: #000000;
+            margin: 0;
+            text-align: left;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: space-around;
+            margin: 0;
+            height: 430px;
+
+            .point {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: lighter; /* Light */
+                font-size: 25px;
+                line-height: auto;
+                letter-spacing: 0%;
+                color: #000000;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.cardWrapper:nth-child(2) {
+    flex-direction: row-reverse;
+}

@@ -1,0 +1,67 @@
+.Banner {
+    width: 100%;
+    height: 947px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 56px;
+
+    .mainText {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        line-height: auto;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #FFFFFF;
+        opacity: 1;
+        margin: 0;
+
+        // 🏠 Крупный заголовок на главной
+        &.largeText {
+            font-size: 146px;
+        }
+
+        // 📄 Меньший заголовок на остальных страницах
+        &.smallText {
+            font-size: 106px;
+            margin: 0;
+        }
+    }
+
+    .secondaryText {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: auto;
+        letter-spacing: 0%;
+        margin: 0;
+        text-align: center;
+        color: #FFFFFF;
+        opacity: 1;
+        margin-bottom: 20px;
+    }
+
+    .backgroundImg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    // 🏠 Главная страница
+    &.homeBanner {
+        height: 947px; // Полный размер баннера
+    }
+
+    // 📄 Остальные страницы
+    &.smallBanner {
+        height: 556px; // Уменьшенный баннер
+    }
+}

@@ -1,33 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // ✔️
+import './App.style.scss'
+import HomePage from './HomePage/HomePage.jsx'
+import AllServicesPage from './AllServicesPage/AllServicesPage.jsx';
+import ExamplesPage from './ExamplesPage/ExamplesPage.jsx';
+import PricePage from './PricePage/PricePage.jsx';
+import MechanicRepairPage from './MechanicWatchRepair/MechanicWatchRepair.jsx';
+import PolishingPage from './PolishingPage/PolishingPage.jsx';
+import BatteryPage from './BatteryPage/BatteryPage.jsx';
+import StrapPage from './StrapPage/StrapPage.jsx';
+import CleaningPage from './CleaningPage/CleaningPage.jsx';
+import MajorRenovationPage from './MajorRenovationPage/MajorRenovationPage.jsx';
+import DeliveryPage from './DeliveryPage/DeliveryPage.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter> {/* Обернули Routes в Router */}
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/AllServices' element={<AllServicesPage />} />
+          <Route path='/Examples' element={<ExamplesPage />} />
+          <Route path='/PriceList' element={<PricePage />} />
+          <Route path='/FirstService' element={<MechanicRepairPage />} />
+          <Route path='/SecondService' element={<PolishingPage />} />
+          <Route path='/ThirdService' element={<BatteryPage />} />
+          <Route path='/FourthService' element={<StrapPage />} />
+          <Route path='/FifthService' element={<CleaningPage />} />
+          <Route path='/SixthService' element={<MajorRenovationPage />} />
+          <Route path='/DeliveryPage' element={<DeliveryPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

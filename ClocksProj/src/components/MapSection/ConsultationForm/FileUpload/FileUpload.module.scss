@@ -1,0 +1,32 @@
+.dropZone {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .dropZone.dragging {
+    background-color: #e0f7ff;
+  }
+  
+  .hiddenInput {
+    display: none;
+  }
+  
+  .uploadButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

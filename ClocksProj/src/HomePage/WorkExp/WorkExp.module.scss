@@ -1,0 +1,64 @@
+.sectionWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    place-content: center;
+    margin-bottom: 100px;
+
+
+    .textSection {
+        width: 770px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        position: relative;
+        height: 717px;
+        
+        .textHeading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800; 
+            font-size: 41px;
+            line-height: auto;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: medium; 
+            font-size: 31px;
+            line-height: auto;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-top: 15px;
+            margin-bottom: 40px;
+        }
+
+        .backgroundImg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .imgSection {
+        width: 842px;
+        height: 717px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        .partImg {
+            height: 100%;
+            width: 1fr;
+            display: block;
+            border-radius: 10px;
+        }
+    }
+}

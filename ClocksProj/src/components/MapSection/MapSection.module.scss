@@ -1,0 +1,104 @@
+.sectionWrapper {
+    width: 1241px;
+    height: 456px;
+    border-radius: 12px;
+    background-color: #EAE7DE;
+    padding: 70px 145px 94px 134px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+   // place-content: center;
+   margin: auto;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+   margin-bottom: 68px;
+
+
+    .adressSection {
+        width: 315px;
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: space-between;
+
+        .locationSection {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 4px;
+            margin-left: 10px;
+
+            .adress {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 21px;
+                line-height: auto;
+                letter-spacing: 0%;
+                text-align: left;
+                
+                color: #000000;
+                opacity: 1;
+                margin: 0;
+                margin-left: 10px;
+            }
+
+
+            .pointer {
+                display: block;
+                width: 14px;
+                height: 14px;
+                margin-top: 5px;
+            }
+        }
+
+        .phoneSection {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            margin-left: 10px;
+
+            .sectionLabel {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: light;
+                font-size: 18px;
+                line-height: auto;
+                letter-spacing: 0%;
+                text-align: left;
+                
+                color: #000000;
+                opacity: 1;
+                margin: 0;
+                margin-left: 20px;
+            }
+
+            .phoneWrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: end;
+                gap: 5px;
+
+                .phoneIcon {
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                }
+
+                .number {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: lighter;
+                    font-size: 14px;
+                    line-height: auto;
+                    letter-spacing: 0%;
+                    text-align: left;
+                    
+                    color: #000000;
+                    opacity: 1;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,18 @@
+.consultationForm {
+    display: flex;
+    flex-direction: column;
+    width: 415px;
+    height: 100%;
+    text-align: center;
+
+    .fromLabel {
+        font-family: 'Montserrat', sans-serif;;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: auto;
+        text-align: center;
+        color: black;
+        margin-top: 0;
+        margin-bottom: 7px;
+    }
+}
