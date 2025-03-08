@@ -20,7 +20,7 @@ const ConsultationForm = () => {
         onSubmit={(values, { resetForm }) => {
 
           axios
-            .post("http://localhost:9000/phone-email", {
+            .post("https://clocksshopserver.onrender.com/phone-email", {
               phoneNumber: values.phone,
               fullName: values.Name
             }, {
