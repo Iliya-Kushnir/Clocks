@@ -36,3 +36,54 @@
         }
     }
 }
+
+
+@media  screen and (max-width: 1439px) and (min-width: 768px) {
+    .cardPairWrapper {
+    width: 750px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    .cardWrapper {
+        width: 100%;
+        gap: 0;
+
+        .cardImg {
+            height: 308px;
+        }
+
+        .text {
+            height: 28px;
+            font-size: 23px;
+            margin: 0;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .cardPairWrapper {
+        width: 320px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    
+        .cardWrapper {
+            width: 100%;
+            gap: 0;
+    
+            .cardImg {
+                height: 130px;
+            }
+    
+            .text {
+                height: 12px;
+                font-size: 9px;
+                margin: 0;
+            }
+        }
+    }
+}

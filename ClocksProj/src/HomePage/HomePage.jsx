@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
+import RepairForm from "../components/RepairForm/RepairForm.jsx";
 
 
 const HomePage = () => {
@@ -108,6 +109,8 @@ const HomePage = () => {
         imgAlt="Banner Image"
       />
 
+    <RepairForm/>     
+
       <h1 ref={section3Ref} className={styles.SectionHeading}>Услуги мастерской</h1>
 
       <Services cards={cards} />
@@ -116,6 +119,8 @@ const HomePage = () => {
         label="Узнать расценки"
         onClick={() => handleClick2()}
       />
+
+      
 
       <h1 className={styles.SectionHeading}>Опыт мастера</h1>
 
@@ -155,8 +160,8 @@ const HomePage = () => {
 
       <h1 ref={section2Ref}  className={styles.SectionHeading}>Как нас найти?</h1>
 
-      <MapSection />
-
+      
+    <MapSection/>
       
 
       <h1 className={styles.Delivery}>ПРИНИМАЕМ ЗАКАЗЫ СО ВСЕЙ УКРАИНЫ ПО ПОЧТЕ!</h1>

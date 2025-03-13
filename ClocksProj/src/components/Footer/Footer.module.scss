@@ -128,3 +128,32 @@ footer {
         justify-content: space-around;
     }
 }
+
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    footer {
+        height: 70px;
+    
+        .Heading {
+            font-size: 15px;
+        }
+    
+        .redText {
+            display: none;
+        }
+    
+    
+        .adressSection {
+            display: none;
+        }
+    
+        .socialMedia {
+            width: 120px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+    }
+}

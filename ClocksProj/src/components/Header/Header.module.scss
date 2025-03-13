@@ -59,4 +59,80 @@
             cursor: pointer;
         }
     }
+
+    .burgerMenu {
+        display: none;
+    }
+}
+
+
+@media  screen and (max-width: 1439px) and (min-width: 768px) {
+    .Header {
+        height: 67px;
+    
+        .logoName {
+            gap: 12px;
+            height: 50px;          
+    
+            .Heading {
+                font-size: 22px;
+            }
+        }
+    
+        .Numbers {
+    
+            .number {
+                font-size: 12px;
+            }
+        }
+    
+        .contactInfo {
+            height: 20px;
+    
+            .linkBtn {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        .burgerMenu {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .Header {
+        height: 69px;
+    
+        .logoName {
+            gap: 5px;
+            height: 35px;          
+    
+            .Heading {
+                font-size: 11px;
+            }
+        }
+    
+        .Numbers {
+    
+            .number {
+                font-size: 9px;
+            }
+        }
+    
+        .contactInfo {
+            height: 20px;
+    
+            .linkBtn {
+                display: none;
+                cursor: pointer;
+            }
+        }
+
+        .burgerMenu {
+            display: block;
+            cursor: pointer;
+        }
+    }
 }

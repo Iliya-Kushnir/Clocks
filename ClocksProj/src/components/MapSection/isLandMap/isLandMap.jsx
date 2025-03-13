@@ -7,7 +7,7 @@ const position = [49.98761491943315, 36.21672317791318]; // Задай коор�
 const IslandMap = () => {
   return (
     <div className={styles.mapContainer}>
-     <MapContainer center={position} zoom={13} style={{ height: "456px", width: "530px", borderRadius: "12px" }}>
+     <MapContainer center={position} zoom={13} style={{ height: "100%", width: "100%", borderRadius: "12px" }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

@@ -12,3 +12,15 @@
     border: none;
     cursor: pointer;
 }
+
+@media  screen and (max-width: 1439px) and (min-width: 768px) {
+    .HeaderButton {
+        display: none;
+    }
+}
+
+@media  screen and (max-width: 767px) and (min-width: 375px) {
+    .HeaderButton {
+        display: none;
+    }
+}

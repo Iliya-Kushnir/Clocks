@@ -5,3 +5,17 @@
     gap: 20px;
     place-content: center;
 }
+
+@media  screen and (max-width: 1439px) and (min-width: 768px) {
+    .SectionWrapper {
+        display: grid;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .SectionWrapper {
+        display: grid;
+        gap: 20px;
+    }
+}

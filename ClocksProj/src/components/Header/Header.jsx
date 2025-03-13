@@ -38,6 +38,8 @@ const Header = (props) => {
                     <img className={styles.linkBtn} src="/images/InstagramIcon.png" alt="" />
                     <img className={styles.linkBtn} src="/images/TelegramIcon.png" alt="" />
             </div>
+
+            <img className={styles.burgerMenu} src="/images/Segment.png" alt="" />
         </div>
     )
 }

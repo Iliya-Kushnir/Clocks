@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+
 const regx = {
   Name: /^[A-Яа-яA-Za-z]{2,20}$/,
   phone: /^(\+380|0)[679][0-9]{8}$/

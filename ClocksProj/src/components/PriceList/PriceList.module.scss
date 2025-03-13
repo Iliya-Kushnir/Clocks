@@ -1,58 +1,9 @@
-/*.tableContainer {
-    .priceList {
-        width: 1200px;
-        height: 709px;
-        border-collapse: collapse;
-        background: linear-gradient(to bottom, #6e7b82, #2c4d59);
-        color: white;
-        font-family: Arial, sans-serif;
-        border-radius: 8px;
-        overflow: hidden;
-        margin: auto;
-        margin-top: 112px;
-        margin-bottom: 121px;
-
-        .topLine {
-            height: 70px;
-            text-align: center;
-        }
-
-        .priceList th, .priceList td {
-            padding: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            text-align: left;
-          }
-          
-          .priceList th {
-            font-weight: bold;
-            text-transform: uppercase;
-            background: rgba(255, 255, 255, 0.1);
-          }
-          
-          .priceList tbody tr {
-            background: rgba(255, 255, 255, 0.1);
-          }
-
-          .priceList tbody td {
-            text-align: left;
-          }
-          
-          .priceList tbody tr:nth-child(even) {
-            background: rgba(255, 255, 255, 0.2);
-          }
-          
-          .priceList tbody tr:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transition: 0.3s;
-          }
-      }
-}
-      */
+/**/
       .tableContainer {
         display: flex;
         justify-content: center;
         align-items: center;
-        min-width: 1200px; /* Фиксированная минимальная ширина контейнера */
+        width: 1200px; /* Фиксированная минимальная ширина контейнера */
         
         .priceList {
             width: 1200px;
@@ -128,4 +79,142 @@
     }
     
     
-    
+    @media  screen and (max-width: 1439px) and (min-width: 768px) {
+        .tableContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 700px; /* Фиксированная минимальная ширина контейнера */
+            
+            .priceList {
+                width: 700px;
+                height: 709px;
+                border-collapse: collapse;
+                background: linear-gradient(to bottom, #A7A7A7, #273B46);
+                color: white;
+                font-family: Arial, sans-serif;
+                border-radius: 8px;
+                margin-top: 112px;
+                margin-bottom: 121px;
+                table-layout: fixed; /* Фиксированная ширина колонок */
+                overflow: hidden;
+        
+                .topLine {
+                    height: 64px;
+                }
+        
+                th, td {
+                    padding: 0;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    text-align: center;
+                    white-space: nowrap; /* Запрещает перенос строк */
+                    background: transparent;
+                    width: 70px; /* Убираем фон у ячеек */
+                    text-align: center;
+                }
+
+                td {
+                    text-align: center;
+                }
+        
+                th {
+                    font-size: 16px;
+                }
+        
+                th:nth-child(1) {
+                    width: 595px !important;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    background: transparent;
+                }
+        
+                tbody tr {
+                    background: transparent;
+                }
+        
+                tbody td {
+                    font-size: 10px;
+                }
+        
+                tbody tr:nth-child(even) {
+                    background: transparent;
+                }
+        
+                tbody tr:hover {
+                    background: rgba(255, 255, 255, 0.3);
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 375px) {
+        .tableContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 317px; /* Фиксированная минимальная ширина контейнера */
+            margin: auto;
+
+            .priceList {
+                width: 317px;
+                height: 480px;
+                border-collapse: collapse;
+                background: linear-gradient(to bottom, #A7A7A7, #273B46);
+                color: white;
+                font-family: Arial, sans-serif;
+                border-radius: 8px;
+                margin-top: 0;
+                margin-bottom: 20px;
+                table-layout: fixed; /* Фиксированная ширина колонок */
+                overflow: hidden;
+        
+                .topLine {
+                    height: 32px;
+                }
+        
+                th, td {
+                    padding: 0;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    text-align: center;
+                    white-space: nowrap; /* Запрещает перенос строк */
+                    background: transparent;
+                    width: 40px; /* Убираем фон у ячеек */
+                    text-align: center;
+                }
+
+                td {
+                    text-align: center;
+                }
+        
+                th {
+                    font-size: 9px;
+                }
+        
+                th:nth-child(1) {
+                    width: 243px !important;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    background: transparent;
+                }
+        
+                tbody tr {
+                    background: transparent;
+                }
+        
+                tbody td {
+                    font-size: 8px;
+                    text-align: center;
+                }
+        
+                tbody tr:nth-child(even) {
+                    background: transparent;
+                }
+        
+                tbody tr:hover {
+                    background: rgba(255, 255, 255, 0.3);
+                    transition: 0.3s;
+                }
+            }
+        }
+    }

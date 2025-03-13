@@ -38,3 +38,23 @@
     width: 1300px;
     margin: auto;
 }
+
+@media  screen and (max-width: 1439px) and (min-width: 768px) {
+    .sectionWrapper {
+        width: 696px;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 80px;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .sectionWrapper {
+        width: 345px;
+        height: 350px;
+        margin-bottom: 22px;
+        margin-top: 0px;
+        gap: 30px;
+    }
+}

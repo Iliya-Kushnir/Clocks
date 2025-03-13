@@ -33,3 +33,30 @@
     object-fit: cover;
     margin: auto;
 }
+
+@media  screen and (max-width: 1439px) and (min-width: 768px) {
+    .SectionHeading {
+        display: none;    
+    }
+    
+    
+    .bigImage {      
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .sectionWrapper {
+        width: 345px;
+        height: 350px;
+        margin-bottom: 22px;
+        margin-top: 0px;
+        gap: 30px;
+    }
+
+    .bigImage {      
+        width: 200px;
+        height: 200px;
+    }
+}

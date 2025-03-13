@@ -65,3 +65,81 @@
         height: 556px; // Уменьшенный баннер
     }
 }
+
+
+@media  screen and (max-width: 1439px) and (min-width: 768px) {
+    .Banner {
+        height: 381px;
+        margin-bottom: 10px;
+    
+        .mainText {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            line-height: auto;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #FFFFFF;
+            opacity: 1;
+            margin: 0;
+    
+            // 🏠 Крупный заголовок на главной
+            &.largeText {
+                font-size: 76px;
+            }
+    
+            // 📄 Меньший заголовок на остальных страницах
+            &.smallText {
+                font-size: 20px;
+            }
+        }
+    
+        .secondaryText {
+            font-size: 24px;
+        }
+    
+        // 🏠 Главная страница
+        &.homeBanner {
+            height: 381px; // Полный размер баннера
+        }
+    
+        // 📄 Остальные страницы
+        &.smallBanner {
+            height: 221px; // Уменьшенный баннер
+        }
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .Banner {
+        height: 155px;
+        margin-bottom: 20px;
+    
+        .mainText {
+            font-size: 26px;
+    
+            // 🏠 Крупный заголовок на главной
+            &.largeText {
+                font-size: 26px;
+            }
+    
+            // 📄 Меньший заголовок на остальных страницах
+            &.smallText {
+                font-size: 10px;
+            }
+        }
+    
+        .secondaryText {
+            font-size: 10px;
+        }
+    
+        // 🏠 Главная страница
+        &.homeBanner {
+            height: 155px; // Полный размер баннера
+        }
+    
+        // 📄 Остальные страницы
+        &.smallBanner {
+            height: 109px; // Уменьшенный баннер
+        }
+    }
+}

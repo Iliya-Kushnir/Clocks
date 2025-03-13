@@ -16,3 +16,19 @@
         margin-bottom: 7px;
     }
 }
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .consultationForm {
+        display: flex;
+        flex-direction: column;
+        width: 415px;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+    
+        .fromLabel {
+            font-size: 20px;
+            margin-bottom: 17px;
+        }
+    }
+}

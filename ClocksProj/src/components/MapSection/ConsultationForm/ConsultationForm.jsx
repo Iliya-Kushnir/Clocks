@@ -7,7 +7,7 @@ import { initialValues, schemas } from "./helper";
 import { Input } from "./Input/Input";
 import { Button } from "./Button/Button";
 import axios from "axios";
-import FileUpload from "./FileUpload/FileUpload.jsx";
+//import FileUpload from "./FileUpload/FileUpload.jsx";
 
 const ConsultationForm = () => {
   const [isDisabled, setIsDisabled] = useState(false);
