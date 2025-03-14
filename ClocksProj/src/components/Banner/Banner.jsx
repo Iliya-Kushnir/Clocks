@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router";
 import styles from "./Banner.module.scss";
 import MainButton from "../MainButton/MainButton.jsx";
 import ImageSwitcher from "../../HomePage/ImageAttempt/ImageAttempt.jsx";
+import RepairForm from "../RepairForm/RepairForm.jsx"; // Импортируем форму
 
 const Banner = ({ mainText, secondaryText }) => {
     const location = useLocation();
     const isHomePage = location.pathname === "/";
+    
+    const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для модального окна
 
-    // Определяем массив изображений в зависимости от страницы
     const imagesByPage = {
         "/": ["/images/HomeBanner.png", "/images/HomeBanner2.jpg", "/images/HomeBanner3.jpg"],
         "/PriceList": ["/images/PricePageBanner.png", "/images/PricePageBanner2.png", "/images/PricePageBanner3.png"],
@@ -24,15 +26,10 @@ const Banner = ({ mainText, secondaryText }) => {
         "/SixthService": ["/images/SixthServiceBanner.png", "/images/SixthServiceBanner2.png", "/images/SixthServiceBanner3.png"]
     };
 
-    // Берем изображения по маршруту или ставим дефолт
     const selectedImages = imagesByPage[location.pathname] || ["/images/DefaultBanner.jpg"];
 
-    console.log(selectedImages)
-
     return (
-        <div 
-            className={`${styles.Banner} ${isHomePage ? styles.homeBanner : styles.smallBanner}`}
-        >
+        <div className={`${styles.Banner} ${isHomePage ? styles.homeBanner : styles.smallBanner}`}>
             <h1 className={`${styles.mainText} ${isHomePage ? styles.largeText : styles.smallText}`}>
                 {mainText}
             </h1>
@@ -41,16 +38,17 @@ const Banner = ({ mainText, secondaryText }) => {
                 {secondaryText}
             </p>
 
-        {console.log("Передаю в ImageSwitcher:", selectedImages)}
-            {/* Динамически передаем картинки в ImageSwitcher */}
             <ImageSwitcher images={selectedImages} />
 
             {isHomePage && (
                 <MainButton
                     label="Бесплатная консультация"
-                    onClick={() => console.log("Success!")}
+                    onClick={() => setIsModalOpen(true)} // Открываем модальное окно
                 />
             )}
+
+            {/* Показываем модальное окно, если isModalOpen === true */}
+            {isModalOpen && <RepairForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
         </div>
     );
 };

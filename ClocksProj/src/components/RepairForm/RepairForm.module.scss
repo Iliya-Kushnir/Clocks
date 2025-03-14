@@ -8,6 +8,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    z-index: 99999999;
   }
   
   .modalContent {
@@ -15,8 +17,8 @@
     padding: 20px;
     border-radius: 8px;
     position: relative;
-    width: 400px;
-    max-width: 90%;
+    width: 932px;
+    height: 942px;
   }
   
   .closeModal {
@@ -25,7 +27,7 @@
     right: 10px;
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 40px;
     cursor: pointer;
   }
   
@@ -38,3 +40,34 @@
     cursor: pointer;
   }
   
+  .formLabel {
+    font-size: 43px;
+    margin-top: 0;
+    margin-bottom: 36px;
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+
+  .paragraph {
+    font-weight: light;
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .consultationForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99999999;
+
+    .button {
+      width: 319px;
+      height: 97px;
+      border-radius: 14px;
+      background-color: #D9D9D9;
+      font-size: 14px;
+      color: black;
+      border: none;
+      margin-top: 31px;
+    }
+  }

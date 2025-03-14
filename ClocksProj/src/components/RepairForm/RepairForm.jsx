@@ -9,10 +9,9 @@ import { Button } from "./Button/Button";
 import axios from "axios";
 import FileUpload from "../MapSection/ConsultationForm/FileUpload/FileUpload.jsx";
 
-const RepairForm = () => {
+const RepairForm = ({ isModalOpen, setIsModalOpen }) => {
     const [isDisabled, setIsDisabled] = useState(false);
     const [timer, setTimer] = useState(0);
-    const [isModalOpen, setIsModalOpen] = useState(false);
   
     useEffect(() => {
       let interval;
@@ -35,58 +34,68 @@ const RepairForm = () => {
     return (
         <>
         <ToastContainer />
-        <button className={styles.openModalButton} onClick={() => setIsModalOpen(true)}>
-          Открыть форму
-        </button>
         {isModalOpen && (
           <div className={styles.modalOverlay}>
             <div className={styles.modalContent}>
               <button className={styles.closeModal} type="button" onClick={() => setIsModalOpen(false)}>X</button>
               <Formik
-                initialValues={initialValues}
-                validationSchema={schemas.custom}
-                onSubmit={(values, { resetForm }) => {
-                    console.log(values, resetForm);
+  initialValues={initialValues}
+  validationSchema={schemas.custom}
+  onSubmit={(values, { resetForm }) => {
+    console.log("Submitted values:"); // Проверяем, какие данные отправляются
 
-                    axios
-                    .post("https://clocksshopserver.onrender.com/email", {
-                      name: values.name,
-                      email: values.email,
-                      message: values.message,
-                      file: values.file
-                    })
-                    .then((response) => {
-                      if (response.status === 200) {
-                        toast.success("Форма успешно отправлена!", {
-                          position: "bottom-right",
-                          autoClose: 3000,
-                        });
-                        resetForm();
-                        setIsModalOpen(false);
-                      }
-                    })
-                    .catch(() => {
-                      toast.error("Ошибка отправки. Попробуйте снова.", {
-                        position: "bottom-right",
-                        autoClose: 3000,
-                      });
-                    });
-                }}
-                className={styles.repairForm}
-              >
-                {({ setFieldValue, touched, errors }) => (
-                  <Form className={styles.consultationForm}>
-                    <h1 className={styles.formLabel}>Записаться на ремонт</h1>
+    // Создаём объект FormData
+    const formData = new FormData();
+    formData.append("name", values.name);
+    formData.append("email", values.email);
+    formData.append("message", values.message);
+    
+    // Проверяем наличие файла перед добавлением
+    if (values.file) {
+      formData.append("file", values.file);
+    }
 
-                    <Input name="name" id="name" placeholder="Ваше имя" />
-                    <Input name="email" id="email" placeholder="Ваш email" />
-                    <Input name="message" id="message" placeholder="Описание проблемы"/>
-                    <FileUpload setFieldValue={setFieldValue} />
+    axios
+      .post("https://clocksshopserver.onrender.com/email", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then((response) => {
+        if (response.status === 200) {
+          toast.success("Форма успешно отправлена!", {
+            position: "bottom-right",
+            autoClose: 3000,
+          });
+          resetForm();
+          setIsModalOpen(false);
+        }
+      })
+      .catch((error) => {
+        console.error("Ошибка при отправке формы:", error);
+        toast.error("Ошибка отправки. Попробуйте снова.", {
+          position: "bottom-right",
+          autoClose: 3000,
+        });
+      });
+  }}
+>
+  {({ setFieldValue, touched, errors }) => (
+    <Form className={styles.consultationForm}>
+      <h1 className={styles.formLabel}>Записаться на ремонт</h1>
 
-                    <button type="submit">Записаться</button>
-                  </Form>
-                )}
-              </Formik>
+      <p className={styles.paragraph}>Запишите ваши данные и мы с вами свяжемся как только сможем, ожидание может составлять 1-2 дня</p>
+      
+      <Input name="name" id="name" placeholder="Ваше имя" />
+      <Input name="email" id="email" placeholder="Ваш email" />
+      <Input name="message" id="message" placeholder="Описание проблемы" />
+      <FileUpload setFieldValue={setFieldValue} />
+
+      <Button type="submit" disabled={isDisabled}>
+        {isDisabled ? `Подождите ${timer} сек` : "Записаться"}
+      </Button>
+    </Form>
+  )}
+</Formik>
+
             </div>
           </div>
         )}
