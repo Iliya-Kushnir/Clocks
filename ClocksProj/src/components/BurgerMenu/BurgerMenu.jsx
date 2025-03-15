@@ -24,12 +24,14 @@ const BurgerMenu = () => {
       {/* Меню */}
       <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
         <ul>
-          <li><Link  to="/">Главная</Link></li>
-          <li><Link to="/AllServices">Услсуги</Link></li>
-          <li><Link to="/DeliveryPage">Доставка</Link></li>
-          <li><Link to="/Examples">Работы</Link></li>
-          <li><Link to="/PriceList">Расценки</Link></li>
+          <li><Link className={styles.text}  to="/">Главная</Link></li>
+          <li><Link className={styles.text} to="/AllServices">Услсуги</Link></li>
+          <li><Link className={styles.text} to="/DeliveryPage">Доставка</Link></li>
+          <li><Link className={styles.text} to="/Examples">Работы</Link></li>
+          <li><Link className={styles.text} to="/PriceList">Расценки</Link></li>
           <li><LanguageSwitcher /></li>
+          <li><button>insta</button></li>
+          <li><button>telegram</button></li>
         </ul>
       </div>
     </div>
