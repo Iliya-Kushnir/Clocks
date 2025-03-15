@@ -1,12 +1,12 @@
 .cardPairWrapper {
-    width: 520px;
+    width: 50em;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
 
     .cardWrapper {
-        width: 250px;
+        width: 13em;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -40,7 +40,7 @@
 
 @media  screen and (max-width: 1439px) and (min-width: 768px) {
     .cardPairWrapper {
-    width: 750px;
+    width: 47em;
     display: flex;
     flex-direction: row;
     align-items: center;

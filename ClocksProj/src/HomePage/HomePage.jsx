@@ -116,32 +116,32 @@ const HomePage = () => {
 
     <RepairForm/>     
 
-      <h1 ref={section3Ref} className={styles.SectionHeading}>Услуги мастерской</h1>
+      <h1 ref={section3Ref} className={styles.SectionHeading}>{t("homePage.servicesTitle")}</h1>
 
       <Services cards={cards} />
 
       <MainButton
-        label="Узнать расценки"
+        label={t("homePage.buttons.checkPrices")}
         onClick={() => handleClick2()}
       />
 
       
 
-      <h1 className={styles.SectionHeading}>Опыт мастера</h1>
+      <h1 className={styles.SectionHeading}>{t("homePage.experienceTitle")}</h1>
 
       <WorkExp
-        label={t("buttons.consultation")}
+        label={t("homePage.buttons.consultation")}
         backgroundSrc="/images/BackGroundWatch.png"
         firstSrc="/images/bigClock1.png"
         secondSrc="/images/bigClock2.png"
       />
 
       <MainButton
-        label="Записаться на консультацию"
+        label={t("homePage.buttons.bookAppointment")}
         onClick={() => handleClick3()}
       />
 
-      <h1 className={styles.SectionHeading}>Расценки за услугу</h1>
+      <h1 className={styles.SectionHeading}>{t("homePage.pricingTitle")}</h1>
 
       <div ref={section1Ref} className="p-5">
         <PriceList services={services} />
@@ -149,30 +149,30 @@ const HomePage = () => {
 
     <Link to="/PriceList">
       <MainButton
-        label="Смотреть все расценки"
+        label={t("homePage.buttons.consultation")}
       />
     </Link>
 
 
 
-      <h1  className={styles.SectionHeading}>Примеры работ</h1>
+      <h1  className={styles.SectionHeading}>{t("homePage.examplesTitle")}</h1>
 
       <img className={styles.bigImage} src="/images/BigWatchConstructor.png" alt="" />
 
       <BeforeAfterLine />
 
       <MainButton
-        label="Смотреть больше"
+        label={t("homePage.buttons.viewMore")}
         onClick={() => navigate("/Examples")}
       />
 
-      <h1 ref={section2Ref}  className={styles.SectionHeading}>Как нас найти?</h1>
+      <h1 ref={section2Ref}  className={styles.SectionHeading}>{t("homePage.findUsTitle")}</h1>
 
       
     <MapSection/>
       
 
-      <h1 className={styles.Delivery}>ПРИНИМАЕМ ЗАКАЗЫ СО ВСЕЙ УКРАИНЫ ПО ПОЧТЕ!</h1>
+      <h1 className={styles.Delivery}>{t("homePage.deliveryText")}</h1>
 
       <Footer buttons={buttons} />
     </>

@@ -4,6 +4,8 @@
     align-items: center;
     gap: 20px;
     place-content: center;
+    width: 1380px;
+    margin: auto;
     margin-bottom: 80px;
 }
 
@@ -11,6 +13,7 @@
     .SectionWrapper {
         display: grid;
         gap: 40px;
+        width: 47em;
     }
 }
 
@@ -18,5 +21,6 @@
     .SectionWrapper {
         display: grid;
         gap: 20px;
+        width: 20em;
     }
 }
