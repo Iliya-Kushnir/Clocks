@@ -34,8 +34,8 @@ const BurgerMenu = () => {
       <li><Link className={styles.text} to="/PriceList">Расценки</Link></li>
       <li><LanguageSwitcher /></li>
       <li className={styles.socialMedia}>
-        <img className={styles.linkBtn} src="/images/InstagramIcon.png" alt="" /> 
-        <img className={styles.linkBtn} src="/images/TelegramIcon.png" alt="" />
+        <img className={styles.linkBtn} src="/compressed/InstagramIcon.png" alt="" /> 
+        <img className={styles.linkBtn} src="/compressed/TelegramIcon.png" alt="" />
       </li>
     </ul>
     </div>

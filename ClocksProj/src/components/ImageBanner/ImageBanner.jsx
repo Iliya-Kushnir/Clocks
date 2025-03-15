@@ -4,13 +4,13 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 const images = [
   {
-    original: "/images/HomeBanner.png",
-    thumbnail: "/images/HomeBanner2.jpg",
+    original: "/compressed/HomeBanner.png",
+    thumbnail: "/compressed/HomeBanner2.jpg",
   },
 
   {
-    original: "/images/HomeBanner3.jpg",
-    thumbnail: "/images/ServicesBanner.png",
+    original: "/compressed/HomeBanner3.jpg",
+    thumbnail: "/compressed/ServicesBanner.png",
   },
 ];
 

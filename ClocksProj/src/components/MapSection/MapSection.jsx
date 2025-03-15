@@ -14,7 +14,7 @@ const MapSection = (props) => {
 
             <div className={styles.adressSection}>
                 <div className={styles.locationSection}>
-                    <img className={styles.pointer} src="/images/Vector.png" alt="MapPointer" />
+                    <img className={styles.pointer} src="/compressed/Vector.png" alt="MapPointer" />
                     <p className={styles.adress}>Адрес мастерской: Харьков, Полтавский Шлях 31 офисный центр, офис 311</p>
                 </div>
 
@@ -22,7 +22,7 @@ const MapSection = (props) => {
                     <h1 className={styles.sectionLabel}>Телефон:</h1>
 
                     <div className={styles.phoneWrapper}>
-                        <img className={styles.phoneIcon} src="/images/PhoneIcon.png" alt="phoneIcon" />
+                        <img className={styles.phoneIcon} src="/compressed/PhoneIcon.png" alt="phoneIcon" />
                         <p className={styles.number}>+38 097-075-40-94 +38 095-739-86-14</p>
                     </div>
                 </div>

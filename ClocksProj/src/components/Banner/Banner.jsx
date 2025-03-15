@@ -17,21 +17,21 @@ const Banner = ({ mainText, secondaryText }) => {
   const [isButtonVisible, setIsButtonVisible] = useState(true); // Состояние для видимости кнопки
 
   const imagesByPage = {
-    "/": ["/images/HomeBanner.png", "/images/HomeBanner2.jpg", "/images/HomeBanner3.jpg"],
-    "/PriceList": ["/images/PricePageBanner.png", "/images/PricePageBanner2.png", "/images/PricePageBanner3.png"],
-    "/DeliveryPage": ["/images/DeliveryBanner.png", "/images/DeliveryBanner2.png", "/images/DeliveryBanner3.png"],
-    "/Examples": ["/images/ExamplesBanner.png", "/images/ExamplesBanner2.png", "/images/ExamplesBanner3.png"],
-    "/AllServices": ["/images/ServicesBanner.png", "/images/ServicesBanner2.png", "/images/ServicesBanner3.png"],
-    "/FirstService": ["/images/FirstServiceBanner.png", "/images/FirstServiceBanner2.png", "/images/FirstServiceBanner3.png"],
-    "/SecondService": ["/images/SecondServiceBanner.png", "/images/SecondServiceBanner2.png", "/images/SecondServiceBanner3.png"],
-    "/ThirdService": ["/images/ThirdServiceBanner.png", "/images/ThirdServiceBanner2.png", "/images/ThirdServiceBanner3.png"],
-    "/FourthService": ["/images/FourthServiceBanner.png", "/images/FourthServiceBanner2.png", "/images/FourthServiceBanner3.png"],
-    "/FifthService": ["/images/FifthServiceBanner.png", "/images/FifthServiceBanner2.png", "/images/FifthServiceBanner3.png"],
-    "/SixthService": ["/images/SixthServiceBanner.png", "/images/SixthServiceBanner2.png", "/images/SixthServiceBanner3.png"],
-    "/ExperiencePage": ["/images/ExperiencePageBanner.png", "/images/ExperiencePageBanner2.png", "/images/ExperiencePageBanner3.png"]
+    "/": ["/compressed/HomeBanner.png", "/compressed/HomeBanner2.jpg", "/compressed/HomeBanner3.jpg"],
+    "/PriceList": ["/compressed/PricePageBanner.png", "/compressed/PricePageBanner2.png", "/compressed/PricePageBanner3.png"],
+    "/DeliveryPage": ["/compressed/DeliveryBanner.png", "/compressed/DeliveryBanner2.png", "/compressed/DeliveryBanner3.png"],
+    "/Examples": ["/compressed/ExamplesBanner.png", "/compressed/ExamplesBanner2.png", "/compressed/ExamplesBanner3.png"],
+    "/AllServices": ["/compressed/ServicesBanner.png", "/compressed/ServicesBanner2.png", "/compressed/ServicesBanner3.png"],
+    "/FirstService": ["/compressed/FirstServiceBanner.png", "/compressed/FirstServiceBanner2.png", "/compressed/FirstServiceBanner3.png"],
+    "/SecondService": ["/compressed/SecondServiceBanner.png", "/compressed/SecondServiceBanner2.png", "/compressed/SecondServiceBanner3.png"],
+    "/ThirdService": ["/compressed/ThirdServiceBanner.png", "/compressed/ThirdServiceBanner2.png", "/compressed/ThirdServiceBanner3.png"],
+    "/FourthService": ["/compressed/FourthServiceBanner.png", "/compressed/FourthServiceBanner2.png", "/compressed/FourthServiceBanner3.png"],
+    "/FifthService": ["/compressed/FifthServiceBanner.png", "/compressed/FifthServiceBanner2.png", "/compressed/FifthServiceBanner3.png"],
+    "/SixthService": ["/compressed/SixthServiceBanner.png", "/compressed/SixthServiceBanner2.png", "/compressed/SixthServiceBanner3.png"],
+    "/ExperiencePage": ["/compressed/ExperiencePageBanner.png", "/compressed/ExperiencePageBanner2.png", "/compressed/ExperiencePageBanner3.png"]
   };
 
-  const selectedImages = imagesByPage[location.pathname] || ["/images/DefaultBanner.jpg"];
+  const selectedImages = imagesByPage[location.pathname] || ["/compressed/DefaultBanner.jpg"];
 
   return (
     <div className={`${styles.Banner} ${isHomePage ? styles.homeBanner : styles.smallBanner}`}>

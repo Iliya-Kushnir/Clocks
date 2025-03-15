@@ -52,7 +52,7 @@ const PricePage = () => {
            <Banner
            mainText="Расценки"
            secondaryText="Самые технологичные работы в Харькове"
-           imgSrc="/images/PricePageBanner.png"
+           imgSrc="/compressed/PricePageBanner.png"
            imgAlt="Banner Image"
            />
 

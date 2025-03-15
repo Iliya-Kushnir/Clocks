@@ -53,12 +53,12 @@ const HomePage = () => {
   ];
 
   const cards = [
-    { serviceName: "Ремонт механических часов", serviceSrc: "/images/Watch.png", serviceAlt: "first", link: "/FirstService" },
-    { serviceName: "Замена элементов питания", serviceSrc: "/images/Watch2.png", serviceAlt: "second", link: "/ThirdService" },
-    { serviceName: "Полировка часов", serviceSrc: "/images/Watch3.png", serviceAlt: "third", link: "/SecondService" },
-    { serviceName: "Чистка и смазка часов", serviceSrc: "/images/Watch4.png", serviceAlt: "fourth", link: "/FifthService" },
-    { serviceName: "Замена ремешка или браслета", serviceSrc: "/images/Watch5.png", serviceAlt: "fifth", link: "/FourthService" },
-    { serviceName: "Капитальный ремонт часов", serviceSrc: "/images/Watch6.png", serviceAlt: "sixth", link: "/SixthService" }
+    { serviceName: "Ремонт механических часов", serviceSrc: "/compressed/Watch.png", serviceAlt: "first", link: "/FirstService" },
+    { serviceName: "Замена элементов питания", serviceSrc: "/compressed/Watch2.png", serviceAlt: "second", link: "/ThirdService" },
+    { serviceName: "Полировка часов", serviceSrc: "/compressed/Watch3.png", serviceAlt: "third", link: "/SecondService" },
+    { serviceName: "Чистка и смазка часов", serviceSrc: "/compressed/Watch4.png", serviceAlt: "fourth", link: "/FifthService" },
+    { serviceName: "Замена ремешка или браслета", serviceSrc: "/compressed/Watch5.png", serviceAlt: "fifth", link: "/FourthService" },
+    { serviceName: "Капитальный ремонт часов", serviceSrc: "/compressed/Watch6.png", serviceAlt: "sixth", link: "/SixthService" }
   ];
 
   const services = [
@@ -110,7 +110,7 @@ const HomePage = () => {
       <Banner
         mainText={t("homePage.title")}
         secondaryText={t("homePage.subtitle")}
-        imgSrc="/images/HomeBanner.png"
+        imgSrc="/compressed/HomeBanner.png"
         imgAlt="Banner Image"
       />
 
@@ -131,9 +131,9 @@ const HomePage = () => {
 
       <WorkExp
         label={t("homePage.buttons.consultation")}
-        backgroundSrc="/images/BackGroundWatch.png"
-        firstSrc="/images/bigClock1.png"
-        secondSrc="/images/bigClock2.png"
+        backgroundSrc="/compressed/BackGroundWatch.png"
+        firstSrc="/compressed/bigClock1.png"
+        secondSrc="/compressed/bigClock2.png"
       />
 
       <MainButton
@@ -157,7 +157,7 @@ const HomePage = () => {
 
       <h1  className={styles.SectionHeading}>{t("homePage.examplesTitle")}</h1>
 
-      <img className={styles.bigImage} src="/images/BigWatchConstructor.png" alt="" />
+      <img className={styles.bigImage} src="/compressed/BigWatchConstructor.png" alt="" />
 
       <BeforeAfterLine />
 

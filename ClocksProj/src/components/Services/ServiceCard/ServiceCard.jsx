@@ -14,7 +14,7 @@ const ServiceCard = (props) => {
                 </p>
                 <img 
                     className={styles.vector} 
-                    src="/images/Group.png" 
+                    src="/compressed/Group.png" 
                     alt="vector" 
                 />
                 <img 

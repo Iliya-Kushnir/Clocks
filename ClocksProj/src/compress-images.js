@@ -5,7 +5,7 @@ import imageminSvgo from 'imagemin-svgo';
 
 (async () => {
     const files = await imagemin(['public/images/*.{jpg,png,svg}'], {
-        destination: 'src/assets/compressed',
+        destination: 'public/compressed',
         plugins: [
             imageminMozjpeg({ quality: 75 }), // Сжатие JPEG (качество 75)
             imageminPngquant({ quality: [0.6, 0.8] }), // Сжатие PNG (60-80%)

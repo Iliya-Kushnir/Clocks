@@ -30,12 +30,12 @@ const AllServicesPage = () => {
       ];
 
       const cards = [
-        { serviceName: "Ремонт механических часов", serviceSrc: "/images/Watch.png", serviceAlt: "first", link: "/FirstService" },
-        { serviceName: "Замена элементов питания", serviceSrc: "/images/Watch2.png", serviceAlt: "second", link: "/ThirdService" },
-        { serviceName: "Полировка часов", serviceSrc: "/images/Watch3.png", serviceAlt: "third", link: "/SecondService" },
-        { serviceName: "Чистка и смазка часов", serviceSrc: "/images/Watch4.png", serviceAlt: "fourth", link: "/FifthService" },
-        { serviceName: "Замена ремешка или браслета", serviceSrc: "/images/Watch5.png", serviceAlt: "fifth", link: "/FourthService" },
-        { serviceName: "Капитальный ремонт часов", serviceSrc: "/images/Watch6.png", serviceAlt: "sixth", link: "/SixthService" }
+        { serviceName: "Ремонт механических часов", serviceSrc: "/compressed/Watch.png", serviceAlt: "first", link: "/FirstService" },
+        { serviceName: "Замена элементов питания", serviceSrc: "/compressed/Watch2.png", serviceAlt: "second", link: "/ThirdService" },
+        { serviceName: "Полировка часов", serviceSrc: "/compressed/Watch3.png", serviceAlt: "third", link: "/SecondService" },
+        { serviceName: "Чистка и смазка часов", serviceSrc: "/compressed/Watch4.png", serviceAlt: "fourth", link: "/FifthService" },
+        { serviceName: "Замена ремешка или браслета", serviceSrc: "/compressed/Watch5.png", serviceAlt: "fifth", link: "/FourthService" },
+        { serviceName: "Капитальный ремонт часов", serviceSrc: "/compressed/Watch6.png", serviceAlt: "sixth", link: "/SixthService" }
       ];
 
       return (
@@ -47,7 +47,7 @@ const AllServicesPage = () => {
            <Banner
            mainText="Услуги"
            secondaryText="Услуги от Мастерской Время!"
-           imgSrc="/images/ServicesBanner.png"
+           imgSrc="/compressed/ServicesBanner.png"
            imgAlt="Banner Image"
            />
 

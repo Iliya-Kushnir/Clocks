@@ -31,13 +31,13 @@ const ExamplesPage = () => {
            <Banner
            mainText="Услуги"
            secondaryText="Услуги от Мастерской Время!"
-           imgSrc="/images/ServicesBanner.png"
+           imgSrc="/compressed/ServicesBanner.png"
            imgAlt="Banner Image"
            />
 
             <h1 className={styles.SectionHeading}>Примеры работ</h1>
 
-            <img className={styles.bigImage} src="/images/BigWatchConstructor.png" alt="" />
+            <img className={styles.bigImage} src="/compressed/BigWatchConstructor.png" alt="" />
            
             <BeforeAfterLine/>
 

@@ -11,8 +11,8 @@ jest.mock("./ServiceCard/ServiceCard.jsx", () => ({
 
 describe("Services Component", () => {
   const mockCards = [
-    { serviceName: "Service 1", serviceSrc: "/images/service1.jpg", serviceAlt: "Service 1" },
-    { serviceName: "Service 2", serviceSrc: "/images/service2.jpg", serviceAlt: "Service 2" },
+    { serviceName: "Service 1", serviceSrc: "/compressed/service1.jpg", serviceAlt: "Service 1" },
+    { serviceName: "Service 2", serviceSrc: "/compressed/service2.jpg", serviceAlt: "Service 2" },
   ];
 
   it("renders the correct number of service cards", () => {

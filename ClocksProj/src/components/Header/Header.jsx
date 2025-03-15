@@ -16,7 +16,7 @@ const Header = (props) => {
 
             <div className={styles.logoName}>
                 <Logo
-                logoSrc="/images/Logo.png"
+                logoSrc="/compressed/Logo.png"
                 logoAlt="kskkwkw"
                 />
                 <h1 onClick={() => navigate("/")} className={styles.Heading}>Мастерская время</h1>
@@ -39,8 +39,8 @@ const Header = (props) => {
             </div>
 
             <div className={styles.contactInfo}>
-                    <img className={styles.linkBtn} src="/images/InstagramIcon.png" alt="" />
-                    <img className={styles.linkBtn} src="/images/TelegramIcon.png" alt="" />
+                    <img className={styles.linkBtn} src="/compressed/InstagramIcon.png" alt="" />
+                    <img className={styles.linkBtn} src="/compressed/TelegramIcon.png" alt="" />
             </div>
 
             <BurgerMenu/>

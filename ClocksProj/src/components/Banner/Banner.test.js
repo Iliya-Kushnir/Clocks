@@ -31,7 +31,7 @@ describe("Banner Component", () => {
     );
 
     expect(ImageSwitcher).toHaveBeenCalledWith(
-      { images: ["/images/HomeBanner.png", "/images/HomeBanner2.jpg", "/images/HomeBanner3.jpg"] },
+      { images: ["/compressed/HomeBanner.png", "/compressed/HomeBanner2.jpg", "/compressed/HomeBanner3.jpg"] },
       {}
     );
   });
@@ -44,7 +44,7 @@ describe("Banner Component", () => {
     );
 
     expect(ImageSwitcher).toHaveBeenCalledWith(
-      { images: ["/images/DefaultBanner.jpg"] },
+      { images: ["/compressed/DefaultBanner.jpg"] },
       {}
     );
   });
