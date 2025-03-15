@@ -14,6 +14,7 @@ const Services = (props) => {
                 serviceName={card.serviceName}
                 serviceSrc={card.serviceSrc}
                 serviceAlt={card.serviceAlt}
+                link={card.link}
                 />
             ))}
         </div>

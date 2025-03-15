@@ -30,13 +30,13 @@ const AllServicesPage = () => {
       ];
 
       const cards = [
-        { serviceName: "Ремонт механических,напольных часов", serviceSrc: "/images/Watch.png", serviceAlt: "first"},
-        { serviceName: "Замена элементов питания", serviceSrc: "/images/Watch2.png", serviceAlt: "second"},
-        { serviceName: "Полировка часов", serviceSrc: "/images/Watch3.png", serviceAlt: "third"},
-        { serviceName: "Чистка и смазка часов", serviceSrc: "/images/Watch4.png", serviceAlt: "fourth"},
-        { serviceName: "Замена ремешка или браслета", serviceSrc: "/images/Watch5.png", serviceAlt: "fifth"},
-        { serviceName: "Капитальный ремонт часов", serviceSrc: "/images/Watch6.png", serviceAlt: "sixth"}
-      ]
+        { serviceName: "Ремонт механических часов", serviceSrc: "/images/Watch.png", serviceAlt: "first", link: "/FirstService" },
+        { serviceName: "Замена элементов питания", serviceSrc: "/images/Watch2.png", serviceAlt: "second", link: "/ThirdService" },
+        { serviceName: "Полировка часов", serviceSrc: "/images/Watch3.png", serviceAlt: "third", link: "/SecondService" },
+        { serviceName: "Чистка и смазка часов", serviceSrc: "/images/Watch4.png", serviceAlt: "fourth", link: "/FifthService" },
+        { serviceName: "Замена ремешка или браслета", serviceSrc: "/images/Watch5.png", serviceAlt: "fifth", link: "/FourthService" },
+        { serviceName: "Капитальный ремонт часов", serviceSrc: "/images/Watch6.png", serviceAlt: "sixth", link: "/SixthService" }
+      ];
 
       return (
         <>

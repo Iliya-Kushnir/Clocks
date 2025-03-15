@@ -4,4 +4,16 @@ html, body, #root {
     padding: 0;
     overflow-x: hidden; 
     font-family: 'Montserrat', sans-serif;
+    font-family: 'A Plakat Titul', sans-serif;
+}
+
+@font-face {
+    font-family: 'A Plakat Titul';
+    src: url('./fonts/a_plakattitul_extrabold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+a {
+    text-decoration: none;
 }

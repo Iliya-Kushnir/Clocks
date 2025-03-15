@@ -3,25 +3,34 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInterval } from "react-use";
 import PropTypes from "prop-types";
 
-const ImageSwitcher = ({ images }) => {
+const ImageSwitcher = ({ images, setIsButtonVisible }) => {
   const [index, setIndex] = useState(0);
-
-  console.log(images)
 
   useInterval(() => {
     setIndex((prev) => (prev + 1) % images.length);
   }, 8000);
 
+  // Скрываем кнопку, если изображение последнее, показываем если это не так
+  React.useEffect(() => {
+    if (index === images.length - 1) {
+      setIsButtonVisible(false);
+    } else {
+      setIsButtonVisible(true);
+    }
+  }, [index, images.length, setIsButtonVisible]);
+
   return (
-    <div style={{
-      position: "absolute", // Вместо fixed
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      overflow: "hidden",
-      zIndex: -1 // Чтобы фон был позади всего
-    }}>
+    <div
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+        zIndex: -1
+      }}
+    >
       <AnimatePresence mode="wait">
         <motion.img
           key={images[index]}
@@ -44,6 +53,7 @@ const ImageSwitcher = ({ images }) => {
 
 ImageSwitcher.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  setIsButtonVisible: PropTypes.func.isRequired
 };
 
 export default ImageSwitcher;

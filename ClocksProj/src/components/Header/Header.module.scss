@@ -63,6 +63,10 @@
     .burgerMenu {
         display: none;
     }
+    
+    .LanguageSwitcher {
+        display: block;
+    }
 }
 
 
@@ -98,7 +102,13 @@
         .burgerMenu {
             display: block;
         }
+    
+        .LanguageSwitcher {
+            display: none;
+        }
     }
+
+
 }
 
 @media screen and (max-width: 767px) and (min-width: 375px) {
@@ -134,5 +144,11 @@
             display: block;
             cursor: pointer;
         }
+   
+        
+    .LanguageSwitcher {
+        display: none;
     }
+    }
+
 }

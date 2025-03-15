@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import styles from "./BatteryPage.module.scss";
+import styles from "./ExperiencePage.module.scss";
 import Header from "../components/Header/Header.jsx";
 import Banner from "../components/Banner/Banner.jsx";
 import MapSection from "../components/MapSection/MapSection.jsx";
@@ -12,8 +12,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
+import GridLayout from "./GridImg/GridImg.jsx";
 
-const BatteryPage = () => {
+const ExperiencePage = () => {
     const navigate = useNavigate();
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);
@@ -76,39 +77,38 @@ const BatteryPage = () => {
             <Header buttons={buttons} />
 
             <Banner
-            mainText="Замена єлементов питания"
-            secondaryText="Качественное полирование из разных материалов"
+            mainText="Опыт"
+            secondaryText="Мастер с более 20 летним опытом и 
+с более 300 выполненых заказов"
             imgSrc="/images/ServicesBanner.png"
             imgAlt="Banner Image"
             />
 
             <div className={styles.sectionWrapper}>
                 <Card
-                title="Что такое замена элементов питания?"
-                text="Если ваши часы остановились или начали отставать, скорее всего, им требуется замена элемента питания. Мы профессионально заменим батарейку в любых наручных, карманных и настенных часах, используя качественные источники питания, соответствующие вашему механизму. Процедура выполняется аккуратно, с проверкой контактов и герметичности корпуса, чтобы часы снова работали без сбоев. Доверьте нам замену батарейки – и ваши часы прослужат еще долгие годы!"
-                image="/images/Rectangle 28-13.png"
+                title="Сколько лет я уже в этой сфере?"
+                text="Я – опытный часовщик с более чем 20-летним стажем. Работаю с любыми видами часов – от классических механических до современных кварцевых и автоматических моделей. Любая поломка – это вызов, который я с удовольствием принимаю. Отреставрирую, настрою и верну вашим часам идеальную точность и внешний вид. Гарантирую качественный ремонт и индивидуальный подход к каждому заказу.
+Ваши часы – в надежных руках!"
+                image="/images/ExpPageImg.png"
                 />
                 <Card
-                title="Преимущества замены батарейки у нас:"
+                title="Почему именно я?"
                 points={[
-                    "Быстро и безопасно – замена занимает всего несколько минут.",
-                    "Оригинальные батарейки – используем только проверенные и долговечные элементы.",
-                    "Сохранение герметичности – проверяем и восстанавливаем защиту от влаги.",
-                    "Продление жизни механизма – своевременная замена предотвращает окисление контактов.",
-                    "Гарантия на работу – уверены в качестве каждой замены!",
+                    " 20+ лет опыта – я занимаюсь ремонтом часов более двух десятилетий и знаю все тонкости работы с любыми механизмами. Ремонт любых часов – механика, кварц, автоматические модели, винтажные экземпляры – починю все! Честность и качество – только профессиональный подход, никаких лишних услуг и скрытых платежей. Индивидуальный подход – внимательно изучаю каждую проблему и нахожу наилучшее решение. Безопасная доставка – вы можете отправить мне свои часы, а я быстро их починю и верну в надежной упаковке. Доверьте свои часы профессионалу – и они снова будут работать идеально!"
                 ]}
-                image="/images/Rectangle 29-2.png"
+                image="/images/ExpPageImg2.png"
                 />
-        </div>
+            </div>
+
+
+
+        <h1  className={styles.SectionHeading}>Мои работы</h1>
+
+                <GridLayout />
 
         <MainButton
         label="Позвонить нам"
-        onClick={() => console.log("Hello world!")}
         />
-
-        <h1  className={styles.SectionHeading}>Примеры работ</h1>
-
-        <BeforeAfterLine />
 
         <MapSection />
 
@@ -117,4 +117,4 @@ const BatteryPage = () => {
     )
 }
 
-export default BatteryPage
+export default ExperiencePage

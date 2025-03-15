@@ -11,6 +11,11 @@
     padding-left: 15px;
     cursor: pointer;
 
+    .cardLink {
+        text-decoration: none;
+        
+    }
+
     .cardText {
         font-family: 'Montserrat', sans-serif;
         font-weight: light; /* Light */

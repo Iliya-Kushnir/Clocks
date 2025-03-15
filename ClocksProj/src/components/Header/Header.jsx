@@ -30,9 +30,9 @@ const Header = (props) => {
                     type={button.type}
                 />
             ))}
-
-            <LanguageSwitcher/>
-
+                <div className={styles.LanguageSwitcher}>
+                    <LanguageSwitcher />
+                </div>
             <div className={styles.Numbers}>
                 <p className={styles.number}>+38 097-075-40-94</p>
                 <p className={styles.number}>+38 095-739-86-14</p>
