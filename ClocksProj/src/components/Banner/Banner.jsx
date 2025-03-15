@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router";
 import styles from "./Banner.module.scss";
@@ -13,8 +13,9 @@ const Banner = ({ mainText, secondaryText }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
-  const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для модального окна
-  const [isButtonVisible, setIsButtonVisible] = useState(true); // Состояние для видимости кнопки
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isButtonVisible, setIsButtonVisible] = useState(true);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const imagesByPage = {
     "/": ["/compressed/HomeBanner.png", "/compressed/HomeBanner2.jpg", "/compressed/HomeBanner3.jpg"],
@@ -41,26 +42,24 @@ const Banner = ({ mainText, secondaryText }) => {
 
       <p className={styles.secondaryText}>{secondaryText}</p>
 
-      <ImageSwitcher images={selectedImages} setIsButtonVisible={setIsButtonVisible} />
+      <ImageSwitcher images={selectedImages} setIsButtonVisible={setIsButtonVisible}/>
 
       {isHomePage && (
         <AnimatePresence>
           {isButtonVisible && (
             <motion.div
               key="button"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 1.2, ease: "easeOut" }} // ⬅ Увеличили до 1.2 сек
             >
-              <MainButton
-                label="Бесплатная консультация"
-                onClick={() => setIsModalOpen(true)} // Открываем модальное окно
-              />
+              <MainButton label="Бесплатная консультация" onClick={() => setIsModalOpen(true)} />
             </motion.div>
           )}
         </AnimatePresence>
       )}
+
 
       {/* Показываем модальное окно, если isModalOpen === true */}
       {isModalOpen && <RepairForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
