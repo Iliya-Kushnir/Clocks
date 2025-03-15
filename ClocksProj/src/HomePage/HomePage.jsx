@@ -14,9 +14,11 @@ import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import RepairForm from "../components/RepairForm/RepairForm.jsx";
+import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 
 
 const HomePage = () => {
+  const {t} = useLanguage();
   const navigate = useNavigate();
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
@@ -47,7 +49,6 @@ const HomePage = () => {
     { label: 'Расценки', onClick: handleClick2, type: 'button' },
     { label: 'Карта', onClick: handleClick3, type: 'button' },
     { label: 'Услуги', onClick: handleClick4, type: 'button' },
-    { label: 'Укр/Ру', onClick: handleClick5, type: 'button' },
   ];
 
   const cards = [
@@ -97,14 +98,17 @@ const HomePage = () => {
     });
   };
 
+  console.log(t)
+
+
   return (
     <>
       <ToastContainer />
       <Header buttons={buttons} />
 
       <Banner
-        mainText="Ремонт часов"
-        secondaryText="Ремонт часов в Харькове с качественным мастером"
+        mainText={t("homePage.title")}
+        secondaryText={t("homePage.subtitle")}
         imgSrc="/images/HomeBanner.png"
         imgAlt="Banner Image"
       />
@@ -125,7 +129,7 @@ const HomePage = () => {
       <h1 className={styles.SectionHeading}>Опыт мастера</h1>
 
       <WorkExp
-        label="Сколько лет я уже в этой сфере?"
+        label={t("buttons.consultation")}
         backgroundSrc="/images/BackGroundWatch.png"
         firstSrc="/images/bigClock1.png"
         secondSrc="/images/bigClock2.png"

@@ -12,10 +12,12 @@ import StrapPage from './StrapPage/StrapPage.jsx';
 import CleaningPage from './CleaningPage/CleaningPage.jsx';
 import MajorRenovationPage from './MajorRenovationPage/MajorRenovationPage.jsx';
 import DeliveryPage from './DeliveryPage/DeliveryPage.jsx';
+import { LanguageProvider } from './LanguageContext/LanguageContext';
 
 function App() {
   return (
     <>
+    <LanguageProvider>
       <BrowserRouter> {/* Обернули Routes в Router */}
         <Routes>
           <Route path='/' element={<HomePage />} />
@@ -31,6 +33,7 @@ function App() {
           <Route path='/DeliveryPage' element={<DeliveryPage />} />
         </Routes>
       </BrowserRouter>
+    </LanguageProvider>
     </>
   )
 }

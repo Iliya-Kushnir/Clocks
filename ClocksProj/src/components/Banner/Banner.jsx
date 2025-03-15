@@ -5,8 +5,11 @@ import styles from "./Banner.module.scss";
 import MainButton from "../MainButton/MainButton.jsx";
 import ImageSwitcher from "../../HomePage/ImageAttempt/ImageAttempt.jsx";
 import RepairForm from "../RepairForm/RepairForm.jsx"; // Импортируем форму
+import { useLanguage } from "../../LanguageContext/LanguageContext.jsx";
+
 
 const Banner = ({ mainText, secondaryText }) => {
+    const { language } = useLanguage()
     const location = useLocation();
     const isHomePage = location.pathname === "/";
     
@@ -31,7 +34,7 @@ const Banner = ({ mainText, secondaryText }) => {
     return (
         <div className={`${styles.Banner} ${isHomePage ? styles.homeBanner : styles.smallBanner}`}>
             <h1 className={`${styles.mainText} ${isHomePage ? styles.largeText : styles.smallText}`}>
-                {mainText}
+            {mainText}
             </h1>
 
             <p className={styles.secondaryText}>

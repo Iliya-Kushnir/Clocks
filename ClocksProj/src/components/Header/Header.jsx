@@ -4,6 +4,8 @@ import styles from "./Header.module.scss";
 import HeaderNavBtn from "./HeaderNavBtn/HeaderNavBtn.jsx";
 import Logo from "./Logo/Logo.jsx";
 import { useNavigate } from "react-router";
+import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher.jsx";
+import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx";
 
 const Header = (props) => {
     const {label, logoSrc, logoAlt, buttons} = props
@@ -29,6 +31,8 @@ const Header = (props) => {
                 />
             ))}
 
+            <LanguageSwitcher/>
+
             <div className={styles.Numbers}>
                 <p className={styles.number}>+38 097-075-40-94</p>
                 <p className={styles.number}>+38 095-739-86-14</p>
@@ -39,7 +43,7 @@ const Header = (props) => {
                     <img className={styles.linkBtn} src="/images/TelegramIcon.png" alt="" />
             </div>
 
-            <img className={styles.burgerMenu} src="/images/Segment.png" alt="" />
+            <BurgerMenu/>
         </div>
     )
 }
