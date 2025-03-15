@@ -14,10 +14,9 @@ export const schemas = {
       .matches(regx.email, "Email введен неправильно")
       .required("Email обязателен"),
     message: Yup.string().required("Опишите свою проблему"),
-    file: Yup.mixed()
-      .test("file", "Переместите сюда фото", (value) => {
-        return value instanceof File;
-      }),
+    file: Yup.mixed().test("file", "Переместите сюда фото", (value) => {
+      return value instanceof File;
+    }),
   }),
 };
 

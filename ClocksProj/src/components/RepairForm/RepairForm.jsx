@@ -10,97 +10,93 @@ import axios from "axios";
 import FileUpload from "../MapSection/ConsultationForm/FileUpload/FileUpload.jsx";
 
 const RepairForm = ({ isModalOpen, setIsModalOpen }) => {
-    const [isDisabled, setIsDisabled] = useState(false);
-    const [timer, setTimer] = useState(0);
-  
-    useEffect(() => {
-      let interval;
-      if (isDisabled && timer > 0) {
-        interval = setInterval(() => {
-          setTimer((prev) => {
-            if (prev <= 1) {
-              clearInterval(interval);
-              setIsDisabled(false);
-              return 0;
-            }
-            return prev - 1;
-          });
-        }, 1000);
-      }
-  
-      return () => clearInterval(interval);
-    }, [isDisabled, timer]);
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [timer, setTimer] = useState(0);
 
-    return (
-        <>
-        <ToastContainer />
-        {isModalOpen && (
-          <div className={styles.modalOverlay}>
-            <div className={styles.modalContent}>
-              <button className={styles.closeModal} type="button" onClick={() => setIsModalOpen(false)}>X</button>
-              <Formik
-  initialValues={initialValues}
-  validationSchema={schemas.custom}
-  onSubmit={(values, { resetForm }) => {
-    console.log("Submitted values:"); // Проверяем, какие данные отправляются
+  useEffect(() => {
+    let interval;
+    if (isDisabled && timer > 0) {
+      interval = setInterval(() => {
+        setTimer((prev) => {
+          if (prev <= 1) {
+            clearInterval(interval);
+            setIsDisabled(false);
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [isDisabled, timer]);
 
-    // Создаём объект FormData
+  // Функция для отправки данных на сервер
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    console.log(values);
     const formData = new FormData();
     formData.append("name", values.name);
     formData.append("email", values.email);
     formData.append("message", values.message);
-    
-    // Проверяем наличие файла перед добавлением
     if (values.file) {
       formData.append("file", values.file);
     }
-
-    axios
-      .post("https://clocksshopserver.onrender.com/email", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      })
-      .then((response) => {
-        if (response.status === 200) {
-          toast.success("Форма успешно отправлена!", {
-            position: "bottom-right",
-            autoClose: 3000,
-          });
-          resetForm();
-          setIsModalOpen(false);
-        }
-      })
-      .catch((error) => {
-        console.error("Ошибка при отправке формы:", error);
-        toast.error("Ошибка отправки. Попробуйте снова.", {
-          position: "bottom-right",
-          autoClose: 3000,
-        });
+  
+    try {
+      const response = await axios.post("https://clocksshopserver.onrender.com/email", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
-  }}
->
-  {({ setFieldValue, touched, errors }) => (
-    <Form className={styles.consultationForm}>
-      <h1 className={styles.formLabel}>Записаться на ремонт</h1>
+  
+      toast.success("Данные успешно отправлены!"); // Показываем тост
+  
+      setTimeout(() => {
+        resetForm(); 
+        setIsModalOpen(false); // Закрываем модалку через 2 секунды
+      }, 2000);
+  
+    } catch (error) {
+      toast.error("Ошибка отправки данных!");
+      console.error(error);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+  
 
-      <p className={styles.paragraph}>Запишите ваши данные и мы с вами свяжемся как только сможем, ожидание может составлять 1-2 дня</p>
-      
-      <Input name="name" id="name" placeholder="Ваше имя" />
-      <Input name="email" id="email" placeholder="Ваш email" />
-      <Input name="message" id="message" placeholder="Описание проблемы" />
-      <FileUpload setFieldValue={setFieldValue} />
+  return (
+    <>
+      <ToastContainer />
+      {isModalOpen && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modalContent}>
+            <button className={styles.closeModal} type="button" onClick={() => setIsModalOpen(false)}>X</button>
+            <Formik
+              initialValues={initialValues}
+              validationSchema={schemas.custom}
+              onSubmit={handleSubmit}
+            >
+              {({ setFieldValue, isSubmitting }) => (
+                <Form className={styles.consultationForm}>
+                  <h1 className={styles.formLabel}>Записаться на ремонт</h1>
+                  <p className={styles.paragraph}>Запишите ваши данные и мы с вами свяжемся как только сможем, ожидание может составлять 1-2 дня</p>
 
-      <Button type="submit" disabled={isDisabled}>
-        {isDisabled ? `Подождите ${timer} сек` : "Записаться"}
-      </Button>
-    </Form>
-  )}
-</Formik>
+                  <Input name="name" id="name" placeholder="Ваше имя" />
+                  <Input name="email" id="email" placeholder="Ваш email" />
+                  <Input name="message" id="message" placeholder="Описание проблемы" />
+                  <FileUpload name="file" setFieldValue={setFieldValue} />
 
-            </div>
+                  <Button type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Отправка..." : "Записаться"}
+                  </Button>
+                </Form>
+              )}
+            </Formik>
           </div>
-        )}
-        </>
-    );
-}
+        </div>
+      )}
+    </>
+  );
+};
 
 export default RepairForm;

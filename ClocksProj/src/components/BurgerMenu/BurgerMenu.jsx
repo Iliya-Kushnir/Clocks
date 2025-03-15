@@ -30,7 +30,6 @@ const BurgerMenu = () => {
           <li><Link to="/Examples">Работы</Link></li>
           <li><Link to="/PriceList">Расценки</Link></li>
           <li><LanguageSwitcher /></li>
-          <li>penis</li>
         </ul>
       </div>
     </div>

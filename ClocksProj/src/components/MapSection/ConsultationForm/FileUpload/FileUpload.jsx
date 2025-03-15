@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./FileUpload.module.scss";
 
-  const FileUpload = ({ name, setFieldValue }) => {
+const FileUpload = ({ name, setFieldValue }) => {
   const [preview, setPreview] = useState(null);
   const [dragging, setDragging] = useState(false);
   const [file, setFile] = useState(null);
@@ -54,5 +54,4 @@ import styles from "./FileUpload.module.scss";
   );
 };
 
-
-export default FileUpload
+export default FileUpload;
