@@ -34,8 +34,8 @@ const Header = (props) => {
                     <LanguageSwitcher />
                 </div>
             <div className={styles.Numbers}>
-                <p className={styles.number}>+38 097-075-40-94</p>
-                <p className={styles.number}>+38 095-739-86-14</p>
+                <a className={styles.number} href="tel:+380970754094">+38 097-075-40-94</a>
+                <a className={styles.number} href="tel:+380957398614">+38 097-075-40-94</a>
             </div>
 
             <div className={styles.contactInfo}>

@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
+import CallButton from "../components/CallBtn/CallBtn.jsx";
 
 const PolishingPage = () => {
     const navigate = useNavigate();
@@ -100,10 +101,7 @@ const PolishingPage = () => {
                 />
         </div>
 
-        <MainButton
-        label="Позвонить нам"
-        onClick={() => console.log("Hello world!")}
-        />
+        <CallButton/>
 
         <h1  className={styles.SectionHeading}>Примеры работ</h1>
 

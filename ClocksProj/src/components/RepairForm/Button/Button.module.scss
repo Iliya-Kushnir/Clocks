@@ -8,7 +8,7 @@
     border: none;
     margin-top: 31px;
     
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: lighter;
     line-height: 16.41px;
@@ -17,4 +17,18 @@
     justify-items: center;
     margin-top: 30px;
     margin: 30px auto;
+}
+
+@media  screen and (max-width: 1439px) and (min-width: 768px) {    
+    .submit {
+        width: 319px;
+        height: 97px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .submit {
+        width: 200px;
+        height: 54px;
+    }
 }

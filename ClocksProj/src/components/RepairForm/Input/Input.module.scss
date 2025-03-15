@@ -35,3 +35,61 @@
         color: red;
     }
 }
+
+@media  screen and (max-width: 1439px) and (min-width: 768px) {    
+    .inpWrapper {
+        width: 100%;
+        margin-top: 23px;
+    
+        label {
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 100;
+            line-height: 18.75px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            color: #3C4242;
+        }
+    
+        input {
+            height: 47px;
+            font-size: 14px;
+        }
+    
+        .error {
+
+            font-size: 14px;
+
+        }
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    .inpWrapper {
+        width: 100%;
+        margin-top: 23px;
+    
+        label {
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 100;
+            line-height: 18.75px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            color: #3C4242;
+        }
+    
+        input {
+            height: 30px;
+            font-size: 12px;
+        }
+    
+        .error {
+
+            font-size: 12px;
+
+        }
+    }
+}

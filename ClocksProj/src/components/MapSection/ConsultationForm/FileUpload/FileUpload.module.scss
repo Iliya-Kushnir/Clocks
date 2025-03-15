@@ -9,10 +9,12 @@
     cursor: pointer;
     transition: 0.3s;
     margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .dropZone.dragging {
     background-color: #e0f7ff;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .hiddenInput {
@@ -23,6 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .preview {
@@ -31,3 +34,17 @@
     object-fit: cover;
   }
   
+
+  @media  screen and (max-width: 1439px) and (min-width: 768px) {    
+    .dropZone {
+      width: 219px;
+      height: 195px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+  .dropZone {
+    width: 177px;
+    height: 158px;
+  }
+}
