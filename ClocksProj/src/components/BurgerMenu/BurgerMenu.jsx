@@ -13,6 +13,7 @@ const BurgerMenu = () => {
   };
 
   return (
+    <>
     <div className={styles.burgerMenu}>
       {/* Кнопка гамбургера */}
       <button className={styles.burgerButton} onClick={toggleMenu}>
@@ -21,20 +22,24 @@ const BurgerMenu = () => {
         <span className={isOpen ? styles.open : ""}></span>
       </button>
 
-      {/* Меню */}
-      <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
-        <ul>
-          <li><Link className={styles.text}  to="/">Главная</Link></li>
-          <li><Link className={styles.text} to="/AllServices">Услсуги</Link></li>
-          <li><Link className={styles.text} to="/DeliveryPage">Доставка</Link></li>
-          <li><Link className={styles.text} to="/Examples">Работы</Link></li>
-          <li><Link className={styles.text} to="/PriceList">Расценки</Link></li>
-          <li><LanguageSwitcher /></li>
-          <li><button>insta</button></li>
-          <li><button>telegram</button></li>
-        </ul>
-      </div>
+      
     </div>
+
+    <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
+    <ul>
+      <li><Link className={styles.text}  to="/">Главная</Link></li>
+      <li><Link className={styles.text} to="/AllServices">Услсуги</Link></li>
+      <li><Link className={styles.text} to="/DeliveryPage">Доставка</Link></li>
+      <li><Link className={styles.text} to="/Examples">Работы</Link></li>
+      <li><Link className={styles.text} to="/PriceList">Расценки</Link></li>
+      <li><LanguageSwitcher /></li>
+      <li className={styles.socialMedia}>
+        <img className={styles.linkBtn} src="/images/InstagramIcon.png" alt="" /> 
+        <img className={styles.linkBtn} src="/images/TelegramIcon.png" alt="" />
+      </li>
+    </ul>
+    </div>
+</>
   );
 };
 
