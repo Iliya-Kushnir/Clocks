@@ -224,7 +224,7 @@ const translations = {
             map: "Карта",
             services: "Услуги",
             works: "Работы",
-            main: "Главня"
+            main: "Главная"
         }
     },
     ua: {
