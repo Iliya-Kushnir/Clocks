@@ -19,7 +19,7 @@ const Banner = ({ mainText, secondaryText }) => {
 
   const imagesByPage = {
     "/": ["/compressed/HomeBanner.png", "/compressed/HomeBanner2.jpg", "/compressed/HomeBanner3.jpg"],
-    "/PriceList": ["/compressed/PricePageBanner.png", "/compressed/PricePageBanner2.png", "/compressed/PricePageBanner3.png"],
+    "/PriceList": ["/compressed/PricePageBanner3.png", "/compressed/PricePageBanner2.png", "/compressed/PricePageBanner3.png"],
     "/DeliveryPage": ["/compressed/DeliveryBanner.png", "/compressed/DeliveryBanner2.png", "/compressed/DeliveryBanner3.png"],
     "/Examples": ["/compressed/ExamplesBanner.png", "/compressed/ExamplesBanner2.png", "/compressed/ExamplesBanner3.png"],
     "/AllServices": ["/compressed/ServicesBanner.png", "/compressed/ServicesBanner2.png", "/compressed/ServicesBanner3.png"],
