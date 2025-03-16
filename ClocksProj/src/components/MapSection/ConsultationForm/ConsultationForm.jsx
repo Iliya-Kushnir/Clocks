@@ -7,9 +7,10 @@ import { initialValues, schemas } from "./helper";
 import { Input } from "./Input/Input";
 import { Button } from "./Button/Button";
 import axios from "axios";
-//import FileUpload from "./FileUpload/FileUpload.jsx";
+import { useLanguage } from "../../../LanguageContext/LanguageContext.jsx"; // Импортируем хук для перевода
 
 const ConsultationForm = () => {
+  const { t } = useLanguage(); // Используем функцию перевода
   const [isDisabled, setIsDisabled] = useState(false);
   const [timer, setTimer] = useState(0);
 
@@ -38,10 +39,10 @@ const ConsultationForm = () => {
         initialValues={initialValues}
         validationSchema={schemas.custom}
         onSubmit={(values, { resetForm }) => {
-          if (isDisabled) return; // Если кнопка заблокирована — ничего не делаем
+          if (isDisabled) return;
 
           setIsDisabled(true);
-          setTimer(15); // запуск таймера на 15 секунд
+          setTimer(15);
 
           axios
             .post("https://clocksshopserver.onrender.com/phone-email", {
@@ -50,7 +51,7 @@ const ConsultationForm = () => {
             })
             .then((response) => {
               if (response.status === 200) {
-                toast.success("Форма успешно отправлена!", {
+                toast.success(t("form.successMessage"), {
                   position: "bottom-right",
                   autoClose: 3000,
                 });
@@ -58,21 +59,20 @@ const ConsultationForm = () => {
               }
             })
             .catch((error) => {
-              toast.error("Ошибка отправки. Попробуйте снова.", {
+              toast.error(t("form.errorMessage"), {
                 position: "bottom-right",
                 autoClose: 3000,
               });
               console.error("Ошибка запроса:", error);
             });
         }}
-        className={styles.consultationForm}
       >
         {({ errors, touched }) => (
           <Form className={styles.consultationForm}>
-            <h1 className={styles.fromLabel}>Записаться на консультацию</h1>
+            <h1 className={styles.fromLabel}>{t("form.title")}</h1>
 
-            <Input name="Name" id="Name" placeholder="Ваше имя" />
-            <Input name="phone" id="phone" placeholder="Номер телефона" />
+            <Input name="Name" id="Name" placeholder={t("form.namePlaceholder")} />
+            <Input name="phone" id="phone" placeholder={t("form.phonePlaceholder")} />
             <Button
               type="submit"
               disabled={isDisabled}
@@ -81,7 +81,7 @@ const ConsultationForm = () => {
                 cursor: isDisabled ? "not-allowed" : "pointer",
               }}
             >
-              {isDisabled ? `Подождите ${timer} сек` : "Записаться"}
+              {isDisabled ? `${t("form.waitMessage")} ${timer} сек` : t("form.submitButton")}
             </Button>
           </Form>
         )}

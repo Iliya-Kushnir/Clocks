@@ -34,15 +34,24 @@
     margin: auto;
 }
 
-@media  screen and (max-width: 1439px) and (min-width: 768px) {
-    .SectionHeading {
-        display: none;    
-    }
-    
-    
+@media  screen and (max-width: 1439px) and (min-width: 768px) {    
     .bigImage {      
         width: 400px;
         height: 400px;
+    }
+
+    .SectionHeading {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900; /* Light */
+        font-size: 31px;
+        line-height: auto;
+        letter-spacing: 0%;
+        text-align: center;
+        
+        color: #8B8B8B;
+        opacity: 1;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
 
@@ -58,5 +67,19 @@
     .bigImage {      
         width: 200px;
         height: 200px;
+    }
+
+    .SectionHeading {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900; /* Light */
+        font-size: 16px;
+        line-height: auto;
+        letter-spacing: 0%;
+        text-align: center;
+        
+        color: #8B8B8B;
+        opacity: 1;
+        margin-top: 36px;
+        margin-bottom: 30px; 
     }
 }

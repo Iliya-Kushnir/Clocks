@@ -8,10 +8,12 @@ import MapSection from "../components/MapSection/MapSection.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import BeforeAfterLine from "../components/BeforeAfterLine/BeforeAfterLine.jsx";
 import { useNavigate } from "react-router";
+import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 
 
 const AllServicesPage = () => {
   const navigate = useNavigate()
+  const {t} = useLanguage();
 
 
 
@@ -30,12 +32,12 @@ const AllServicesPage = () => {
       ];
 
       const cards = [
-        { serviceName: "Ремонт механических часов", serviceSrc: "/compressed/Watch.png", serviceAlt: "first", link: "/FirstService" },
-        { serviceName: "Замена элементов питания", serviceSrc: "/compressed/Watch2.png", serviceAlt: "second", link: "/ThirdService" },
-        { serviceName: "Полировка часов", serviceSrc: "/compressed/Watch3.png", serviceAlt: "third", link: "/SecondService" },
-        { serviceName: "Чистка и смазка часов", serviceSrc: "/compressed/Watch4.png", serviceAlt: "fourth", link: "/FifthService" },
-        { serviceName: "Замена ремешка или браслета", serviceSrc: "/compressed/Watch5.png", serviceAlt: "fifth", link: "/FourthService" },
-        { serviceName: "Капитальный ремонт часов", serviceSrc: "/compressed/Watch6.png", serviceAlt: "sixth", link: "/SixthService" }
+        { serviceName: t("ServiceCards.MechaicWatch"), serviceSrc: "/compressed/Watch.png", serviceAlt: "first", link: "/FirstService" },
+        { serviceName: t("ServiceCards.Battery"), serviceSrc: "/compressed/Watch2.png", serviceAlt: "second", link: "/ThirdService" },
+        { serviceName: t("ServiceCards.Polishing"), serviceSrc: "/compressed/Watch3.png", serviceAlt: "third", link: "/SecondService" },
+        { serviceName: t("ServiceCards.Сleaning"), serviceSrc: "/compressed/Watch4.png", serviceAlt: "fourth", link: "/FifthService" },
+        { serviceName: t("ServiceCards.Straps"), serviceSrc: "/compressed/Watch5.png", serviceAlt: "fifth", link: "/FourthService" },
+        { serviceName: t("ServiceCards.Capital"), serviceSrc: "/compressed/Watch6.png", serviceAlt: "sixth", link: "/SixthService" }
       ];
 
       return (
@@ -57,15 +59,17 @@ const AllServicesPage = () => {
             cards={cards}
             />
 
-            <h1 className={styles.SectionHeading}>Примеры работ</h1>
+            <h1 className={styles.SectionHeading}>{t("homePage.examplesTitle")}</h1>
 
             <BeforeAfterLine/>
 
-            <h1  className={styles.SectionHeading}>Как нас найти?</h1>
+            <h1  className={styles.SectionHeading}>{t("homePage.findUsTitle")}</h1>
 
-            <MapSection/>
+            <MapSection
+              adress={t("homePage.adress")}
+            />
 
-            <h1 className={styles.Delivery}>ПРИНИМАЕМ ЗАКАЗЫ СО ВСЕЙ УКРАИНЫ ПО ПОЧТЕ!</h1>
+            <h1 className={styles.Delivery}>{t("homePage.deliveryText")}</h1>
 
             <Footer
                 buttons={buttons}

@@ -1,16 +1,20 @@
-.SectionHeading {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal; /* Light */
-    font-size: 51px;
-    line-height: auto;
-    letter-spacing: 0%;
-    text-align: center;
-    
-    color: #8B8B8B;
-    opacity: 1;
-    margin-top: 112px;
-    
+.p {
+    .SectionHeading {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal; /* Light */
+        font-size: 51px;
+        line-height: auto;
+        letter-spacing: 0%;
+        text-align: center;
+        
+        color: #8B8B8B;
+        opacity: 1;
+        margin-top: 112px;
+        
+    }
 }
+
+
 
 .Delivery {
     font-family: 'Montserrat', sans-serif;
@@ -34,6 +38,24 @@
     margin: auto;
 }
 
+@media  screen and (max-width: 1439px) and (min-width: 768px) {
+    .p {
+        .SectionHeading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900; /* Light */
+            font-size: 31px;
+            line-height: auto;
+            letter-spacing: 0%;
+            text-align: center;
+            
+            color: #8B8B8B;
+            opacity: 1;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
 @media screen and (max-width: 767px) and (min-width: 375px) {
     .sectionWrapper {
         width: 345px;
@@ -41,5 +63,21 @@
         margin-bottom: 22px;
         margin-top: 0px;
         gap: 30px;
+    }
+
+    .p {
+        .SectionHeading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900; /* Light */
+            font-size: 16px;
+            line-height: auto;
+            letter-spacing: 0%;
+            text-align: center;
+            
+            color: #8B8B8B;
+            opacity: 1;
+            margin-top: 36px;
+            margin-bottom: 30px; 
+        }
     }
 }

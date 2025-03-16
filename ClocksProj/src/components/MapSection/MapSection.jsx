@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./MapSection.module.scss"
 import PropTypes from "prop-types";
 import IslandMap from "./isLandMap/isLandMap.jsx";
@@ -6,7 +6,12 @@ import "leaflet/dist/leaflet.css";
 import ConsultationForm from "./ConsultationForm/ConsultationForm.jsx";
 
 const MapSection = (props) => {
-    const {} = props
+    const {adress} = props
+
+    //Адрес мастерской: Харьков, Полтавский Шлях 31 офисный центр, офис 311
+    //
+    //
+
 
     return (
         <div className={styles.sectionWrapper}>
@@ -15,7 +20,7 @@ const MapSection = (props) => {
             <div className={styles.adressSection}>
                 <div className={styles.locationSection}>
                     <img className={styles.pointer} src="/compressed/Vector.png" alt="MapPointer" />
-                    <p className={styles.adress}>Адрес мастерской: Харьков, Полтавский Шлях 31 офисный центр, офис 311</p>
+                    <p className={styles.adress}>{adress}</p>
                 </div>
 
                 <div className={styles.phoneSection}>

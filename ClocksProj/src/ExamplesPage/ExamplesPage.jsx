@@ -5,6 +5,7 @@ import Banner from "../components/Banner/Banner.jsx";
 import BeforeAfterLine from "../components/BeforeAfterLine/BeforeAfterLine.jsx";
 import MapSection from "../components/MapSection/MapSection.jsx";
 import Footer from "../components/Footer/Footer.jsx";
+import CallButton from "../components/CallBtn/CallBtn.jsx";
 
 const ExamplesPage = () => {
 
@@ -42,6 +43,10 @@ const ExamplesPage = () => {
             <BeforeAfterLine/>
 
             <BeforeAfterLine/>
+
+            <CallButton />
+
+            <h1 className={styles.SectionHeading}>Где нас найти?</h1>
 
             <MapSection/>
 

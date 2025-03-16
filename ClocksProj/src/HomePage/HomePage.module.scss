@@ -59,6 +59,7 @@
     .SectionHeading {
         font-size: 16px;
         margin-top: 40px;   
+        font-weight: bold;
     }
 
     .bigImage {
@@ -68,5 +69,25 @@
 
     .Delivery {
         display: none;
+    }
+
+    .tabel {
+        width: 735px;
+        margin: auto;
+    }
+}
+
+
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+
+    .SectionHeading {
+        font-size: 31px;
+        margin-top: 40px;   
+        font-weight: bold;
+    }
+
+    .tabel {
+        width: 317px;
     }
 }

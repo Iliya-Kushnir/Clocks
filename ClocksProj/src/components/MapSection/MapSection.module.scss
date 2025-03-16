@@ -114,6 +114,7 @@
        margin-bottom: 68px;
        padding-left: 0;
        padding-right: 0;
+       margin-top: 60px;
     
     
         .adressSection {
@@ -147,7 +148,7 @@
                 .sectionLabel {
                     font-family: 'Montserrat', sans-serif;
                     font-weight: light;
-                    font-size: 12px;
+                    font-size: 18px;
                     line-height: auto;
                     letter-spacing: 0%;
                     text-align: left;
@@ -161,13 +162,13 @@
                 .phoneWrapper {
                     display: flex;
                     flex-direction: row;
-                    align-items: end;
+                    align-items: center;
                     gap: 5px;
     
                     .phoneIcon {
                         display: block;
-                        width: 7px;
-                        height: 7px;
+                        width: 15px;
+                        height: 15px;
                     }
     
                     .number {
@@ -189,7 +190,7 @@
        margin-bottom: 68px;
        padding-left: 0;
        padding-right: 0;
-    
+        margin-top: 30px;
     
         .adressSection {
             flex-direction: column;

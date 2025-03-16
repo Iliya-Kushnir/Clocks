@@ -86,10 +86,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 700px; /* Фиксированная минимальная ширина контейнера */
-            
+            width: 735px; /* Фиксированная минимальная ширина контейнера */
+            height: 709px;
+
             .priceList {
-                width: 700px;
+                width: 735px;
                 height: 709px;
                 border-collapse: collapse;
                 background: linear-gradient(to bottom, #A7A7A7, #273B46);
@@ -109,7 +110,7 @@
                     padding: 0;
                     border: 1px solid rgba(255, 255, 255, 0.3);
                     text-align: center;
-                    white-space: nowrap; /* Запрещает перенос строк */
+                    white-space: normal; /* Запрещает перенос строк */
                     background: transparent;
                     width: 70px; /* Убираем фон у ячеек */
                     text-align: center;
@@ -135,7 +136,8 @@
                 }
         
                 tbody td {
-                    font-size: 10px;
+                    font-size: 16px;
+                    text-align: center;
                 }
         
                 tbody tr:nth-child(even) {
@@ -156,7 +158,6 @@
             justify-content: center;
             align-items: center;
             width: 317px; /* Фиксированная минимальная ширина контейнера */
-            margin: auto;
 
             .priceList {
                 width: 317px;

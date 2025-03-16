@@ -53,28 +53,16 @@ const HomePage = () => {
   ];
 
   const cards = [
-    { serviceName: "Ремонт механических часов", serviceSrc: "/compressed/Watch.png", serviceAlt: "first", link: "/FirstService" },
-    { serviceName: "Замена элементов питания", serviceSrc: "/compressed/Watch2.png", serviceAlt: "second", link: "/ThirdService" },
-    { serviceName: "Полировка часов", serviceSrc: "/compressed/Watch3.png", serviceAlt: "third", link: "/SecondService" },
-    { serviceName: "Чистка и смазка часов", serviceSrc: "/compressed/Watch4.png", serviceAlt: "fourth", link: "/FifthService" },
-    { serviceName: "Замена ремешка или браслета", serviceSrc: "/compressed/Watch5.png", serviceAlt: "fifth", link: "/FourthService" },
-    { serviceName: "Капитальный ремонт часов", serviceSrc: "/compressed/Watch6.png", serviceAlt: "sixth", link: "/SixthService" }
+    { serviceName: t("ServiceCards.MechaicWatch"), serviceSrc: "/compressed/Watch.png", serviceAlt: "first", link: "/FirstService" },
+    { serviceName: t("ServiceCards.Battery"), serviceSrc: "/compressed/Watch2.png", serviceAlt: "second", link: "/ThirdService" },
+    { serviceName: t("ServiceCards.Polishing"), serviceSrc: "/compressed/Watch3.png", serviceAlt: "third", link: "/SecondService" },
+    { serviceName: t("ServiceCards.Сleaning"), serviceSrc: "/compressed/Watch4.png", serviceAlt: "fourth", link: "/FifthService" },
+    { serviceName: t("ServiceCards.Straps"), serviceSrc: "/compressed/Watch5.png", serviceAlt: "fifth", link: "/FourthService" },
+    { serviceName: t("ServiceCards.Capital"), serviceSrc: "/compressed/Watch6.png", serviceAlt: "sixth", link: "/SixthService" }
   ];
 
-  const services = [
-    { name: "Замена ремешка или браслета", price: "от 600 грн", duration: "1-2 дня" },
-    { name: "Замена батарейки", price: "от 300 грн", duration: "1-2 дня" },
-    { name: "Замена стекла", price: "от 400 грн", duration: "1-2 дня" },
-    { name: "Водонепроницаемая защита", price: "от 500 грн", duration: "2-3 дня" },
-    { name: "Полировка корпуса и браслета", price: "от 1000 грн", duration: "2-3 дня" },
-    { name: "Проверка точности хода", price: "от 200 грн", duration: "1-2 дня" },
-    { name: "Реставрация антикварных часов", price: "от 3000 грн", duration: "7+ дней" },
-    { name: "Обновление водозащиты", price: "от 800 грн", duration: "2-3 дня" },
-    { name: "Капитальный ремонт часов", price: "от 500 грн", duration: "2-3 дня" },
-    { name: "Замена стрелок и циферблата", price: "от 800 грн", duration: "2-3 дня" },
-    { name: "Чистка и смазка", price: "от 600 грн", duration: "1-2 дня" },
-    { name: "Ремонт или замена механизма хронограф", price: "от 2000 грн", duration: "3-4 дня" },
-  ];
+  const services = Object.values(t("ServicesList")).slice(0, 12);
+
 
   useEffect(() => {
     let timer;
@@ -134,6 +122,7 @@ const HomePage = () => {
         backgroundSrc="/compressed/BackGroundWatch.png"
         firstSrc="/compressed/bigClock1.png"
         secondSrc="/compressed/bigClock2.png"
+        description={t("homePage.description")}
       />
 
       <MainButton
@@ -143,7 +132,7 @@ const HomePage = () => {
 
       <h1 className={styles.SectionHeading}>{t("homePage.pricingTitle")}</h1>
 
-      <div ref={section1Ref} className="p-5">
+      <div ref={section1Ref} className={styles.tabel}>
         <PriceList services={services} />
       </div>
 
@@ -169,7 +158,9 @@ const HomePage = () => {
       <h1 ref={section2Ref}  className={styles.SectionHeading}>{t("homePage.findUsTitle")}</h1>
 
       
-    <MapSection/>
+    <MapSection
+    adress={t("homePage.adress")}
+    />
       
 
       <h1 className={styles.Delivery}>{t("homePage.deliveryText")}</h1>
