@@ -13,8 +13,11 @@ import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import GridLayout from "./GridImg/GridImg.jsx";
+import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import CallButton from "../components/CallBtn/CallBtn.jsx";
 
 const ExperiencePage = () => {
+    const {t} = useLanguage()
     const navigate = useNavigate();
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);
@@ -77,40 +80,36 @@ const ExperiencePage = () => {
             <Header buttons={buttons} />
 
             <Banner
-            mainText="Опыт"
-            secondaryText="Мастер с более 20 летним опытом и 
-с более 300 выполненых заказов"
+                mainText={t("expPage.title")}
+                secondaryText={t("expPage.subtitle")}
             imgSrc="/compressed/ServicesBanner.png"
             imgAlt="Banner Image"
             />
 
             <div className={styles.sectionWrapper}>
                 <Card
-                title="Сколько лет я уже в этой сфере?"
-                text="Я – опытный часовщик с более чем 20-летним стажем. Работаю с любыми видами часов – от классических механических до современных кварцевых и автоматических моделей. Любая поломка – это вызов, который я с удовольствием принимаю. Отреставрирую, настрою и верну вашим часам идеальную точность и внешний вид. Гарантирую качественный ремонт и индивидуальный подход к каждому заказу.
-Ваши часы – в надежных руках!"
+                    title={t("expPage.question")}
+                    text={t("expPage.description1")}
                 image="/compressed/ExpPageImg.png"
                 />
                 <Card
-                title="Почему именно я?"
-                points={[
-                    " 20+ лет опыта – я занимаюсь ремонтом часов более двух десятилетий и знаю все тонкости работы с любыми механизмами. Ремонт любых часов – механика, кварц, автоматические модели, винтажные экземпляры – починю все! Честность и качество – только профессиональный подход, никаких лишних услуг и скрытых платежей. Индивидуальный подход – внимательно изучаю каждую проблему и нахожу наилучшее решение. Безопасная доставка – вы можете отправить мне свои часы, а я быстро их починю и верну в надежной упаковке. Доверьте свои часы профессионалу – и они снова будут работать идеально!"
-                ]}
+                    title={t("expPage.advantagesTitle")}
+                    points={t("expPage.advantages", { returnObjects: true })}
                 image="/compressed/ExpPageImg2.png"
                 />
             </div>
 
 
 
-        <h1  className={styles.SectionHeading}>Мои работы</h1>
+        <h1  className={styles.SectionHeading}>{t("expPage.examplesTitle")}</h1>
 
                 <GridLayout />
 
-        <MainButton
-        label="Позвонить нам"
-        />
+        <CallButton/>
 
-        <MapSection />
+        <MapSection 
+        adress={t("homePage.adress")}
+        />
 
         <Footer buttons={buttons} />
         </>

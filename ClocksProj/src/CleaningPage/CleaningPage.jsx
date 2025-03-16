@@ -13,8 +13,10 @@ import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
+import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 
 const CleaningPage = () => {
+  const {t} = useLanguage()
     const navigate = useNavigate();
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);
@@ -77,38 +79,42 @@ const CleaningPage = () => {
             <Header buttons={buttons} />
 
             <Banner
-            mainText="Чистка и смазка часов"
-            secondaryText="Поддерживаем ваш механизм в отличном состоянии"
+            mainText={t("cleaningPage.title")}
+            secondaryText={t("cleaningPage.subtitle")}
             imgSrc="/compressed/ServicesBanner.png"
             imgAlt="Banner Image"
             />
 
             <div className={styles.sectionWrapper}>
                 <Card
-                title="Что такое смазка и чистка часов?"
-                text="Со временем в механизме часов накапливаются пыль и микрочастицы, которые ухудшают работу и точность хода. Смазка высыхает, что приводит к износу деталей. Профессиональная чистка и смазка помогают восстановить идеальную работу механизма. В нашей мастерской мы аккуратно разбираем часы, очищаем все элементы, обновляем смазку и собираем их заново, чтобы продлить срок службы и вернуть точность."
+                title={t("cleaningPage.explanatio1")}
+                text={t("cleaningPage.description1")}
                 image="/compressed/Rectangle 28-15.png"
                 />
                 <Card
-                title="Преимущества смазки и чистки часов у нас:"
+                title={t("cleaningPage.explanatio2")}
                 points={[
-                    "Продление срока службы – регулярный уход предотвращает износ деталей.",
-                    "Идеальная точность – устранение загрязнений восстанавливает стабильный ход.",
-                    "Оригинальные смазочные материалы – используем только качественные масла.",
-                    "Безопасность процесса – чистка проводится профессиональными инструментами.",
-                    "Гарантия результата – ваши часы будут работать, как новые!"
+                  t("cleaningPage.descriptionPoin1"),
+                  t("cleaningPage.descriptionPoin2"),
+                  t("cleaningPage.descriptionPoin3"),
+                  t("cleaningPage.descriptionPoin4"),
+                  t("cleaningPage.descriptionPoin5"),
                 ]}
                 image="/compressed/Rectangle 29-4.png"
                 />
         </div>
 
-        <CallButton/>
+        <CallButton
+        label={t("expPage.buttons.call")}
+        />
 
-        <h1  className={styles.SectionHeading}>Примеры работ</h1>
+        <h1  className={styles.SectionHeading}>{t("cleaningPage.sectionHeading")}</h1>
 
         <BeforeAfterLine />
 
-        <MapSection />
+        <MapSection 
+        adress={t("homePage.adress")}
+        />
 
         <Footer buttons={buttons} />
         </>

@@ -13,8 +13,10 @@ import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
+import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 
 const MajorRenovationPage = () => {
+  const {t} = useLanguage()
     const navigate = useNavigate();
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);
@@ -77,26 +79,26 @@ const MajorRenovationPage = () => {
             <Header buttons={buttons} />
 
             <Banner
-            mainText="Капитальный ремонт часов"
-            secondaryText="Капитальный ремонт с приятными мастерами"
+            mainText={t("capital.title")}
+            secondaryText={t("capital.subtitle")}
             imgSrc="/compressed/ServicesBanner.png"
             imgAlt="Banner Image"
             />
 
             <div className={styles.sectionWrapper}>
                 <Card
-                title="Что такое капитальный ремонт часов?"
-                text="Капитальный ремонт часов – это комплексная процедура, позволяющая восстановить их точность и продлить срок службы. Со временем детали изнашиваются, смазка теряет свойства, а механизмы загрязняются. В ходе ремонта мы полностью разбираем часы, очищаем и смазываем каждую деталь, заменяем изношенные элементы и настраиваем точность хода. После капитального ремонта ваши часы снова будут работать как новые!"
+                title={t("capital.explanatio1")}
+                text={t("capital.description1")}
                 image="/compressed/Rectangle 28-17.png"
                 />
                 <Card
-                title="Преимущества капитального ремонта у нас:"
+                title={t("capital.explanatio2")}
                 points={[
-                    "Полное восстановление механизма – устраняем все возможные неисправности.",
-                    "Точность хода – после регулировки часы будут работать без отклонений.",
-                    "Замена изношенных деталей – используем только оригинальные или аналогичные комплектующие.",
-                    "Профессиональная чистка и смазка – механизму возвращается плавность работы.",
-                    "Гарантия качества – уверены в результате каждого ремонта!"
+                  t("capital.descriptionPoin1"),
+                  t("capital.descriptionPoin2"),
+                  t("capital.descriptionPoin3"),
+                  t("capital.descriptionPoin4"),
+                  t("capital.descriptionPoin5"),
                 ]}
                 image="/compressed/Rectangle 29-6.png"
                 />
@@ -104,11 +106,13 @@ const MajorRenovationPage = () => {
 
         <CallButton/>
 
-        <h1  className={styles.SectionHeading}>Примеры работ</h1>
+        <h1  className={styles.SectionHeading}>{t("capital.sectionHeading")}</h1>
 
         <BeforeAfterLine />
 
-        <MapSection />
+        <MapSection 
+         adress={t("homePage.adress")}
+        />
 
         <Footer buttons={buttons} />
         </>

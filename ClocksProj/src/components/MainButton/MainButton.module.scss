@@ -7,30 +7,41 @@
     font-weight: 900; 
     font-size: 36px;
     line-height: normal;
-    letter-spacing: 0%;
     opacity: 1;
     padding-top: 20px;
     padding-bottom: 20px;
-
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 100px;
+    margin-top: 100px;  // Обычный отступ
 }
 
-@media  screen and (max-width: 1439px) and (min-width: 768px) {
+.noMargin {
+    margin-top: 0 !important; // Убираем отступ
+}
+
+/* Адаптивность */
+@media (max-width: 1439px) and (min-width: 768px) {
     .mainButton {
         width: 535px;
         font-size: 30px;
         margin-top: 50px;
     }
+
+    .noMargin {
+        margin-top: 0 !important;
+    }
 }
 
-@media screen and (max-width: 767px) and (min-width: 375px) {
+@media (max-width: 767px) and (min-width: 375px) {
     .mainButton {
         width: 273px;
         font-size: 15px;
         height: 40px;
         padding: 0;
         margin-top: 30px;
+    }
+
+    .noMargin {
+        margin-top: 0 !important;
     }
 }

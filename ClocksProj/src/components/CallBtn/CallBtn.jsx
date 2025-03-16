@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "./CallBtn.module.scss"
+import { useLanguage } from "../../LanguageContext/LanguageContext";
 
 const CallButton = () => {
+  const {t} = useLanguage()
   return (
     <button className={styles.CallButton}>
         <a 
         className={styles.label}
-        href="tel:+380991234567">Позвонить нам
+        href="tel:+380991234567">
+          {t("expPage.buttons.call")}
       </a>
       </button>
   );

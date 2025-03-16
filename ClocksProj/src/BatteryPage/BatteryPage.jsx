@@ -13,8 +13,10 @@ import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
+import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 
 const BatteryPage = () => {
+  const {t} = useLanguage()
     const navigate = useNavigate();
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);
@@ -77,38 +79,42 @@ const BatteryPage = () => {
             <Header buttons={buttons} />
 
             <Banner
-            mainText="Замена єлементов питания"
-            secondaryText="Качественное полирование из разных материалов"
+            mainText={t("batteryPage.title")}
+            secondaryText={t("batteryPage.subtitle")}
             imgSrc="/compressed/ServicesBanner.png"
             imgAlt="Banner Image"
             />
 
             <div className={styles.sectionWrapper}>
                 <Card
-                title="Что такое замена элементов питания?"
-                text="Если ваши часы остановились или начали отставать, скорее всего, им требуется замена элемента питания. Мы профессионально заменим батарейку в любых наручных, карманных и настенных часах, используя качественные источники питания, соответствующие вашему механизму. Процедура выполняется аккуратно, с проверкой контактов и герметичности корпуса, чтобы часы снова работали без сбоев. Доверьте нам замену батарейки – и ваши часы прослужат еще долгие годы!"
+                title={t("batteryPage.explanatio1")}
+                text={t("batteryPage.description1")}
                 image="/compressed/Rectangle 28-13.png"
                 />
                 <Card
-                title="Преимущества замены батарейки у нас:"
+                title={t("batteryPage.explanatio2")}
                 points={[
-                    "Быстро и безопасно – замена занимает всего несколько минут.",
-                    "Оригинальные батарейки – используем только проверенные и долговечные элементы.",
-                    "Сохранение герметичности – проверяем и восстанавливаем защиту от влаги.",
-                    "Продление жизни механизма – своевременная замена предотвращает окисление контактов.",
-                    "Гарантия на работу – уверены в качестве каждой замены!",
+                  t("batteryPage.descriptionPoin1"),
+                  t("batteryPage.descriptionPoin2"),
+                  t("batteryPage.descriptionPoin3"),
+                  t("batteryPage.descriptionPoin4"),
+                  t("batteryPage.descriptionPoin5"),
                 ]}
                 image="/compressed/Rectangle 29-2.png"
                 />
         </div>
 
-        <CallButton/>
+        <CallButton
+        label={t("expPage.buttons.call")}
+        />
 
-        <h1  className={styles.SectionHeading}>Примеры работ</h1>
+        <h1  className={styles.SectionHeading}>{t("batteryPage.sectionHeading")}</h1>
 
         <BeforeAfterLine />
 
-        <MapSection />
+        <MapSection 
+         adress={t("homePage.adress")}
+        />
 
         <Footer buttons={buttons} />
         </>

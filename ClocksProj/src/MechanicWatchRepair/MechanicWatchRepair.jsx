@@ -68,27 +68,32 @@ const MechanicRepairPage = () => {
             <ToastContainer />
             <Header buttons={buttons} />
             <Banner
-                mainText={t("mechanicPage.title")}
-                secondaryText={t("mechanicPage.subtitle")}
+                mainText={t("mechanicRepairPage.title")}
+                secondaryText={t("mechanicRepairPage.subtitle")}
                 imgSrc="/compressed/Rectangle 28-12.png"
                 imgAlt="Banner Image"
             />
             <div className={styles.sectionWrapper}>
                 <Card
-                    title={t("mechanicPage.whatIs")}
-                    text={t("mechanicPage.description")}
-                    image="/compressed/Rectangle 29.png"
+                    title={t("mechanicRepairPage.question")}
+                    text={t("mechanicRepairPage.description1")}
+                    image="/compressed/MechWatch.png"
                 />
                 <Card
-                    title={t("mechanicPage.advantagesTitle")}
-                    points={t("mechanicPage.advantages", { returnObjects: true })}
+                    title={t("mechanicRepairPage.advantagesTitle")}
+                    points={t("mechanicRepairPage.advantages", { returnObjects: true })}
                     image="/compressed/MechaicWatch.png"
                 />
             </div>
-            <CallButton />
-            <h1 className={styles.SectionHeading}>{t("examplesTitle")}</h1>
+
+            <CallButton
+        label={t("expPage.buttons.call")}
+        />
+            <h1 className={styles.SectionHeading}>{t("mechanicRepairPage.examplesTitle")}</h1>
             <BeforeAfterLine />
-            <MapSection />
+            <MapSection 
+             adress={t("homePage.adress")}
+            />
             <Footer buttons={buttons} />
         </>
     );

@@ -8,24 +8,24 @@ const BeforeAfterLine = () => {
     return (
         <div className={styles.SectionWrapper}>
             <BeforeAfterCard
-            beforeSrc=""
+            beforeSrc="/images/example1.png"
             beforeAlt="Before photo1"
-            afterSrc=""
+            afterSrc="/images/example12.png"
             afterAlt="After photo1"
             />
 
             <BeforeAfterCard
-            beforeSrc=""
+            beforeSrc="/images/example2.png"
             beforeAlt="Before photo2"
-            afterSrc=""
+            afterSrc="/images/example22.png"
             afterAlt="After photo2"
             />
 
             <BeforeAfterCard
-            beforeSrc=""
-            beforeAlt="Before photo3"
-            afterSrc=""
-            afterAlt="After photo3"
+            beforeSrc="/images/example1.png"
+            beforeAlt="Before photo1"
+            afterSrc="/images/example12.png"
+            afterAlt="After photo1"
             />
         </div>
     )

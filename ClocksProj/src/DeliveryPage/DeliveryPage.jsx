@@ -13,8 +13,10 @@ import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
+import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 
 const DeliveryPage = () => {
+  const {t} = useLanguage()
     const navigate = useNavigate();
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);
@@ -77,34 +79,36 @@ const DeliveryPage = () => {
             <Header buttons={buttons} />
 
             <Banner
-            mainText="Доставка"
-            secondaryText="Гарантируем сохранность и скорость"
+                mainText={t("delivery.title")}
+                secondaryText={t("delivery.subtitle")}
             imgSrc="/compressed/ServicesBanner.png"
             imgAlt="Banner Image"
             />
 
             <div className={styles.sectionWrapper}>
                 <Card
-                title="Какими почтами можно отправить часы?"
-                text="Вы можете отправить нам ваш товар любой удобной почтовой службой. Мы проведем ремонт максимально быстро и отправим его обратно в надежной упаковке. Гарантируем полную безопасность пересылки и бережное обращение с вашим устройством."
-                image="/compressed/Watch2.png"
+                    title={t("delivery.question")}
+                    text={t("delivery.description1")}
+                image="/compressed/delivery1.png"
                 />
                 <Card
-                title="Преимущества капитального ремонта у нас:"
-                points={[
-                    "Гарантия надежности доставки. Мы работаем только с проверенными и надежными курьерскими службами, чтобы ваши часы достигли нас в целости и сохранности. Хотя у нас нет собственной службы доставки, мы уверены в высоком уровне безопасности и ответственности партнеров, с которыми сотрудничаем. Все отправления застрахованы, и вы можете отслеживать путь своей посылки. Мы делаем все, чтобы процесс доставки был максимально удобным и надежным, и гарантируем, что ваши часы всегда будут в безопасности.",
-                ]}
-                image="/compressed/Watch3.png"
+                    title={t("delivery.advantagesTitle")}
+                    points={t("delivery.advantages", { returnObjects: true })}
+                    image="/compressed/delivery2.png"
                 />
         </div>
 
-        <CallButton/>
+        <CallButton
+        label={t("expPage.buttons.call")}
+        />
 
-        <h1  className={styles.SectionHeading}>Примеры работ</h1>
+        <h1  className={styles.SectionHeading}>{t("delivery.examplesTitle")}</h1>
 
         <BeforeAfterLine />
 
-        <MapSection />
+        <MapSection 
+          adress={t("homePage.adress")}
+        />
 
         <Footer buttons={buttons} />
         </>

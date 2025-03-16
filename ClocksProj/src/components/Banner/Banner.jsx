@@ -9,7 +9,7 @@ import { useLanguage } from "../../LanguageContext/LanguageContext.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Banner = ({ mainText, secondaryText }) => {
-  const { language } = useLanguage();
+  const {t} = useLanguage();
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
@@ -54,7 +54,11 @@ const Banner = ({ mainText, secondaryText }) => {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 1.2, ease: "easeOut" }} // ⬅ Увеличили до 1.2 сек
             >
-              <MainButton label="Бесплатная консультация" onClick={() => setIsModalOpen(true)} />
+            <MainButton 
+              label={t("homePage.buttons.consultation")} 
+              onClick={() => setIsModalOpen(true)} 
+              className={styles.noMargin}// Добавляем класс
+            />
             </motion.div>
           )}
         </AnimatePresence>

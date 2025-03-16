@@ -13,8 +13,10 @@ import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
+import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 
 const StrapPage = () => {
+  const {t} = useLanguage()
     const navigate = useNavigate();
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);
@@ -77,38 +79,42 @@ const StrapPage = () => {
             <Header buttons={buttons} />
 
             <Banner
-            mainText="Замена ремешка или браслета"
-            secondaryText="Люксовые ремешки премиального качество"
+            mainText={t("strapPage.title")}
+            secondaryText={t("strapPage.subtitle")}
             imgSrc="/compressed/ServicesBanner.png"
             imgAlt="Banner Image"
             />
 
             <div className={styles.sectionWrapper}>
                 <Card
-                title="Что такое ремешок?"
-                text="Ремешок – это не только функциональная часть часов, но и важный элемент их стиля. Со временем он изнашивается, теряет внешний вид или просто перестает быть удобным. Мы поможем подобрать и заменить ремешок или браслет на новый – кожаный, силиконовый, тканевый или металлический. Замена проводится аккуратно, с учетом особенностей крепления, чтобы часы надежно сидели на руке и выглядели безупречно."
+                title={t("strapPage.explanatio1")}
+                text={t("strapPage.description1")}
                 image="/compressed/Rectangle 28-16.png"
                 />
                 <Card
-                title="Преимущества замены ремешка именно  нас"
+                title={t("strapPage.explanatio2")}
                 points={[
-                    "Широкий выбор – кожаные, металлические, силиконовые и другие варианты.",
-                    "Идеальная посадка – подбираем и регулируем ремешок для максимального комфорта.",
-                    "Качество и надежность – работаем только с проверенными материалами.",
-                    "Быстрая замена – установка занимает всего несколько минут.",
-                    "Обновленный стиль – сделайте ваши часы еще элегантнее и удобнее."
+                  t("strapPage.descriptionPoin1"),
+                  t("strapPage.descriptionPoin2"),
+                  t("strapPage.descriptionPoin3"),
+                  t("strapPage.descriptionPoin4"),
+                  t("strapPage.descriptionPoin5"),
                 ]}
                 image="/compressed/Rectangle 29-5.png"
                 />
         </div>
 
-        <CallButton/>
+        <CallButton
+        label={t("expPage.buttons.call")}
+        />
 
-        <h1  className={styles.SectionHeading}>Примеры работ</h1>
+        <h1  className={styles.SectionHeading}>{t("strapPage.sectionHeading")}</h1>
 
         <BeforeAfterLine />
 
-        <MapSection />
+        <MapSection 
+          adress={t("homePage.adress")}
+        />
 
         <Footer buttons={buttons} />
         </>

@@ -13,8 +13,10 @@ import { ToastContainer } from "react-toastify";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
+import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 
 const PolishingPage = () => {
+  const {t} = useLanguage()
     const navigate = useNavigate();
     const section1Ref = useRef(null);
     const section2Ref = useRef(null);
@@ -77,37 +79,37 @@ const PolishingPage = () => {
             <Header buttons={buttons} />
 
             <Banner
-            mainText="Полировка часов"
-            secondaryText="Качественное полирование из разных материалов"
+            mainText={t("poloshingPage.title")}
+            secondaryText={t("poloshingPage.subtitle")}
             imgSrc="/compressed/ServicesBanner.png"
             imgAlt="Banner Image"
             />
 
             <div className={styles.sectionWrapper}>
-                <Card
-                title="Что такое полировка часов?"
-                text="Полирование часов – это процесс удаления царапин, потертостей и мелких дефектов с корпуса и браслета часов, чтобы восстановить их первоначальный блеск. Оно бывает нескольких видов:
-Обычное полирование – удаляет мелкие царапины и восстанавливает глянец.
-Сатинирование (шлифовка) – создает матовую текстуру на металлических поверхностях.
-Глубокая реставрация – включает устранение более серьезных повреждений и восстановление геометрии корпуса."
+
+            <Card
+                title={t("poloshingPage.explanatio1")}
+                text={t("poloshingPage.description1")}
                 image="/compressed/Rectangle 28-14.png"
                 />
                 <Card
-                title="Как выполняют полировку?"
+                title={t("poloshingPage.explanatio2")}
                 points={[
-                    "Полировку выполняют вручную или на специальных станках, а для дорогих часов используют щадящие методы, чтобы сохранить оригинальные формы. Важно не злоупотреблять процедурой, так как частые полировки могут стереть детали корпуса.",
+                    t("poloshingPage.descriptionPoint2"),
                 ]}
                 image="/compressed/Rectangle 29-3.png"
                 />
         </div>
 
-        <CallButton/>
+        <CallButton />
 
-        <h1  className={styles.SectionHeading}>Примеры работ</h1>
+        <h1  className={styles.SectionHeading}>{t("poloshingPage.sectionHeading")}</h1>
 
         <BeforeAfterLine />
 
-        <MapSection />
+        <MapSection 
+         adress={t("homePage.adress")}
+        />
 
         <Footer buttons={buttons} />
         </>

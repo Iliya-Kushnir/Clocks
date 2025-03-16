@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import styles from "./BurgerMenu.module.scss"; // Подключаем стили для гамбургер-меню
 import LanguageSwitcher from "../Header/LanguageSwitcher/LanguageSwitcher.jsx";
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-
+import { useLanguage } from "../../LanguageContext/LanguageContext.jsx";
 
 const BurgerMenu = () => {
+  const {t} = useLanguage()
   const [isOpen, setIsOpen] = useState(false); // Стейт для открытия/закрытия меню
 
   // Функция для переключения состояния меню
@@ -27,11 +28,11 @@ const BurgerMenu = () => {
 
     <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
     <ul>
-      <li><Link className={styles.text}  to="/">Главная</Link></li>
-      <li><Link className={styles.text} to="/AllServices">Услсуги</Link></li>
-      <li><Link className={styles.text} to="/DeliveryPage">Доставка</Link></li>
-      <li><Link className={styles.text} to="/Examples">Работы</Link></li>
-      <li><Link className={styles.text} to="/PriceList">Расценки</Link></li>
+      <li><Link className={styles.text}  to="/">{t("NavigationLinks.main")}</Link></li>
+      <li><Link className={styles.text} to="/AllServices">{t("NavigationLinks.services")}</Link></li>
+      <li><Link className={styles.text} to="/DeliveryPage">{t("NavigationLinks.delivery")}</Link></li>
+      <li><Link className={styles.text} to="/Examples">{t("NavigationLinks.works")}</Link></li>
+      <li><Link className={styles.text} to="/PriceList">{t("NavigationLinks.price")}</Link></li>
       <li><LanguageSwitcher /></li>
       <li className={styles.socialMedia}>
         <img className={styles.linkBtn} src="/compressed/InstagramIcon.png" alt="" /> 

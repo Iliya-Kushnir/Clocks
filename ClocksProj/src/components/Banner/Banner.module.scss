@@ -64,6 +64,10 @@
     &.smallBanner {
         height: 556px; // Уменьшенный баннер
     }
+
+    .noMargin {
+        margin-top: 0 !important; 
+    }
 }
 
 
@@ -107,6 +111,10 @@
             height: 221px; // Уменьшенный баннер
         }
     }
+
+    .noMargin {
+        margin-top: 0 !important; 
+    }
 }
 
 @media screen and (max-width: 767px) and (min-width: 375px) {
@@ -141,5 +149,9 @@
         &.smallBanner {
             height: 109px; // Уменьшенный баннер
         }
+    }
+
+    .noMargin {
+        margin-top: 0 !important; 
     }
 }

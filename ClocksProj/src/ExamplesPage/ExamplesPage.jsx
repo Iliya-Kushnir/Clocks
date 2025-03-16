@@ -6,9 +6,11 @@ import BeforeAfterLine from "../components/BeforeAfterLine/BeforeAfterLine.jsx";
 import MapSection from "../components/MapSection/MapSection.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
+import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+
 
 const ExamplesPage = () => {
-
+  const {t} = useLanguage()
   const handleClick1 = () => navigate("/DeliveryPage");
   const handleClick2 = () => navigate("/PriceList");
   const handleClick3 = () => handleScroll(section2Ref);
@@ -30,13 +32,13 @@ const ExamplesPage = () => {
            />
 
            <Banner
-           mainText="Услуги"
-           secondaryText="Услуги от Мастерской Время!"
+           mainText={t("examplesPage.title")}
+           secondaryText={t("examplesPage.subtitle")}
            imgSrc="/compressed/ServicesBanner.png"
            imgAlt="Banner Image"
            />
 
-            <h1 className={styles.SectionHeading}>Примеры работ</h1>
+           
 
             <img className={styles.bigImage} src="/compressed/BigWatchConstructor.png" alt="" />
            
@@ -46,9 +48,11 @@ const ExamplesPage = () => {
 
             <CallButton />
 
-            <h1 className={styles.SectionHeading}>Где нас найти?</h1>
+            <h1 className={styles.SectionHeading}>{t("homePage.findUsTitle")}</h1>
 
-            <MapSection/>
+            <MapSection
+            adress={t("homePage.adress")}
+            />
 
             <Footer
                 buttons={buttons}
