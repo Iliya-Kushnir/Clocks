@@ -32,14 +32,18 @@ const MechanicRepairPage = () => {
     const handleScroll = (ref) => {
         ref?.current?.scrollIntoView({ behavior: "smooth" });
     };
+
+    const handleClick1 = () => navigate("/DeliveryPage");
+    const handleClick2 = () => navigate("/PriceList");
+    const handleClick3 = () => handleScroll(section2Ref);
+    const handleClick4 = () => navigate("/AllServices");
   
     const buttons = [
-        { label: t("buttons.delivery"), onClick: () => navigate("/DeliveryPage"), type: "button" },
-        { label: t("buttons.pricing"), onClick: () => navigate("/PriceList"), type: "button" },
-        { label: t("buttons.map"), onClick: () => handleScroll(section2Ref), type: "button" },
-        { label: t("buttons.services"), onClick: () => navigate("/AllServices"), type: "button" },
-        { label: "Укр/Ру", onClick: handleClick, type: "button" },
-    ];
+        { label: t("NavigationLinks.delivery"), onClick: handleClick1, type: 'button' },
+        { label: t("NavigationLinks.price"), onClick: handleClick2, type: 'button' },
+        { label: t("NavigationLinks.map"), onClick: handleClick3, type: 'button' },
+        { label: t("NavigationLinks.services"), onClick: handleClick4, type: 'button' },
+      ];
   
     useEffect(() => {
         let timer;

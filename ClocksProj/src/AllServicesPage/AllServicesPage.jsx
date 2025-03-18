@@ -23,13 +23,12 @@ const AllServicesPage = () => {
   const handleClick4 = () => navigate("/AllServices");
   const handleClick5 = () => notify();
 
-    const buttons = [
-        { label: 'Доставка', onClick: handleClick1, type: 'button' },
-        { label: 'Расценки', onClick: handleClick2, type: 'button' },
-        { label: 'Карта', onClick: handleClick3, type: 'button' },
-        { label: 'Услуги', onClick: handleClick4, type: 'button' },
-        { label: 'Укр/Ру', onClick: handleClick5, type: 'button' },
-      ];
+  const buttons = [
+    { label: t("NavigationLinks.delivery"), onClick: handleClick1, type: 'button' },
+    { label: t("NavigationLinks.price"), onClick: handleClick2, type: 'button' },
+    { label: t("NavigationLinks.map"), onClick: handleClick3, type: 'button' },
+    { label: t("NavigationLinks.services"), onClick: handleClick4, type: 'button' },
+  ];
 
       const cards = [
         { serviceName: t("ServiceCards.MechaicWatch"), serviceSrc: "/compressed/Watch.png", serviceAlt: "first", link: "/FirstService" },

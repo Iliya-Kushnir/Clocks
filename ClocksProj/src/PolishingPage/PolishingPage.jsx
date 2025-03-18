@@ -43,11 +43,10 @@ const PolishingPage = () => {
     const handleClick5 = () => notify();
   
     const buttons = [
-      { label: 'Доставка', onClick: handleClick1, type: 'button' },
-      { label: 'Расценки', onClick: handleClick2, type: 'button' },
-      { label: 'Карта', onClick: handleClick3, type: 'button' },
-      { label: 'Услуги', onClick: handleClick4, type: 'button' },
-      { label: 'Укр/Ру', onClick: handleClick5, type: 'button' },
+      { label: t("NavigationLinks.delivery"), onClick: handleClick1, type: 'button' },
+      { label: t("NavigationLinks.price"), onClick: handleClick2, type: 'button' },
+      { label: t("NavigationLinks.map"), onClick: handleClick3, type: 'button' },
+      { label: t("NavigationLinks.services"), onClick: handleClick4, type: 'button' },
     ];
   
     useEffect(() => {

@@ -138,7 +138,7 @@ const HomePage = () => {
 
     <Link to="/PriceList">
       <MainButton
-        label={t("homePage.buttons.consultation")}
+        label={t("homePage.buttons.viewAllPrices")}
       />
     </Link>
 

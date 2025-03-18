@@ -37,7 +37,7 @@
         .number {
             font-family: 'Montserrat', sans-serif;
             font-weight: 300; /* Light */
-            font-size: 14px;
+            font-size: 18px;
             line-height: normal;
             letter-spacing: 0%;
             
@@ -87,11 +87,12 @@
         .Numbers {
     
             .number {
-                font-size: 12px;
+                font-size: 16px;
             }
         }
     
         .contactInfo {
+            display: none;
             height: 20px;
     
             .linkBtn {
@@ -128,11 +129,12 @@
         .Numbers {
     
             .number {
-                font-size: 9px;
+                font-size: 13px;
             }
         }
     
         .contactInfo {
+            display: none;
             height: 20px;
     
             .linkBtn {

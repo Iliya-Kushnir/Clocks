@@ -35,8 +35,10 @@ const BurgerMenu = () => {
       <li><Link className={styles.text} to="/PriceList">{t("NavigationLinks.price")}</Link></li>
       <li><LanguageSwitcher /></li>
       <li className={styles.socialMedia}>
-        <img className={styles.linkBtn} src="/compressed/InstagramIcon.png" alt="" /> 
-        <img className={styles.linkBtn} src="/compressed/TelegramIcon.png" alt="" />
+        <a target="_blank" href="https://www.instagram.com/kharkov_watchrepair?igsh=MW9xZzltZTU2cHUxbQ=="><img className={styles.linkBtn} src="/compressed/InstagramIcon.png" alt="" /> </a>
+        
+        <a target="_blank" href="https://t.me/GennadiyB1981"><img className={styles.linkBtn} src="/compressed/TelegramIcon.png" alt="" /></a>
+        
       </li>
     </ul>
     </div>

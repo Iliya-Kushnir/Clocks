@@ -8,8 +8,10 @@ import { Input } from "./Input/Input";
 import { Button } from "./Button/Button";
 import axios from "axios";
 import FileUpload from "../MapSection/ConsultationForm/FileUpload/FileUpload.jsx";
+import { useLanguage } from "../../LanguageContext/LanguageContext.jsx";
 
 const RepairForm = ({ isModalOpen, setIsModalOpen }) => {
+  const {t} = useLanguage()
   const [isDisabled, setIsDisabled] = useState(false);
   const [timer, setTimer] = useState(0);
 
@@ -78,16 +80,16 @@ const RepairForm = ({ isModalOpen, setIsModalOpen }) => {
             >
               {({ setFieldValue, isSubmitting }) => (
                 <Form className={styles.consultationForm}>
-                  <h1 className={styles.formLabel}>Записаться на ремонт</h1>
-                  <p className={styles.paragraph}>Запишите ваши данные и мы с вами свяжемся как только сможем, ожидание может составлять 1-2 дня</p>
+                  <h1 className={styles.formLabel}>{t("repairForm.title")}</h1>
+                  <p className={styles.paragraph}>{t("repairForm.paragraph")}</p>
 
-                  <Input name="name" id="name" placeholder="Ваше имя" />
-                  <Input name="email" id="email" placeholder="Ваш email" />
-                  <Input name="message" id="message" placeholder="Описание проблемы" />
+                  <Input name="name" id="name" placeholder={t("repairForm.name")} />
+                  <Input name="email" id="email" placeholder={t("repairForm.email")} />
+                  <Input name="message" id="message" placeholder={t("repairForm.description")} />
                   <FileUpload name="file" setFieldValue={setFieldValue} />
 
                   <Button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? "Отправка..." : "Записаться"}
+                    {isSubmitting ? t("repairForm.send") : t("repairForm.book")}
                   </Button>
                 </Form>
               )}

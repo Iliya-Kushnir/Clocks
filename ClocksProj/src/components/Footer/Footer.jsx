@@ -2,13 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Footer.module.scss";
 import HeaderNavBtn from "../Header/HeaderNavBtn/HeaderNavBtn.jsx";
+import { useLanguage } from "../../LanguageContext/LanguageContext.jsx";
 
 const Footer = (props) => {
+    const {t} = useLanguage()
     const {buttons} = props
 
     return (
         <footer>
-            <h1 className={styles.Heading}>Мастерская время</h1>
+            <h1 className={styles.Heading}>{t("siteHeading.title")}</h1>
        
             {buttons.map((button, index) => (
                 <HeaderNavBtn
@@ -19,14 +21,13 @@ const Footer = (props) => {
                 />
             ))}
 
-            <p className={styles.redText}>Принимаем заказы со всей
-            Украины по почте</p>
+
 
 
             <div className={styles.adressSection}>
                 <div className={styles.locationSection}>
                     <img className={styles.pointer} src="/compressed/Vector.png" alt="MapPointer" />
-                    <p className={styles.adress}>Адрес мастерской: Харьков, Полтавский Шлях 31 офисный центр, офис 311</p>
+                    <p className={styles.adress}>{t("homePage.adress")}</p>
                 </div>
 
                 <div className={styles.phoneSection}>

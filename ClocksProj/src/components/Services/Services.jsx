@@ -7,6 +7,7 @@ const Services = (props) => {
     const {cards} = props
 
     return (
+    <>
         <div className={styles.ServicesWrapper}>
             {cards.map((card, index) => (
                 <ServiceCard
@@ -18,6 +19,8 @@ const Services = (props) => {
                 />
             ))}
         </div>
+        <p className={styles.redText}>Берем на ремонт ЛЮБЫЕ часы всех марок и систем</p>
+    </>
     )
 }
 

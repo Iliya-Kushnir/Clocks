@@ -17,13 +17,12 @@ const PricePage = () => {
   const handleClick5 = () => notify();
   const navigate = useNavigate()
 
-    const buttons = [
-        { label: 'Доставка', onClick: handleClick1, type: 'button' },
-        { label: 'Расценки', onClick: handleClick2, type: 'button' },
-        { label: 'Карта', onClick: handleClick3, type: 'button' },
-        { label: 'Услуги', onClick: handleClick4, type: 'button' },
-        { label: 'Укр/Ру', onClick: handleClick5, type: 'button' },
-      ];
+  const buttons = [
+    { label: t("NavigationLinks.delivery"), onClick: handleClick1, type: 'button' },
+    { label: t("NavigationLinks.price"), onClick: handleClick2, type: 'button' },
+    { label: t("NavigationLinks.map"), onClick: handleClick3, type: 'button' },
+    { label: t("NavigationLinks.services"), onClick: handleClick4, type: 'button' },
+  ];
 
       const services = Object.values(t("ServicesList"));
 
@@ -41,7 +40,6 @@ const PricePage = () => {
            />
 
             <div className={styles.p}>
-                <h1 className={styles.SectionHeading}>Прайс-лист</h1>
                 <PriceList services={services} />
              </div>
 

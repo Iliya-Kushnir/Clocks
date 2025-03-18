@@ -6,8 +6,10 @@ import Logo from "./Logo/Logo.jsx";
 import { useNavigate } from "react-router";
 import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher.jsx";
 import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx";
+import { useLanguage } from "../../LanguageContext/LanguageContext.jsx";
 
 const Header = (props) => {
+    const {t} = useLanguage()
     const {label, logoSrc, logoAlt, buttons} = props
     const navigate = useNavigate()
 
@@ -19,7 +21,7 @@ const Header = (props) => {
                 logoSrc="/compressed/Logo.png"
                 logoAlt="kskkwkw"
                 />
-                <h1 onClick={() => navigate("/")} className={styles.Heading}>Мастерская время</h1>
+                <h1 onClick={() => navigate("/")} className={styles.Heading}>{t("siteHeading.title")}</h1>
             </div>
 
             {buttons.map((button, index) => (
@@ -35,7 +37,7 @@ const Header = (props) => {
                 </div>
             <div className={styles.Numbers}>
                 <a className={styles.number} href="tel:+380970754094">+38 097-075-40-94</a>
-                <a className={styles.number} href="tel:+380957398614">+38 097-075-40-94</a>
+                <a className={styles.number} href="tel:+380957398614">+38 095-739-86-14</a>
             </div>
 
             <div className={styles.contactInfo}>
