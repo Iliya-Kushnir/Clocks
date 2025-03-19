@@ -332,11 +332,11 @@
     }
 
     .worksGrid {
-        width: 90%;
+        width: 80%;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(2, 400px);
-        gap: 1rem;
+        gap: 5px;
         justify-items: center;
         align-items: start;
         margin: auto;
