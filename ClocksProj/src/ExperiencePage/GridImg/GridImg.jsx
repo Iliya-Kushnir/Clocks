@@ -35,7 +35,7 @@ const GridLayout = () => {
                 <img src="/images/alarm.png" className={styles.small} />
                 <img src="/images/lighthouse.png" className={styles.small} />
                 <img src="/compressed/SmallWatch.png" className={styles.small}  />
-                <img src="/images/bigWatch3.png" className={styles.wide} />
+                <img src="/images/bigClock.png" className={styles.wide} />
             </div>
 
 

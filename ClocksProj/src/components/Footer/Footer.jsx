@@ -21,8 +21,7 @@ const Footer = (props) => {
                 />
             ))}
 
-
-
+            <p className={styles.redText}>Принимаем заказы со всей Украины по почте</p>
 
             <div className={styles.adressSection}>
                 <div className={styles.locationSection}>

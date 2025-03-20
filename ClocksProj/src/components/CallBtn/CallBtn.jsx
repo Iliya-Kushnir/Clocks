@@ -8,7 +8,7 @@ const CallButton = () => {
     <button className={styles.CallButton}>
         <a 
         className={styles.label}
-        href="tel:+380991234567">
+        href="tel:+380970754094">
           {t("expPage.buttons.call")}
       </a>
       </button>
