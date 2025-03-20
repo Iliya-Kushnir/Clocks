@@ -25,7 +25,7 @@ const PriceList = ({ services }) => {
             ))}
           </tbody>
         </table>
-        <p className={styles.redText}>Берем на ремонт ЛЮБЫЕ часы всех марок и систем</p>
+        <p className={styles.redText}>ПРИНИМАЕМ ЗАКАЗЫ СО ВСЕЙ УКРАИНЫ ПО ПОЧТЕ!</p>
       </div>
     )
 }
