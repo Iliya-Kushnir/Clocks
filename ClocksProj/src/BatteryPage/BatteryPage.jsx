@@ -109,7 +109,17 @@ const BatteryPage = () => {
 
         <h1  className={styles.SectionHeading}>{t("batteryPage.sectionHeading")}</h1>
 
-        <BeforeAfterLine />
+        <BeforeAfterLine 
+        
+        beforeSrc1="/newImages/BeforeafterHome1.png"
+        afterSrc1="/newImages/BeforeafterHome2.png"
+        
+        beforeSrc2="/newImages/BeforeafterHome5.png"
+        afterSrc2="/newImages/BeforeafterHome6.png"
+
+        beforeSrc3="/newImages/BeforeafterHome3.png"
+        afterSrc3="/newImages/BeforeafterHome4.png"
+        />
 
         <MapSection 
          adress={t("homePage.adress")}

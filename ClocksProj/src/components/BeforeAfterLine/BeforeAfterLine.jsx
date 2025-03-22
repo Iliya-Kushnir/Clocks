@@ -3,28 +3,28 @@ import PropTypes from "prop-types";
 import styles from "./BeforeAfterLine.module.scss";
 import BeforeAfterCard from "./BeforeAfterCard/BeforeAfterCard.jsx";
 
-const BeforeAfterLine = () => {
+const BeforeAfterLine = ({beforeSrc1, beforeSrc2, beforeSrc3, beforeAlt1, beforeAlt2, beforeAlt3, afterSrc1, afterSrc2, afterSrc3}) => {
 
     return (
         <div className={styles.SectionWrapper}>
             <BeforeAfterCard
-            beforeSrc="/images/example1.png"
-            beforeAlt="Before photo1"
-            afterSrc="/images/example12.png"
+            beforeSrc={beforeSrc1}
+            beforeAlt={beforeAlt1}
+            afterSrc={afterSrc1}
             afterAlt="After photo1"
             />
 
             <BeforeAfterCard
-            beforeSrc="/images/example2.png"
-            beforeAlt="Before photo2"
-            afterSrc="/images/example22.png"
+            beforeSrc={beforeSrc2}
+            beforeAlt={beforeAlt2}
+            afterSrc={afterSrc2}
             afterAlt="After photo2"
             />
 
             <BeforeAfterCard
-            beforeSrc="/images/example1.png"
-            beforeAlt="Before photo1"
-            afterSrc="/images/example12.png"
+            beforeSrc={beforeSrc3}
+            beforeAlt={beforeAlt3}
+            afterSrc={afterSrc3}
             afterAlt="After photo1"
             />
         </div>

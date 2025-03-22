@@ -94,7 +94,19 @@ const MechanicRepairPage = () => {
         label={t("expPage.buttons.call")}
         />
             <h1 className={styles.SectionHeading}>{t("mechanicRepairPage.examplesTitle")}</h1>
-            <BeforeAfterLine />
+            <BeforeAfterLine 
+
+            beforeSrc1="/compressed/BeforeafterHome3.png"
+            afterSrc1="/compressed/BeforeafterHome4.png"
+            
+            beforeSrc3="/compressed/BeforeafterHome7.png"
+            afterSrc3="/compressed/BeforeafterHome8.png"
+
+            beforeSrc2="/compressed/BeforeafterHome5.png"
+            afterSrc2="/compressed/BeforeafterHome6.png"
+
+
+            />
             <MapSection 
              adress={t("homePage.adress")}
             />

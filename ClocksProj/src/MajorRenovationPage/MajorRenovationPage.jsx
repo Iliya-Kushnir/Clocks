@@ -107,7 +107,18 @@ const MajorRenovationPage = () => {
 
         <h1  className={styles.SectionHeading}>{t("capital.sectionHeading")}</h1>
 
-        <BeforeAfterLine />
+        <BeforeAfterLine 
+        
+        beforeSrc1="/compressed/BeforeafterHome1.png"
+        afterSrc1="/compressed/BeforeafterHome2.png"
+        
+        beforeSrc2="/compressed/BeforeafterHome5.png"
+        afterSrc2="/compressed/BeforeafterHome6.png"
+
+        beforeSrc3="/compressed/BeforeafterHome1.png"
+        afterSrc3="/compressed/BeforeafterHome2.png"
+
+        />
 
         <MapSection 
          adress={t("homePage.adress")}

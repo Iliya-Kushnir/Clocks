@@ -109,7 +109,16 @@ const StrapPage = () => {
 
         <h1  className={styles.SectionHeading}>{t("strapPage.sectionHeading")}</h1>
 
-        <BeforeAfterLine />
+        <BeforeAfterLine 
+          beforeSrc1="/compressed/BeforeafterHome7.png"
+          afterSrc1="/compressed/BeforeafterHome8.png"
+          
+          beforeSrc2="/compressed/BeforeafterHome1.png"
+          afterSrc2="/compressed/BeforeafterHome2.png"
+  
+          beforeSrc3="/compressed/BeforeafterHome3.png"
+          afterSrc3="/compressed/BeforeafterHome4.png"
+        />
 
         <MapSection 
           adress={t("homePage.adress")}

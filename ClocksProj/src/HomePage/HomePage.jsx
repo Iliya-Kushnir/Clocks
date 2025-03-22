@@ -148,7 +148,16 @@ const HomePage = () => {
 
       <img className={styles.bigImage} src="/compressed/BigWatchConstructor.png" alt="" />
 
-      <BeforeAfterLine />
+      <BeforeAfterLine 
+      beforeSrc1="/compressed/BeforeafterHome1.png"
+      afterSrc1="/compressed/BeforeafterHome2.png"
+
+      beforeSrc2="/compressed/BeforeafterHome3.png"
+      afterSrc2="/compressed/BeforeafterHome4.png"
+
+      beforeSrc3="/compressed/BeforeafterHome5.png"
+      afterSrc3="/compressed/BeforeafterHome6.png"
+      />
 
       <MainButton
         label={t("homePage.buttons.viewMore")}
