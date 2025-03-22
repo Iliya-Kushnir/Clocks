@@ -97,14 +97,6 @@ const DeliveryPage = () => {
                 />
         </div>
 
-        <CallButton
-        label={t("expPage.buttons.call")}
-        />
-
-        <h1  className={styles.SectionHeading}>{t("delivery.examplesTitle")}</h1>
-
-        <BeforeAfterLine />
-
         <MapSection 
           adress={t("homePage.adress")}
         />

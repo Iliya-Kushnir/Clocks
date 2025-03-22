@@ -111,14 +111,14 @@ const BatteryPage = () => {
 
         <BeforeAfterLine 
         
-        beforeSrc1="/newImages/BeforeafterHome1.png"
-        afterSrc1="/newImages/BeforeafterHome2.png"
+        beforeSrc1="/compressed/BeforeafterHome1.png"
+        afterSrc1="/compressed/BeforeafterHome2.png"
         
-        beforeSrc2="/newImages/BeforeafterHome5.png"
-        afterSrc2="/newImages/BeforeafterHome6.png"
+        beforeSrc2="/compressed/BeforeafterHome5.png"
+        afterSrc2="/compressed/BeforeafterHome6.png"
 
-        beforeSrc3="/newImages/BeforeafterHome3.png"
-        afterSrc3="/newImages/BeforeafterHome4.png"
+        beforeSrc3="/compressed/BeforeafterHome3.png"
+        afterSrc3="/compressed/BeforeafterHome4.png"
         />
 
         <MapSection 

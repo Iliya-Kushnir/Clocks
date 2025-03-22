@@ -105,7 +105,7 @@ const MajorRenovationPage = () => {
 
         <CallButton/>
 
-        <h1  className={styles.SectionHeading}>{t("capital.sectionHeading")}</h1>
+        <h1  className={styles.SectionHeading}>{t("expPage.examplesTitle")}</h1>
 
         <BeforeAfterLine 
         

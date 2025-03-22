@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    
+    margin-bottom: 60px;
 }
 
 @media screen and (max-width: 767px) and (min-width: 375px) {
     .sectionWrapper {
         width: 345px;    
         margin-top: 0;
+        
     }
 }

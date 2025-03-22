@@ -40,8 +40,10 @@ const Footer = (props) => {
             </div>
 
             <div className={styles.socialMedia}>
-                <img src="/compressed/InstagramIcon.png" alt="" />
-                <img src="/compressed/TelegramIcon.png" alt="" />
+                <a target="_blank" href="https://www.instagram.com/kharkov_watchrepair?igsh=MW9xZzltZTU2cHUxbQ=="><img src="/compressed/InstagramIcon.png" alt="" /></a>
+                
+                <a target="_blank" href="https://t.me/GennadiyB1981"><img src="/compressed/TelegramIcon.png" alt="" /></a>
+                
             </div>
         </footer>
     );
