@@ -337,7 +337,7 @@
         width: 80%;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(2, 400px);
+        grid-template-rows: repeat(2, 250px);
         gap: 5px;
         justify-items: center;
         align-items: start;
@@ -349,6 +349,7 @@
         grid-column: 1 / span 3;
         grid-row: 1 / span 2;
         width: 100%;
+        height: 250px;
       }
       
       .worksGrid img:nth-child(2) {
@@ -367,12 +368,14 @@
         grid-column: 4 / span 3;
         grid-row: 1 / span 2;
         width: 100%;
+        height: 250px;
       }
       
       .worksGrid img:nth-child(5) {
         grid-column: 1 / span 3;
         grid-row: 2 / span 2;
         width: 100%;
+        height: 250px;
       }
       
       .worksGrid img:nth-child(6) {
@@ -403,6 +406,7 @@
         grid-column: 4 / span 3;
         grid-row: 2 / span 2;
         width: 100%;
+        height: 250px;
       }
       
       .worksGrid img:nth-child(11) {
