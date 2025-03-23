@@ -119,10 +119,12 @@ const StrapPage = () => {
           beforeSrc3="/compressed/BeforeafterHome3.png"
           afterSrc3="/compressed/BeforeafterHome4.png"
         />
-
+        <div ref={section2Ref}>
         <MapSection 
-          adress={t("homePage.adress")}
-        />
+                adress={t("homePage.adress")}
+              />
+        </div>
+
 
         <Footer buttons={buttons} />
         </>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import PropTypes from "prop-types";
 import styles from "./AllServicesPage.module.scss";
 import Header from "../components/Header/Header.jsx";
@@ -14,8 +14,11 @@ import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 const AllServicesPage = () => {
   const navigate = useNavigate()
   const {t} = useLanguage();
+  const section2Ref = useRef(null);
 
-
+  const handleScroll = (ref) => {
+    ref?.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleClick1 = () => navigate("/DeliveryPage");
   const handleClick2 = () => navigate("/PriceList");
@@ -73,9 +76,11 @@ const AllServicesPage = () => {
 
             <h1  className={styles.SectionHeading}>{t("homePage.findUsTitle")}</h1>
 
-            <MapSection
-              adress={t("homePage.adress")}
-            />
+            <div ref={section2Ref}>
+              <MapSection 
+                adress={t("homePage.adress")}
+              />
+            </div>
 
             <h1 className={styles.Delivery}>{t("homePage.deliveryText")}</h1>
 

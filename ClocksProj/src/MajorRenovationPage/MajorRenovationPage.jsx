@@ -120,9 +120,11 @@ const MajorRenovationPage = () => {
 
         />
 
-        <MapSection 
-         adress={t("homePage.adress")}
-        />
+<div ref={section2Ref}>
+              <MapSection 
+                adress={t("homePage.adress")}
+              />
+            </div>
 
         <Footer buttons={buttons} />
         </>

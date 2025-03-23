@@ -5,6 +5,7 @@ html, body, #root {
     overflow-x: hidden; 
     font-family: 'Montserrat', sans-serif;
     font-family: 'A Plakat Titul', sans-serif;
+    scroll-behavior: smooth;
 }
 
 @font-face {

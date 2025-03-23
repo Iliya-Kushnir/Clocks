@@ -43,9 +43,11 @@ const PricePage = () => {
                 <PriceList services={services} />
              </div>
 
-            <MapSection
-            adress={t("homePage.adress")}
-            />
+            <div ref={section2Ref}>
+              <MapSection 
+                adress={t("homePage.adress")}
+              />
+            </div>
 
             <Footer
                 buttons={buttons}

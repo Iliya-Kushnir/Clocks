@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef} from "react";
 import styles from "./ExamplesPage.module.scss";
 import Header from "../components/Header/Header.jsx";
 import Banner from "../components/Banner/Banner.jsx";
@@ -11,11 +11,17 @@ import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 
 const ExamplesPage = () => {
   const {t} = useLanguage()
+  const section2Ref = useRef(null);
   const handleClick1 = () => navigate("/DeliveryPage");
   const handleClick2 = () => navigate("/PriceList");
   const handleClick3 = () => handleScroll(section2Ref);
   const handleClick4 = () => navigate("/AllServices");
   const handleClick5 = () => notify();
+
+
+  const handleScroll = (ref) => {
+    ref?.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const buttons = [
     { label: t("NavigationLinks.delivery"), onClick: handleClick1, type: 'button' },
@@ -67,9 +73,11 @@ const ExamplesPage = () => {
 
             <h1 className={styles.SectionHeading}>{t("homePage.findUsTitle")}</h1>
 
-            <MapSection
-            adress={t("homePage.adress")}
-            />
+            <div ref={section2Ref}>
+              <MapSection 
+                adress={t("homePage.adress")}
+              />
+            </div>
 
             <Footer
                 buttons={buttons}
