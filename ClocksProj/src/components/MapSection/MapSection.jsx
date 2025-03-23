@@ -15,7 +15,7 @@ const MapSection = (props) => {
 
     return (
         <div className={styles.sectionWrapper}>
-            <IslandMap/>
+           
 
             <div className={styles.adressSection}>
                 <div className={styles.locationSection}>
