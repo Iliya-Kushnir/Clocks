@@ -46,13 +46,13 @@ const AllServicesPage = () => {
            />
 
            <Banner
-           mainText="Услуги"
-           secondaryText="Услуги от Мастерской Время!"
+           mainText={t("allServices.title")}
+           secondaryText={t("allServices.subtitle")}
            imgSrc="/compressed/ServicesBanner.png"
            imgAlt="Banner Image"
            />
 
-           <h1 className={styles.SectionHeading}>Услуги мастерской</h1>
+           <h1 className={styles.SectionHeading}>{t("allServices.sectionHeading")}</h1>
 
             <Services
             cards={cards}

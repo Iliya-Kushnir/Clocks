@@ -97,6 +97,7 @@ const DeliveryPage = () => {
                 />
         </div>
 
+
         <MapSection 
           adress={t("homePage.adress")}
         />

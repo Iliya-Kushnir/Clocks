@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./PriceList.module.scss";
+import { useLanguage } from "../../LanguageContext/LanguageContext";
 
 const PriceList = ({ services }) => {
+  const {t} = useLanguage()
   
 
     return (
@@ -10,9 +12,9 @@ const PriceList = ({ services }) => {
         <table className={styles.priceList}>
           <thead className={styles.topLine}>
             <tr>
-              <th className={styles.service}>Услуга</th>
-              <th className={styles.cost}>Цена</th>
-              <th className={styles.duration}>Срок</th>
+              <th className={styles.service}>{t("pricePage.service")}</th>
+              <th className={styles.cost}>{t("pricePage.cost")}</th>
+              <th className={styles.duration}>{t("pricePage.duration")}</th>
             </tr>
           </thead>
           <tbody>
@@ -25,7 +27,7 @@ const PriceList = ({ services }) => {
             ))}
           </tbody>
         </table>
-        <p className={styles.redText}>ПРИНИМАЕМ ЗАКАЗЫ СО ВСЕЙ УКРАИНЫ ПО ПОЧТЕ!</p>
+        <p className={styles.redText}>{t("pricePage.redText")}</p>
       </div>
     )
 }

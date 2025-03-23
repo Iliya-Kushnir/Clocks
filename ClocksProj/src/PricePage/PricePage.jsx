@@ -33,8 +33,8 @@ const PricePage = () => {
            />
 
            <Banner
-           mainText="Расценки"
-           secondaryText="Самые технологичные работы в Харькове"
+           mainText={t("pricePage.title")}
+           secondaryText={t("pricePage.subtitle")}
            imgSrc="/compressed/PricePageBanner.png"
            imgAlt="Banner Image"
            />
@@ -43,7 +43,9 @@ const PricePage = () => {
                 <PriceList services={services} />
              </div>
 
-            <MapSection/>
+            <MapSection
+            adress={t("homePage.adress")}
+            />
 
             <Footer
                 buttons={buttons}

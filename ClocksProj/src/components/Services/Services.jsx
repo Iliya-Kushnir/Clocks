@@ -2,8 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Services.module.scss";
 import ServiceCard from "./ServiceCard/ServiceCard.jsx";
+import { useLanguage } from "../../LanguageContext/LanguageContext.jsx";
 
 const Services = (props) => {
+    const {t} = useLanguage()
     const {cards} = props
 
     return (
@@ -19,7 +21,7 @@ const Services = (props) => {
                 />
             ))}
         </div>
-        <p className={styles.redText}>Берем на ремонт ЛЮБЫЕ часы всех марок и систем</p>
+        <p className={styles.redText}>{t("servicesRedTxt.redText")}</p>
     </>
     )
 }

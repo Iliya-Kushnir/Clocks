@@ -55,6 +55,15 @@ const translations = {
             }
         },
 
+        pricePage: {
+            title: "Расценки",
+            subtitle: "Самые технологичные работы в Харькове",
+            redText: "ПРИНИМАЕМ ЗАКАЗЫ СО ВСЕЙ УКРАИНЫ ПО ПОЧТЕ!",
+            service: "Услуга",
+            cost: "Цена",
+            duration: "Срок"
+        },
+
         ServiceCards: {
         MechaicWatch: "Ремонт механических часов",
         Battery: "Замена элементов питания",
@@ -239,7 +248,22 @@ const translations = {
             services: "Услуги",
             works: "Работы",
             main: "Главная"
-        }
+        },
+
+        footerRedTxt: {
+            text: "Принимаем заказы со всей Украины по почте"
+        },
+
+        allServices: {
+            title: "Услуги",
+            subtitle: "Услуги от Мастерской Время!",
+            sectionHeading: "Услуги мастерской"
+        },
+
+        servicesRedTxt: {
+            redText: "Берем на ремонт ЛЮБЫЕ часы всех марок и систем"
+        },
+
     },
     ua: {
         siteHeading: {
@@ -356,6 +380,15 @@ const translations = {
             }
         },
 
+        pricePage: {
+            title: "Розцінки",
+            subtitle: "Найтехнологічніші роботи в Харкові",
+            redText: "ПРИЙМАЄМО ЗАКАЗИ ЗІ ВСІЄЇ УКРАЇНИ ПОШТОЮ!",
+            service: "Послуга",
+            cost: "Ціна",
+            duration: "Срок"
+        },
+
 
         batteryPage: {
             title: "Заміна елементів живлення",
@@ -470,8 +503,8 @@ const translations = {
         },
 
         examplesPage: {
-            title: "Послуги",
-            subtitle: "Послуги від Майстерні Час!",
+            title: "Приклади робіт",
+            subtitle: "Найкращі приклади з якісними работами",
         },
         
         NavigationLinks: {
@@ -481,9 +514,21 @@ const translations = {
             services: "Послуги",
             works: "Роботи",
             main: "Головна"
-        }
+        },
         
-        
+        footerRedTxt: {
+            text: "Приймаємо закази зі всієї України поштою"
+        }, 
+
+        allServices: {
+            title: "Послуги",
+            subtitle: "Послуги від Майстерні Час!",
+            sectionHeading: "Послуги майстерні"
+        },
+
+        servicesRedTxt: {
+            redText: "Беремо на ремонт Будь-які годинники усіх марок та систем"
+        },
     }
   };
   
