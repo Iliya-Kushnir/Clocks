@@ -238,7 +238,7 @@ const translations = {
 
         examplesPage: {
             title: "Услуги",
-            subtitle: "Услуги от Мастерской Время!",
+            subtitle: "Лучшие примеры с качественными работами!",
         },
 
         NavigationLinks: {
