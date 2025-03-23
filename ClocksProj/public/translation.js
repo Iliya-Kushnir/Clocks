@@ -237,7 +237,7 @@ const translations = {
         },
 
         examplesPage: {
-            title: "Услуги",
+            title: "Примеры работ",
             subtitle: "Лучшие примеры с качественными работами!",
         },
 
