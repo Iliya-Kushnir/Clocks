@@ -115,8 +115,8 @@ const MajorRenovationPage = () => {
         beforeSrc2="/compressed/BeforeafterHome5.png"
         afterSrc2="/compressed/BeforeafterHome6.png"
 
-        beforeSrc3="/compressed/BeforeafterHome1.png"
-        afterSrc3="/compressed/BeforeafterHome2.png"
+        beforeSrc3="/compressed/BeforeafterHome3.png"
+        afterSrc3="/compressed/BeforeafterHome4.png"
 
         />
 
