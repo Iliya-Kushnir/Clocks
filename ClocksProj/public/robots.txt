@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://your-domain.ua/sitemap.xml
+Sitemap: https://repairwatch.kharkiv.ua/sitemap.xml
