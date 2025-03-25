@@ -44,27 +44,13 @@ const ConsultationForm = () => {
           setIsDisabled(true);
           setTimer(15);
 
-          axios
-            .post("https://clocksshopserver.onrender.com/phone-email", {
-              phoneNumber: values.phone,
-              fullName: values.Name,
-            })
-            .then((response) => {
-              if (response.status === 200) {
-                toast.success(t("form.successMessage"), {
-                  position: "bottom-right",
-                  autoClose: 3000,
-                });
-                resetForm();
-              }
-            })
-            .catch((error) => {
-              toast.error(t("form.errorMessage"), {
-                position: "bottom-right",
-                autoClose: 3000,
-              });
-              console.error("Ошибка запроса:", error);
+          if (true) {
+            toast.success(t("form.successMessage"), {
+              position: "bottom-right",
+              autoClose: 3000,
             });
+            resetForm();
+          }
         }}
       >
         {({ errors, touched }) => (

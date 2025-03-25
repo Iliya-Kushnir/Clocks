@@ -44,12 +44,6 @@ const RepairForm = ({ isModalOpen, setIsModalOpen }) => {
     }
   
     try {
-      const response = await axios.post("https://clocksshopserver.onrender.com/email", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-  
       toast.success("Данные успешно отправлены!"); // Показываем тост
   
       setTimeout(() => {

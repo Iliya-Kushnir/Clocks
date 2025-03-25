@@ -332,8 +332,7 @@ const translations = {
                 PendulumMechanismRepair: { name: "Ремонт маятникових механізмів", price: "від 1200 грн", duration: "4+ дні" },
                 AntiqueMechanismRepair: { name: "Ремонт і відновлення механізму старовинного годинника", price: "від 2000 грн", duration: "4-5 днів" },
                 FullAntiqueCleaning: { name: "Повне розбирання та чистка старовинного годинника", price: "від 2000 грн", duration: "3-4 дні" }
-            },
-            
+            },          
 
               form: {
                 title: "Записатися на консультацію",
@@ -361,8 +360,6 @@ const translations = {
             examplesTitle: "Приклади робіт",
         },
 
-
-
         poloshingPage: {
             title: "Полірування Годинників",
             subtitle: "Якісне полірування з різних матеріалів",
@@ -388,7 +385,6 @@ const translations = {
             cost: "Ціна",
             duration: "Срок"
         },
-
 
         batteryPage: {
             title: "Заміна елементів живлення",
@@ -529,6 +525,113 @@ const translations = {
         servicesRedTxt: {
             redText: "Беремо на ремонт Будь-які годинники усіх марок та систем"
         },
+    },
+    eng: {
+        siteHeading: {
+            title: "Time Workshop"
+        },
+
+        repairForm: {
+            title: "Book a Repair",
+            paragraph: "Enter your details, and we will contact you as soon as possible. The wait may take 1-2 days.",
+            description: "Describe your problem",
+            name: "Your name",
+            email: "Your email",
+            book: "Book now",
+            send: "Sending..."
+        },
+
+        homePage: {     
+            title: "Watch Repair",
+            subtitle: "Quality watch repair in Kharkiv by an expert craftsman",
+            servicesTitle: "Workshop Services",
+            experienceTitle: "Master's Experience",
+            pricingTitle: "Service Rates",
+            examplesTitle: "Work Examples",
+            findUsTitle: "How to Find Us?",
+            deliveryText: "WE ACCEPT ORDERS FROM ALL OVER UKRAINE BY MAIL!",
+            description: "I am an experienced watchmaker with over 20 years of expertise. I work with all types of watches – from classic mechanical to modern quartz and automatic models. Every breakdown is a challenge I gladly accept. I will restore, adjust, and return your watch to perfect precision and appearance. I guarantee quality repair and a personalized approach to each order. Your watch is in good hands!",
+            adress: "Workshop address: Kharkiv, Poltavskyi Shliakh 31, office center, office 311",
+            buttons: {
+              consultation: "Free Consultation",
+              checkPrices: "Check Prices",
+              bookAppointment: "Book a Consultation",
+              viewAllPrices: "View All Prices",
+              viewMore: "View More"
+            }
+        },   
+
+        beforeAfter: {
+            before: "Before",
+            after: "After"
+        },
+        
+        poloshingPage: {
+            title: "Watch Polishing",
+            subtitle: "High-quality polishing of various materials",
+
+            explanatio1: "What is watch polishing?",
+            description1: "Polishing a watch is the process of removing scratches, scuffs, and minor defects from the case and bracelet to restore their original shine. It comes in several types: Regular polishing – removes minor scratches and restores gloss. Satin finishing (brushing) – creates a matte texture on metal surfaces. Deep restoration – includes the elimination of more severe damage and restoration of the case's geometry.",
+            
+            explanatio2: "How is polishing done?",
+            descriptionPoint2: "Polishing is done manually or using specialized machines. Gentle methods are used for expensive watches to preserve their original shape. It's important not to overdo the procedure, as frequent polishing can wear down case details.",
+            sectionHeading: "Work Examples",
+
+            buttons: {
+                call: "Call Us"
+            }
+        },
+
+        pricePage: {
+            title: "Pricing",
+            subtitle: "The most advanced services in Kharkiv",
+            redText: "WE ACCEPT ORDERS FROM ALL OVER UKRAINE BY MAIL!",
+            service: "Service",
+            cost: "Price",
+            duration: "Duration"
+        },
+
+        ServiceCards: {
+        MechaicWatch: "Mechanical Watch Repair",
+        Battery: "Battery Replacement",
+        Polishing: "Watch Polishing",
+        Сleaning: "Watch Cleaning & Lubrication",
+        Straps: "Strap or Bracelet Replacement",
+        Capital: "Full Watch Overhaul"
+        },
+
+        ServicesList: {
+            StrapReplacement: { name: "Strap or Bracelet Replacement", price: "from 600 UAH", duration: "1-2 days" },
+            BatteryReplacement: { name: "Battery Replacement", price: "from 300 UAH", duration: "1-2 days" },
+            GlassReplacement: { name: "Glass Replacement", price: "from 400 UAH", duration: "1-2 days" },
+            WaterproofProtection: { name: "Waterproof Protection", price: "from 500 UAH", duration: "2-3 days" },
+            Polishing: { name: "Case and Bracelet Polishing", price: "from 1000 UAH", duration: "2-3 days" },
+            AccuracyCheck: { name: "Accuracy Check", price: "from 200 UAH", duration: "1-2 days" },
+            AntiqueRestoration: { name: "Antique Watch Restoration", price: "from 3000 UAH", duration: "7+ days" },
+            WaterproofUpdate: { name: "Waterproofing Update", price: "from 800 UAH", duration: "2-3 days" },
+            Overhaul: { name: "Full Watch Overhaul", price: "from 500 UAH", duration: "2-3 days" },
+            HandsDialReplacement: { name: "Hands and Dial Replacement", price: "from 800 UAH", duration: "2-3 days" },
+            CleaningLubrication: { name: "Cleaning & Lubrication", price: "from 600 UAH", duration: "1-2 days" },
+            ChronographRepair: { name: "Chronograph Mechanism Repair or Replacement", price: "from 2000 UAH", duration: "3-4 days" },
+            PendulumClockRepair: { name: "Pendulum Clock Mechanism Repair & Adjustment", price: "from 600 UAH", duration: "7+ days" },
+            MechanismRestoration: { name: "Mechanism Restoration", price: "from 1000 UAH", duration: "3+ days" },
+            PendulumMechanismRepair: { name: "Pendulum Mechanism Repair", price: "from 1200 UAH", duration: "4+ days" },
+            AntiqueMechanismRepair: { name: "Antique Watch Mechanism Repair & Restoration", price: "from 2000 UAH", duration: "4-5 days" },
+            FullAntiqueCleaning: { name: "Complete Disassembly & Cleaning of Antique Watches", price: "from 2000 UAH", duration: "3-4 days" }
+        },
+
+        footerRedTxt: {
+            text: "We accept orders from all over Ukraine by mail"
+        },
+
+        NavigationLinks: {
+            delivery: "Delivery",
+            price: "Pricing",
+            map: "Map",
+            services: "Services",
+            works: "Works",
+            main: "Home"
+        }
     }
   };
   

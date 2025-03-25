@@ -7,8 +7,8 @@ const LanguageSwitcher = () => {
 
     return (
         <div>
-            <button className={styles.switchBtn} onClick={() => toggleLanguage("ru")} disabled={language === "ru"}>Рус</button>
-            <button className={styles.switchBtn} onClick={() => toggleLanguage("ua")} disabled={language === "en"}>Укр</button>
+            <button className={styles.switchBtn} onClick={() => toggleLanguage("eng")} disabled={language === "eng"}>Eng</button>
+            <button className={styles.switchBtn} onClick={() => toggleLanguage("ua")} disabled={language === "en"}>Ua</button>
         </div>
     );
 };

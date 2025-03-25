@@ -8,6 +8,8 @@ import ConsultationForm from "./ConsultationForm/ConsultationForm.jsx";
 const MapSection = forwardRef(({ adress }, ref) => {
   return (
     <div ref={ref} className={styles.sectionWrapper}>
+
+      <IslandMap></IslandMap>
       <div className={styles.adressSection}>
         <div className={styles.locationSection}>
           <img className={styles.pointer} src="/compressed/Vector.png" alt="MapPointer" />
