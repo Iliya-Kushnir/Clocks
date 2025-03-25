@@ -131,7 +131,7 @@ const HomePage = () => {
         onClick={() => handleClick3()}
       />
 
-      
+      <AdBanner       />
 
       <h1 className={styles.SectionHeading}>{t("homePage.pricingTitle")}</h1>
 
