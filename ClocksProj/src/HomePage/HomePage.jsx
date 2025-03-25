@@ -16,6 +16,7 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import RepairForm from "../components/RepairForm/RepairForm.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import AdBanner from "../components/AdBanner/Adbanner.jsx";
 
 
 const HomePage = () => {
@@ -129,6 +130,8 @@ const HomePage = () => {
         label={t("homePage.buttons.bookAppointment")}
         onClick={() => handleClick3()}
       />
+
+      
 
       <h1 className={styles.SectionHeading}>{t("homePage.pricingTitle")}</h1>
 
