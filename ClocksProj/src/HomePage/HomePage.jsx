@@ -21,6 +21,7 @@ import AdBanner from "../components/AdBanner/Adbanner.jsx";
 
 const HomePage = () => {
   const {t} = useLanguage();
+  console.log(t("homePage.title"))
   const navigate = useNavigate();
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
@@ -88,7 +89,7 @@ const HomePage = () => {
     });
   };
 
-  console.log(t)
+  console.log({t})
 
 
   return (
@@ -131,7 +132,7 @@ const HomePage = () => {
         onClick={() => handleClick3()}
       />
 
-      <AdBanner       />
+      
 
       <h1 className={styles.SectionHeading}>{t("homePage.pricingTitle")}</h1>
 
