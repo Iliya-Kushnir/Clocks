@@ -20,6 +20,7 @@ import AdBanner from "../components/AdBanner/Adbanner.jsx";
 
 
 const HomePage = () => {
+  const adRef = useRef(null);
   const {t} = useLanguage();
   console.log(t("homePage.title"))
   const navigate = useNavigate();
@@ -115,7 +116,15 @@ const HomePage = () => {
         onClick={() => handleClick2()}
       />
 
-      
+      <ins
+      ref={adRef}
+      className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-7786117059413668"
+      data-ad-slot="2785739575" // Твой реальный AdSense slot ID
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+      ></ins>
 
       <h1 className={styles.SectionHeading}>{t("homePage.experienceTitle")}</h1>
 

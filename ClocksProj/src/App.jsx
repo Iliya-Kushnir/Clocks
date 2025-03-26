@@ -20,6 +20,15 @@ import ExperiencePage from './ExperiencePage/ExperiencePage.jsx';
 function App() {
   return (
     <>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TNCLHCZ4"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        ></iframe>
+      </noscript> 
+
     <LanguageProvider>
       <BrowserRouter>
       <ScrollToTop/>
