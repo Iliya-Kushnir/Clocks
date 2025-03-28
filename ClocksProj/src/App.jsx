@@ -27,7 +27,7 @@ function App() {
           width="0"
           style={{ display: "none", visibility: "hidden" }}
         ></iframe>
-      </noscript> 
+      </noscript>
 
     <LanguageProvider>
       <BrowserRouter>

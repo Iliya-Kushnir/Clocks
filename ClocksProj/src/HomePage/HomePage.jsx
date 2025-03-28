@@ -93,6 +93,15 @@ const HomePage = () => {
   console.log({t})
 
 
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.error("Ошибка загрузки рекламы:", e);
+    }
+  }, []);
+
+
   return (
     <>
       <ToastContainer />
