@@ -3,26 +3,6 @@ import styles from "./GridImg.module.scss";
 
 const GridLayout = () => {
 
-    /*
-                <div className={styles.gridContainer}>
-                <div className={styles.gridItem1}><img className={styles.img} src="/compressed/RoundWatch.png" alt="" /></div>
-                <div className={styles.gridItem3}><img className={styles.img} src="/compressed/SmallWatch.png" alt="" /></div>
-                <div className={styles.gridItem4}><img className={styles.img} src="/compressed/SmallWatch2.png" alt="" /></div>
-                <div className={styles.gridItem2}><img className={styles.img} src="/compressed/BigWatch.png" alt="" /></div>
-            </div>
-            <div className={styles.restImgs}>
-                <div>
-
-                </div>
-                <div>
-                    
-                </div>
-                <div>
-
-                </div>
-            </div>
-    */
-
     return (
         <>
             <div class={styles.worksGrid}>
@@ -36,9 +16,28 @@ const GridLayout = () => {
                 <img src="/images/lighthouse.png" className={styles.small} />
                 <img src="/compressed/SmallWatch.png" className={styles.small}  />
                 <img src="/images/bigClock.png" className={styles.wide} />
+                <img src="/images/watchesDefault.jpg" alt="" className={styles.small}/>
+                <img src="/images/TomyWatches.jpg" className={styles.small} />
+                <img src="/images/SuitWatches.jpg" alt="" className={styles.small}/>
+                <img src="/images/oldWatches.jpg" className={styles.small} />
+                <img src="/images/Majak.jpg" className={styles.small} />
+                <img src="/images/Orient.jpg" alt="" className={styles.small}/>
+                <img src="/images/Carnival.jpg" className={styles.small} />
+                <img src="/images/Canion.jpg" className={styles.small} />
+                <img src="/images/Spring1.jpg" className={styles.small} />
+                <img src="/images/Spring2.jpg" alt="" className={styles.small}/>
+                <img src="/images/QQ.jpg" className={styles.small} />
+                <img src="/images/sohne.jpg" className={styles.small} />
+                <img src="/images/sohne2.jpg" alt="" className={styles.small}/>
+                <img src="/images/Jantar.jpg" className={styles.small} />
+                <img src="/images/Majak2.jpg" className={styles.small} />
+                <img src="/images/seiko.jpg" alt="" className={styles.small}/>
+                <img src="/images/michaelKors.jpg" className={styles.small} />
+                <img src="/images/longines.jpg" className={styles.small} />
+                <img src="/images/lighthouse.png" className={styles.small} />
+                <img src="/compressed/SmallWatch.png" alt="" className={styles.small}/>
+                <img src="/images/light.png" className={styles.small} />
             </div>
-
-
         </>
     )
 }
