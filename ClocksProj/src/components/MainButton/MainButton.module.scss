@@ -12,14 +12,14 @@
     padding-bottom: 20px;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 100px;  // Обычный отступ
+    margin-top: 100px;  
 }
 
 .noMargin {
-    margin-top: 0 !important; // Убираем отступ
+    margin-top: 0 !important; 
 }
 
-/* Адаптивность */
+
 @media (max-width: 1439px) and (min-width: 768px) {
     .mainButton {
         width: 535px;

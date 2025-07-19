@@ -20,9 +20,9 @@ const ImageSlider = () => {
       <h2 className="text-xl font-bold mb-4 text-center">Галерея изображений</h2>
       <ImageGallery
         items={images}
-        showPlayButton={false}        // Скрыть кнопку воспроизведения
-        showFullscreenButton={false}  // Скрыть кнопку полноэкранного режима
-        showThumbnails={false}        // Скрыть миниатюры изображений снизу
+        showPlayButton={false}        
+        showFullscreenButton={false} 
+        showThumbnails={false}        
         transitionDuration={500}
         additionalClass="custom-gallery"
       />

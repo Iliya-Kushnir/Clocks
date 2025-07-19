@@ -8,7 +8,7 @@ import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
 const position = [49.98761491943315, 36.21672317791318];
 
-// Фиксим стандартный маркер Leaflet
+
 const customIcon = new L.Icon({
   iconUrl: markerIcon,
   shadowUrl: markerShadow,

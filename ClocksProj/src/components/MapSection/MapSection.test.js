@@ -4,7 +4,6 @@ import MapSection from "./MapSection.jsx";
 import IslandMap from "./isLandMap/isLandMap.jsx";
 import ConsultationForm from "./ConsultationForm/ConsultationForm.jsx";
 
-// Мокаем `IslandMap` и `ConsultationForm`, чтобы проверить, что они рендерятся внутри `MapSection`
 jest.mock("./isLandMap/isLandMap.jsx", () => ({
   __esModule: true,
   default: jest.fn(() => <div data-testid="island-map" />),

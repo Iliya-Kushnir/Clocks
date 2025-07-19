@@ -5,7 +5,7 @@ import styles from "./MainButton.module.scss";
 const MainButton = ({ onClick, label, className = "" }) => {
     return (
         <button
-            className={`${styles.mainButton} ${className}`} // Теперь поддерживает 2 класса
+            className={`${styles.mainButton} ${className}`} 
             onClick={onClick}
             type="button"
         >
@@ -17,7 +17,7 @@ const MainButton = ({ onClick, label, className = "" }) => {
 MainButton.propTypes = {
     label: PropTypes.string.isRequired,
     onClick: PropTypes.func,
-    className: PropTypes.string, // Теперь `className` передается правильно
+    className: PropTypes.string, 
 };
 
 export default MainButton;

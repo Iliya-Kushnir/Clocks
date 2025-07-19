@@ -8,18 +8,18 @@ const ImageSwitcher = ({ images, setIsButtonVisible }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeout(() => {
-        setIsButtonVisible(false); // Скрываем кнопку за 100ms до смены фона
-      }, 900); // Если фон меняется через 1000ms, то кнопку убираем за 100ms до этого
+        setIsButtonVisible(false); 
+      }, 900); 
 
       setTimeout(() => {
-        setIndex((prev) => (prev + 1) % images.length); // Меняем фон
-      }, 1000); // Фон меняется через 1 секунду
+        setIndex((prev) => (prev + 1) % images.length); 
+      }, 1000); 
 
       setTimeout(() => {
-        setIsButtonVisible(true); // Показываем кнопку через 300ms после смены фона
+        setIsButtonVisible(true);
       }, 2000); 
 
-    }, 5000); // Интервал 5 сек
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [images.length, setIsButtonVisible]);
@@ -39,7 +39,7 @@ const ImageSwitcher = ({ images, setIsButtonVisible }) => {
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.1 }}
-          transition={{ duration: 1, ease: "easeInOut" }} // Фон меняется за 1 сек
+          transition={{ duration: 1, ease: "easeInOut" }} 
         />
       </AnimatePresence>
     </div>
