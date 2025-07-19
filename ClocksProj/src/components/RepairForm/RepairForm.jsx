@@ -32,7 +32,7 @@ const RepairForm = ({ isModalOpen, setIsModalOpen }) => {
     return () => clearInterval(interval);
   }, [isDisabled, timer]);
 
-  // Функция для отправки данных на сервер
+
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     console.log(values);
     const formData = new FormData();
@@ -50,11 +50,11 @@ const RepairForm = ({ isModalOpen, setIsModalOpen }) => {
         },
       });
   
-      toast.success("Данные успешно отправлены!"); // Показываем тост
+      toast.success("Данные успешно отправлены!"); 
   
       setTimeout(() => {
         resetForm(); 
-        setIsModalOpen(false); // Закрываем модалку через 2 секунды
+        setIsModalOpen(false); 
       }, 2000);
   
     } catch (error) {

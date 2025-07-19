@@ -10,8 +10,8 @@ const FileUpload = ({ name, setFieldValue }) => {
     const selectedFile = event.target.files[0];
     if (selectedFile) {
       setFile(selectedFile);
-      setFieldValue(name, selectedFile); // Устанавливаем файл в Formik
-      setPreview(URL.createObjectURL(selectedFile)); // Обновляем превью
+      setFieldValue(name, selectedFile);  
+      setPreview(URL.createObjectURL(selectedFile)); 
     }
   };
 
@@ -21,8 +21,8 @@ const FileUpload = ({ name, setFieldValue }) => {
     const droppedFile = event.dataTransfer.files[0];
     if (droppedFile) {
       setFile(droppedFile);
-      setFieldValue(name, droppedFile); // Устанавливаем файл в Formik
-      setPreview(URL.createObjectURL(droppedFile)); // Обновляем превью
+      setFieldValue(name, droppedFile); 
+      setPreview(URL.createObjectURL(droppedFile)); 
     }
   };
 

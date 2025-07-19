@@ -3,7 +3,6 @@ import { render, screen } from "@testing-library/react";
 import Services from "./Services.jsx";
 import ServiceCard from "./ServiceCard/ServiceCard.jsx";
 
-// Мокаем `ServiceCard`, чтобы проверить, как `Services` передает в него данные
 jest.mock("./ServiceCard/ServiceCard.jsx", () => ({
   __esModule: true,
   default: jest.fn(({ serviceName }) => <div data-testid="service-card">{serviceName}</div>),

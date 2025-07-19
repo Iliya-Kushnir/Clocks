@@ -4,7 +4,7 @@ import { useLocation } from "react-router";
 import styles from "./Banner.module.scss";
 import MainButton from "../MainButton/MainButton.jsx";
 import ImageSwitcher from "../../HomePage/ImageAttempt/ImageAttempt.jsx";
-import RepairForm from "../RepairForm/RepairForm.jsx"; // Импортируем форму
+import RepairForm from "../RepairForm/RepairForm.jsx"; 
 import { useLanguage } from "../../LanguageContext/LanguageContext.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -52,12 +52,12 @@ const Banner = ({ mainText, secondaryText }) => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 1.2, ease: "easeOut" }} // ⬅ Увеличили до 1.2 сек
+              transition={{ duration: 1.2, ease: "easeOut" }} 
             >
             <MainButton 
               label={t("homePage.buttons.consultation")} 
               onClick={() => setIsModalOpen(true)} 
-              className={styles.noMargin}// Добавляем класс
+              className={styles.noMargin}
             />
             </motion.div>
           )}
@@ -65,7 +65,7 @@ const Banner = ({ mainText, secondaryText }) => {
       )}
 
 
-      {/* Показываем модальное окно, если isModalOpen === true */}
+
       {isModalOpen && <RepairForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
     </div>
   );

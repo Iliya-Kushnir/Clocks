@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import styles from "./BurgerMenu.module.scss"; // Подключаем стили для гамбургер-меню
+import styles from "./BurgerMenu.module.scss"; 
 import LanguageSwitcher from "../Header/LanguageSwitcher/LanguageSwitcher.jsx";
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { useLanguage } from "../../LanguageContext/LanguageContext.jsx";
 
 const BurgerMenu = () => {
   const {t} = useLanguage()
-  const [isOpen, setIsOpen] = useState(false); // Стейт для открытия/закрытия меню
+  const [isOpen, setIsOpen] = useState(false); /
 
-  // Функция для переключения состояния меню
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -16,7 +16,7 @@ const BurgerMenu = () => {
   return (
     <>
     <div className={styles.burgerMenu}>
-      {/* Кнопка гамбургера */}
+  
       <button className={styles.burgerButton} onClick={toggleMenu}>
         <span className={isOpen ? styles.open : ""}></span>
         <span className={isOpen ? styles.open : ""}></span>

@@ -7,10 +7,10 @@ import { initialValues, schemas } from "./helper";
 import { Input } from "./Input/Input";
 import { Button } from "./Button/Button";
 import axios from "axios";
-import { useLanguage } from "../../../LanguageContext/LanguageContext.jsx"; // Импортируем хук для перевода
+import { useLanguage } from "../../../LanguageContext/LanguageContext.jsx";
 
 const ConsultationForm = () => {
-  const { t } = useLanguage(); // Используем функцию перевода
+  const { t } = useLanguage(); 
   const [isDisabled, setIsDisabled] = useState(false);
   const [timer, setTimer] = useState(0);
 

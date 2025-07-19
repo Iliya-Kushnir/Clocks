@@ -2,12 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: "/", // Убедись, что base установлен корректно
+  base: "/", 
   plugins: [react()],
   server: {
-    historyApiFallback: true // Для корректной работы React Router
+    historyApiFallback: true 
   },
   build: {
-    outDir: "dist" // Убедись, что билд идёт в dist
+    outDir: "dist" 
   }
 })

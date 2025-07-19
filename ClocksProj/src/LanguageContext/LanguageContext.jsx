@@ -1,29 +1,28 @@
 import React, { createContext, useState, useContext } from "react";
-import translations from "../../public/translation"; // Подключаем переводы
+import translations from "../../public/translation";  
 
-// Создаём контекст
 const LanguageContext = createContext();
 
-// Провайдер контекста
+
 export const LanguageProvider = ({ children }) => {
     const [language, setLanguage] = useState(localStorage.getItem("lang") || "ru");
 
     const toggleLanguage = (lang) => {
         setLanguage(lang);
-        localStorage.setItem("lang", lang); // Сохраняем в localStorage
+        localStorage.setItem("lang", lang); 
     };
 
-    // Функция перевода текста с поддержкой вложенных ключей
+
     const t = (key) => {
-        const keys = key.split('.'); // Разделяем ключ на части, используя точку как разделитель
+        const keys = key.split('.'); 
         let translation = translations[language];
 
-        // Итерируем по частям ключа и ищем соответствующее значение в объекте перевода
+
         for (let i = 0; i < keys.length; i++) {
             translation = translation ? translation[keys[i]] : null;
         }
 
-        // Если перевод найден, возвращаем его, иначе возвращаем сам ключ
+        
         return translation || key;
     };
 
@@ -34,5 +33,5 @@ export const LanguageProvider = ({ children }) => {
     );
 };
 
-// Хук для использования языка
+
 export const useLanguage = () => useContext(LanguageContext);

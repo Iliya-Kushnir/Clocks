@@ -5,7 +5,7 @@ const AdBanner = ({ adClient, adSlot }) => {
 
   useEffect(() => {
     console.log(window.adsbygoogle)
-    // Проверяем, загружен ли уже AdSense
+    
     if (!window.adsbygoogle) {
       const script = document.createElement("script");
       script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786117059413668";
@@ -15,7 +15,7 @@ const AdBanner = ({ adClient, adSlot }) => {
       
     }
 
-    // Инициализируем рекламу, но только если блок еще не был загружен
+
     if (adRef.current) {
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
@@ -31,7 +31,7 @@ const AdBanner = ({ adClient, adSlot }) => {
       className="adsbygoogle"
       style={{ display: "block" }}
       data-ad-client={adClient}
-      data-ad-slot={adSlot} // Твой реальный AdSense slot ID
+      data-ad-slot={adSlot} 
       data-ad-format="auto"
       data-full-width-responsive="true"
     ></ins>

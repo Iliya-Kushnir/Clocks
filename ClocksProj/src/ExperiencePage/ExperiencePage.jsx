@@ -23,13 +23,13 @@ const ExperiencePage = () => {
     const section2Ref = useRef(null);
     const section3Ref = useRef(null);
     const [cooldown, setCooldown] = useState(false);
-    const [timeLeft, setTimeLeft] = useState(30); // 30 секунд
+    const [timeLeft, setTimeLeft] = useState(30); 
   
     const handleClick = () => {
       if (!cooldown) {
         notify();
         setCooldown(true);
-        setTimeLeft(30); // сбрасываем кулдаун на 30 секунд
+        setTimeLeft(30); 
       }
     };
   
@@ -66,10 +66,10 @@ const ExperiencePage = () => {
     const notify = () => {
       toast.info(`Осталось ${timeLeft} чтоб повторно отправить форму!`, {
         position: "bottom-right",
-        autoClose: false, // Убираем автозакрытие, чтобы пользователь видел прогресс
+        autoClose: false, 
         closeOnClick: false, 
         progress: (timeLeft / 30),
-        success: ("Кулдаун окончен!"), // Прогресс от 0 до 1 (время / 30 секунд)
+        success: ("Кулдаун окончен!"), 
       });
     };
 

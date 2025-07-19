@@ -24,5 +24,5 @@ export const initialValues = {
   email: "",
   name: "",
   message: "",
-  file: null, // Файл должен быть `null`, а не строка
+  file: null, 
 };
