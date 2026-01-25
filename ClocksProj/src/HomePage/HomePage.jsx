@@ -58,7 +58,8 @@ const HomePage = () => {
     { serviceName: t("ServiceCards.Polishing"), serviceSrc: "/compressed/Watch3.png", serviceAlt: "third", link: "/SecondService" },
     { serviceName: t("ServiceCards.Сleaning"), serviceSrc: "/compressed/Watch4.png", serviceAlt: "fourth", link: "/FifthService" },
     { serviceName: t("ServiceCards.Straps"), serviceSrc: "/compressed/Watch5.png", serviceAlt: "fifth", link: "/FourthService" },
-    { serviceName: t("ServiceCards.Capital"), serviceSrc: "/compressed/Watch6.png", serviceAlt: "sixth", link: "/SixthService" }
+    { serviceName: t("ServiceCards.Capital"), serviceSrc: "/compressed/Watch6.png", serviceAlt: "sixth", link: "/SixthService" },
+    { serviceName: t("ServiceCards.Marriage"), serviceSrc: "/images/maryazh1.png", serviceAlt: "seventh", link: "/MarriagePage" },
   ];
 
   const services = Object.values(t("ServicesList")).slice(0, 12);

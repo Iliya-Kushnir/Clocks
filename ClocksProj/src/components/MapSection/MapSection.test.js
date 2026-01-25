@@ -1,8 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import MapSection from "./MapSection.jsx";
-import IslandMap from "./isLandMap/isLandMap.jsx";
-import ConsultationForm from "./ConsultationForm/ConsultationForm.jsx";
 
 jest.mock("./isLandMap/isLandMap.jsx", () => ({
   __esModule: true,

@@ -84,7 +84,8 @@ const translations = {
         Polishing: "Полировка часов",
         Сleaning: "Чистка и смазка часов",
         Straps: "Замена ремешка или браслета",
-        Capital: "Капитальный ремонт часов"
+        Capital: "Капитальный ремонт часов",
+        Marriage: "Марьяж часов Молния СССР 3602",
         },
 
         ServicesList: {
@@ -325,7 +326,8 @@ const translations = {
             Polishing: "Полірування годинників",
             Сleaning: "Чистка та змащування годинників",
             Straps: "Заміна ремінця або браслета",
-            Capital: "Капітальний ремонт годинників"
+            Capital: "Капітальний ремонт годинників",
+            Marriage: "Мар'яж годинників Молнія СРСР 3602",
             },
 
             ServicesList: {
@@ -557,5 +559,4 @@ const translations = {
     }
   };
   
-  export default translations;
-  
+  export default translations;  

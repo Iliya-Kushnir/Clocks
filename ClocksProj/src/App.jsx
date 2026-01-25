@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Router, Routes, Route } from 'react-router-dom'; 
-import './App.style.scss'
 import HomePage from './HomePage/HomePage.jsx'
 import AllServicesPage from './AllServicesPage/AllServicesPage.jsx';
 import ExamplesPage from './ExamplesPage/ExamplesPage.jsx';
@@ -16,11 +15,20 @@ import { LanguageProvider } from './LanguageContext/LanguageContext';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import ExperiencePage from './ExperiencePage/ExperiencePage.jsx';
 import MarriageWatchPage from './Marriage_Watch_USSR_Molnija3602/MarriageWatch.jsx';
-
+import './App.style.scss'
 
 function App() {
   return (
     <>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TNCLHCZ4"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        ></iframe>
+      </noscript>
+
     <LanguageProvider>
       <BrowserRouter>
       <ScrollToTop/>
