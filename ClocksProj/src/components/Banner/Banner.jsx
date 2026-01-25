@@ -29,7 +29,8 @@ const Banner = ({ mainText, secondaryText }) => {
     "/FourthService": ["/compressed/FourthServiceBanner.png", "/compressed/FourthServiceBanner2.png", "/compressed/FourthServiceBanner3.png"],
     "/FifthService": ["/compressed/FifthServiceBanner.png", "/compressed/FifthServiceBanner2.png", "/compressed/FifthServiceBanner3.png"],
     "/SixthService": ["/compressed/SixthServiceBanner.png", "/compressed/SixthServiceBanner2.png", "/compressed/SixthServiceBanner3.png"],
-    "/ExperiencePage": ["/compressed/ExperiencePageBanner.png", "/compressed/ExperiencePageBanner2.png", "/compressed/ExperiencePageBanner3.png"]
+    "/ExperiencePage": ["/compressed/ExperiencePageBanner.png", "/compressed/ExperiencePageBanner2.png", "/compressed/ExperiencePageBanner3.png"],
+    "/MarriagePage": ["/compressed/ExperiencePageBanner.png", "/compressed/ExperiencePageBanner2.png", "/compressed/ExperiencePageBanner3.png"],
   };
 
   const selectedImages = imagesByPage[location.pathname] || ["/compressed/DefaultBanner.jpg"];

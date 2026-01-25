@@ -15,6 +15,7 @@ import DeliveryPage from './DeliveryPage/DeliveryPage.jsx';
 import { LanguageProvider } from './LanguageContext/LanguageContext';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import ExperiencePage from './ExperiencePage/ExperiencePage.jsx';
+import MarriageWatchPage from './Marriage_Watch_USSR_Molnija3602/MarriageWatch.jsx';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path='/SixthService' element={<MajorRenovationPage />} />
           <Route path='/DeliveryPage' element={<DeliveryPage />} />
           <Route path='/ExperiencePage' element={<ExperiencePage />} />
+          <Route path='/MarriagePage' element={<MarriageWatchPage />} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>

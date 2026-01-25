@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import styles from "./PolishingPage.module.scss";
+import styles from "./MarriageWatch.module.scss";
 import Header from "../components/Header/Header.jsx";
 import Banner from "../components/Banner/Banner.jsx";
 import MapSection from "../components/MapSection/MapSection.jsx";
@@ -15,7 +15,7 @@ import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 
-const PolishingPage = () => {
+const MarriageWatchPage = () => {
     const {t} = useLanguage();
     const navigate = useNavigate();
     const section1Ref = useRef(null);
@@ -78,31 +78,34 @@ const PolishingPage = () => {
             <Header buttons={buttons} />
 
             <Banner
-            mainText={t("poloshingPage.title")}
-            secondaryText={t("poloshingPage.subtitle")}
+            mainText={t("marriagePage.title")}
+            secondaryText={t("marriagePage.subtitle")}
             imgSrc="/compressed/ServicesBanner.png"
             imgAlt="Banner Image"
             />
 
-            <div className={styles.sectionWrapper}>
+        <div className={styles.sectionWrapper}>
+            <Card
+                title={t("marriagePage.explanatio1")}
+                text={t("marriagePage.description1")}
+                image="/images/photo_1_390x340.jpg"
+            />
 
             <Card
-                title={t("poloshingPage.explanatio1")}
-                text={t("poloshingPage.description1")}
-                image="/compressed/Rectangle 28-14.png"
-                />
-                <Card
-                title={t("poloshingPage.explanatio2")}
+                title={t("marriagePage.explanatio2")}
+                // Теперь ключи в t(...) точно совпадают с исправленным translation.js
                 points={[
-                    t("poloshingPage.descriptionPoint2"),
+                    t("marriagePage.descriptionPoint1"),
+                    t("marriagePage.descriptionPoint2"),
+                    t("marriagePage.descriptionPoint3")
                 ]}
-                image="/compressed/Rectangle 29-3.png"
-                />
+                image="/images/photo_2_390x340.jpg"
+            />
         </div>
-
         <CallButton />
 
-        <h1  className={styles.SectionHeading}>{t("poloshingPage.sectionHeading")}</h1>
+        {/* Теперь заголовок будет подтягивать текст "Примеры работ", а не название ключа */}
+        <h1 className={styles.SectionHeading}>{t("marriagePage.sectionHeading")}</h1>
 
         <BeforeAfterLine 
           beforeSrc1="/compressed/BeforeafterHome7.png"
@@ -112,8 +115,7 @@ const PolishingPage = () => {
           afterSrc2="/compressed/BeforeafterHome6.png"
 
           beforeSrc3="/compressed/BeforeafterHome1.png"
-          afterSrc3="/compressed/BeforeafterHome2.png"
-                
+          afterSrc3="/compressed/BeforeafterHome2.png"   
         />
 
             <div ref={section2Ref}>
@@ -127,4 +129,4 @@ const PolishingPage = () => {
     )
 }
 
-export default PolishingPage
+export default MarriageWatchPage;
