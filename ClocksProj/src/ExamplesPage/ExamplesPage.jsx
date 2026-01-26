@@ -69,6 +69,17 @@ const ExamplesPage = () => {
               afterSrc3="/compressed/BeforeafterHome6.png"
             />
 
+            <BeforeAfterLine
+              beforeSrc1="/images/photo_2026-01-26 21.03.03.jpeg"
+              afterSrc1="/images/photo_2026-01-26 21.03.06.jpeg"
+              
+              beforeSrc2="/images/photo_2026-01-26 21.04.31.jpeg"
+              afterSrc2="/images/photo_2026-01-26 21.04.34.jpeg"
+      
+              beforeSrc3="/images/2026-01-26-21.08.52.png"
+              afterSrc3="/images/2026-01-26-21.09.42.png"
+            />
+
             <CallButton />
 
             <h1 className={styles.SectionHeading}>{t("homePage.findUsTitle")}</h1>

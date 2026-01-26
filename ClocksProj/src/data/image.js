@@ -1,0 +1,33 @@
+export const workImages = [
+    { src: "/compressed/RoundWatch.png", type: "wide" },
+    { src: "/images/light.png", type: "small" },
+    { src: "/compressed/SmallWatch2.png", type: "small" },
+    { src: "/compressed/BigWatch.png", type: "wide" },
+    { src: "/images/bigWatch2.png", type: "wide" },
+    { src: "/images/vostok.png", type: "small" },
+    { src: "/images/alarm.png", type: "small" },
+    { src: "/images/lighthouse.png", type: "small" },
+    { src: "/compressed/SmallWatch.png", type: "small" },
+    { src: "/images/bigClock.png", type: "wide" },
+    { src: "/images/watchesDefault.jpg", type: "small" },
+    { src: "/images/TomyWatches.jpg", type: "small" },
+    { src: "/images/SuitWatches.jpg", type: "small" },
+    { src: "/images/oldWatches.jpg", type: "small" },
+    { src: "/images/Majak.jpg", type: "small" },
+    { src: "/images/Orient.jpg", type: "small" },
+    { src: "/images/Carnival.jpg", type: "small" },
+    { src: "/images/Canion.jpg", type: "small" },
+    { src: "/images/Spring1.jpg", type: "small" },
+    { src: "/images/Spring2.jpg", type: "small" },
+    { src: "/images/QQ.jpg", type: "small" },
+    { src: "/images/sohne.jpg", type: "small" },
+    { src: "/images/sohne2.jpg", type: "small" },
+    { src: "/images/Jantar.jpg", type: "small" },
+    { src: "/images/Majak2.jpg", type: "small" },
+    { src: "/images/seiko.jpg", type: "small" },
+    { src: "/images/michaelKors.jpg", type: "small" },
+    { src: "/images/longines.jpg", type: "small" },
+    { src: "/images/lighthouse.png", type: "small" }, // Дубликат из твоего кода
+    { src: "/compressed/SmallWatch.png", type: "small" }, // Дубликат из твоего кода
+    { src: "/images/light.png", type: "small" } // Дубликат из твоего кода
+];
