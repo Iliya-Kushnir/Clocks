@@ -14,6 +14,7 @@ import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import { Helmet } from 'react-helmet-async';
 
 const CleaningPage = () => {
   const {t} = useLanguage()
@@ -74,6 +75,11 @@ const CleaningPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Ультразвуковая чистка часов Харьков | Профилактика механизма</title>
+                <meta name="description" content="Ультразвуковая чистка корпуса и браслета, внешняя и внутренняя профилактика часов для долгой службы механизма." />
+            </Helmet>
+
             <ToastContainer />
             <Header buttons={buttons} />
 

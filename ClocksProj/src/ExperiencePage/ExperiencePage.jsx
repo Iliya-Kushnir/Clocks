@@ -15,6 +15,7 @@ import { useNavigate } from "react-router";
 import GridLayout from "./GridImg/GridImg.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
+import { Helmet } from 'react-helmet-async';
 
 const ExperiencePage = () => {
     const {t} = useLanguage()
@@ -75,6 +76,13 @@ const ExperiencePage = () => {
 
     return (
         <>
+              <Helmet>
+                  <title>Услуги по ремонту швейцарских и советских часов | Мастерская Время</title>
+                  <meta name="description" content="Более 10 лет опыта в ремонте часов любой сложности. Полировка корпуса, чистка механизма (репассаж), настройка точности хода в Харькове." />
+                  <meta property="og:title" content="Профессиональные услуги часового мастера в Харькове" />
+                  <meta property="og:url" content="https://repairwatch.kharkiv.ua/experience" />
+              </Helmet>
+
             <ToastContainer />
             <Header buttons={buttons} />
 

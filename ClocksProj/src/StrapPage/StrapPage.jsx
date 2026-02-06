@@ -14,6 +14,7 @@ import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import { Helmet } from 'react-helmet-async';
 
 const StrapPage = () => {
   const {t} = useLanguage()
@@ -74,6 +75,11 @@ const StrapPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Замена ремешка и ремонт браслета часов в Харькове</title>
+                <meta name="description" content="Широкий выбор кожаных ремешков и стальных браслетов. Подгонка размера браслета под руку и замена креплений." />
+            </Helmet>
+
             <ToastContainer />
             <Header buttons={buttons} />
 

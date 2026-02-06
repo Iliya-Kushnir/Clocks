@@ -14,6 +14,7 @@ import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import { Helmet } from 'react-helmet-async';
 
 const DeliveryPage = () => {
   const {t} = useLanguage()
@@ -74,6 +75,11 @@ const DeliveryPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Доставка часов на ремонт по Украине | Мастерская Время</title>
+                <meta name="description" content="Принимаем часы на ремонт со всей Украины через Новую Почту. Надежная упаковка и страховка вашего заказа." />
+            </Helmet>
+
             <ToastContainer />
             <Header buttons={buttons} />
 

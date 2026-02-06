@@ -41,7 +41,7 @@ const GridLayout = () => {
                 {/* --- НОВЫЕ ФОТО (33-54) ПЕРЕГРУППИРОВАНЫ ПО 6 ШТУК --- */}
 
                 {/* Группа 1 (33-38) */}
-                <img src="/compressed/hublot.jpeg" className={styles.wide}/>   {/* 33: Wide лево */}
+                <img src="/images/hublot.jpeg" className={styles.wide}/>   {/* 33: Wide лево */}
                 <img src="/images/photo_2026-01-26 18.41.18.jpeg" className={styles.small} />         {/* 34: Small центр верх */}
                 <img src="/images/photo_2026-01-26 18.41.25.jpeg" className={styles.small} />          {/* 35: Small центр верх */}
                 <img src="/images/photo_2026-01-26 18.41.28.jpeg" className={styles.wide} />    {/* 36: Wide право */}

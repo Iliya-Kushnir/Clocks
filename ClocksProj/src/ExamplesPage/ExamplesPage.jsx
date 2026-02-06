@@ -7,7 +7,7 @@ import MapSection from "../components/MapSection/MapSection.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
-
+import { Helmet } from 'react-helmet-async';
 
 const ExamplesPage = () => {
   const {t} = useLanguage()
@@ -32,6 +32,13 @@ const ExamplesPage = () => {
 
       return (
         <>
+          <Helmet>
+            <title>Наши работы: реставрация и ремонт часов | Харьков</title>
+            <meta name="description" content="Посмотрите примеры наших работ по восстановлению часов: Молния, Восток, Seiko, Longines. До и после ремонта в мастерской на Полтавском Шляхе." />
+            <meta property="og:title" content="Примеры ремонта и реставрации часов в Харькове" />
+            <meta property="og:url" content="https://repairwatch.kharkiv.ua/examples" />
+          </Helmet>
+
             <Header
             buttons={buttons}
            />

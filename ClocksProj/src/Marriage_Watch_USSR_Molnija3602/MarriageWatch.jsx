@@ -14,6 +14,7 @@ import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import { Helmet } from 'react-helmet-async';
 
 const MarriageWatchPage = () => {
     const {t} = useLanguage();
@@ -74,6 +75,11 @@ const MarriageWatchPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Марьяж часов Молния 3602 в Харькове | Уникальные наручные часы</title>
+                <meta name="description" content="Создание уникальных наручных часов на базе легендарного механизма Молния 3602. Авторские корпуса и реставрация циферблатов." />
+            </Helmet>
+
             <ToastContainer />
             <Header buttons={buttons} />
 

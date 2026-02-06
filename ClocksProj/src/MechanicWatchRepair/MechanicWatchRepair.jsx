@@ -13,6 +13,7 @@ import Card from "../components/ServiceInfo/Card/Card.jsx";
 import MainButton from "../components/MainButton/MainButton.jsx";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import { Helmet } from 'react-helmet-async';
 
 const MechanicRepairPage = () => {
     const { t } = useLanguage();
@@ -69,6 +70,12 @@ const MechanicRepairPage = () => {
 
     return (
         <>
+
+            <Helmet>
+                <title>Ремонт механических часов в Харькове | Обслуживание механизмов</title>
+                <meta name="description" content="Профессиональный ремонт механических часов любой сложности. Репассаж, настройка точности, чистка и смазка механизмов в Харькове." />
+            </Helmet>
+
             <ToastContainer />
             <Header buttons={buttons} />
             <Banner

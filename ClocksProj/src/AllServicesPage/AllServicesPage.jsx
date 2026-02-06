@@ -9,7 +9,7 @@ import Footer from "../components/Footer/Footer.jsx";
 import BeforeAfterLine from "../components/BeforeAfterLine/BeforeAfterLine.jsx";
 import { useNavigate } from "react-router";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
-
+import { Helmet } from 'react-helmet-async';
 
 const AllServicesPage = () => {
   const navigate = useNavigate()
@@ -45,6 +45,12 @@ const AllServicesPage = () => {
 
       return (
         <>
+
+          <Helmet>
+              <title>Услуги по обслуживанию часов в Харькове | Мастерская Время</title>
+              <meta name="description" content="Полный спектр услуг: от замены батарейки и ремешка до сложного капитального ремонта и восстановления механизмов. Цены и описание услуг." />
+          </Helmet>
+
             <Header
             buttons={buttons}
            />

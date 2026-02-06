@@ -14,6 +14,7 @@ import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import { Helmet } from 'react-helmet-async';
 
 const MajorRenovationPage = () => {
   const {t} = useLanguage()
@@ -74,6 +75,11 @@ const MajorRenovationPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Капитальный ремонт и реставрация старых часов в Харькове</title>
+                <meta name="description" content="Восстановление нерабочих часов, замена деталей, поиск запчастей для редких и антикварных механизмов." />
+            </Helmet>
+
             <ToastContainer />
             <Header buttons={buttons} />
 

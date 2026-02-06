@@ -16,6 +16,7 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import RepairForm from "../components/RepairForm/RepairForm.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import { Helmet } from 'react-helmet-async';
 
 
 const HomePage = () => {
@@ -93,6 +94,13 @@ const HomePage = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Ремонт часов Харьков | Сервисный центр «Время»</title>
+      <meta name="description" content="Профессиональный ремонт механических, кварцевых и антикварных часов в Харькове. Полтавский Шлях, 31. Официальная гарантия на все работы." />
+      <meta property="og:title" content="Ремонт часов Харьков | Мастерская Время" />
+      <meta property="og:description" content="Ремонт любой сложности, замена стекол и ремешков в центре Харькова." />
+      <meta property="og:url" content="https://repairwatch.kharkiv.ua/" />
+    </Helmet>
       <ToastContainer />
       <Header buttons={buttons} />
 

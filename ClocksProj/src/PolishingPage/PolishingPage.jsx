@@ -14,6 +14,7 @@ import MainButton from "../components/MainButton/MainButton.jsx";
 import { useNavigate } from "react-router";
 import CallButton from "../components/CallBtn/CallBtn.jsx";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import { Helmet } from 'react-helmet-async';
 
 const PolishingPage = () => {
     const {t} = useLanguage();
@@ -74,6 +75,12 @@ const PolishingPage = () => {
 
     return (
         <>
+
+            <Helmet>
+                <title>Полировка корпуса и стекла часов Харьков | Удаление царапин</title>
+                <meta name="description" content="Профессиональная полировка часов. Восстановление блеска корпуса и удаление царапин со стекол в часовой мастерской Время." />
+            </Helmet>
+
             <ToastContainer />
             <Header buttons={buttons} />
 

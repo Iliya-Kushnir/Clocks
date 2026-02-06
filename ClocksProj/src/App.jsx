@@ -15,6 +15,7 @@ import { LanguageProvider } from './LanguageContext/LanguageContext';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import ExperiencePage from './ExperiencePage/ExperiencePage.jsx';
 import MarriageWatchPage from './Marriage_Watch_USSR_Molnija3602/MarriageWatch.jsx';
+
 import './App.style.scss'
 
 function App() {

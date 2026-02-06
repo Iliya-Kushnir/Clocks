@@ -7,6 +7,7 @@ import PriceList from "../components/PriceList/PriceList.jsx";
 import styles from "./PricePage.module.scss";
 import { useNavigate } from "react-router";
 import { useLanguage } from "../LanguageContext/LanguageContext.jsx";
+import { Helmet } from 'react-helmet-async';
 
 const PricePage = () => {
   const section2Ref = useRef()
@@ -29,6 +30,12 @@ const PricePage = () => {
 
       return (
         <>
+
+            <Helmet>
+                <title>Цены на ремонт часов в Харькове | Прайс-лист 2026</title>
+                <meta name="description" content="Актуальные цены на основные услуги: замена батареек, полировка, ремонт механизмов. Прозрачная стоимость работ." />
+            </Helmet>
+
             <Header
             buttons={buttons}
            />

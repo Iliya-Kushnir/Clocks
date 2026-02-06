@@ -20,12 +20,12 @@
         opacity: 1;
         margin: 0;
 
-        
+
         &.largeText {
             font-size: 146px;
         }
 
-        
+
         &.smallText {
             font-size: 106px;
             margin: 0;
@@ -55,7 +55,6 @@
         z-index: -1;
     }
 
-    
     &.homeBanner {
         height: 947px; 
     }
@@ -63,11 +62,17 @@
     
     &.smallBanner {
         height: 556px; 
+
+
+    &.smallBanner {
+        height: 556px;
+
     }
 
     .noMargin {
         margin-top: 0 !important; 
     }
+}
 }
 
 
@@ -86,12 +91,12 @@
             opacity: 1;
             margin: 0;
     
-            
+
             &.largeText {
                 font-size: 76px;
             }
     
-            
+
             &.smallText {
                 font-size: 20px;
             }
@@ -100,52 +105,49 @@
         .secondaryText {
             font-size: 24px;
         }
-    
         
         &.homeBanner {
             height: 381px; 
         }
-    
-       
+
+        &.homeBanner {
+            height: 381px; 
+        }
+
         &.smallBanner {
             height: 221px; 
+
+            .noMargin {
+                margin-top: 0 !important; 
+            }
         }
     }
 
-    .noMargin {
-        margin-top: 0 !important; 
-    }
+
 }
 
-@media screen and (max-width: 767px) and (min-width: 375px) {
+@media screen and (max-width: 767px) {
     .Banner {
-        height: 155px;
+        height: 155px !important;
         margin-bottom: 20px;
     
         .mainText {
-            font-size: 26px;
-    
-            
+            font-size: 10px !important;
             &.largeText {
-                font-size: 26px;
+                font-size: 10px !important;
             }
-    
-           
             &.smallText {
-                font-size: 10px;
+                font-size: 10px !important;
             }
         }
     
         .secondaryText {
             font-size: 10px;
         }
-    
-       
         &.homeBanner {
             height: 155px; 
         }
     
-        
         &.smallBanner {
             height: 109px; 
         }
