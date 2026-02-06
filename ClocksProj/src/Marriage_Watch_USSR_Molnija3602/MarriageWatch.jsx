@@ -76,6 +76,7 @@ const MarriageWatchPage = () => {
     return (
         <>
             <Helmet>
+            <link rel="icon" type="image/png" href="/compressed/logo.png" />
                 <title>Марьяж часов Молния 3602 в Харькове | Уникальные наручные часы</title>
                 <meta name="description" content="Создание уникальных наручных часов на базе легендарного механизма Молния 3602. Авторские корпуса и реставрация циферблатов." />
             </Helmet>

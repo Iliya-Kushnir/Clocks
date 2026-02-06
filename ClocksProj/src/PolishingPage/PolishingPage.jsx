@@ -77,6 +77,7 @@ const PolishingPage = () => {
         <>
 
             <Helmet>
+            <link rel="icon" type="image/png" href="/compressed/logo.png" />
                 <title>Полировка корпуса и стекла часов Харьков | Удаление царапин</title>
                 <meta name="description" content="Профессиональная полировка часов. Восстановление блеска корпуса и удаление царапин со стекол в часовой мастерской Время." />
             </Helmet>

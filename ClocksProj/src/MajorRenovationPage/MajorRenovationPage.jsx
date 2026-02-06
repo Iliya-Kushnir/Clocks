@@ -76,6 +76,7 @@ const MajorRenovationPage = () => {
     return (
         <>
             <Helmet>
+            <link rel="icon" type="image/png" href="/compressed/logo.png" />
                 <title>Капитальный ремонт и реставрация старых часов в Харькове</title>
                 <meta name="description" content="Восстановление нерабочих часов, замена деталей, поиск запчастей для редких и антикварных механизмов." />
             </Helmet>

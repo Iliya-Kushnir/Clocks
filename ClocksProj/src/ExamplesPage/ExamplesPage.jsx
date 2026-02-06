@@ -33,6 +33,7 @@ const ExamplesPage = () => {
       return (
         <>
           <Helmet>
+          <link rel="icon" type="image/png" href="/compressed/logo.png" />
             <title>Наши работы: реставрация и ремонт часов | Харьков</title>
             <meta name="description" content="Посмотрите примеры наших работ по восстановлению часов: Молния, Восток, Seiko, Longines. До и после ремонта в мастерской на Полтавском Шляхе." />
             <meta property="og:title" content="Примеры ремонта и реставрации часов в Харькове" />

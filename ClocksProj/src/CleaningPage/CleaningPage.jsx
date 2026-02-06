@@ -76,6 +76,7 @@ const CleaningPage = () => {
     return (
         <>
             <Helmet>
+            <link rel="icon" type="image/png" href="/compressed/logo.png" />
                 <title>Ультразвуковая чистка часов Харьков | Профилактика механизма</title>
                 <meta name="description" content="Ультразвуковая чистка корпуса и браслета, внешняя и внутренняя профилактика часов для долгой службы механизма." />
             </Helmet>

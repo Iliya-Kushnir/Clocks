@@ -76,6 +76,7 @@ const StrapPage = () => {
     return (
         <>
             <Helmet>
+            <link rel="icon" type="image/png" href="/public/compressed/Logo.png" />
                 <title>Замена ремешка и ремонт браслета часов в Харькове</title>
                 <meta name="description" content="Широкий выбор кожаных ремешков и стальных браслетов. Подгонка размера браслета под руку и замена креплений." />
             </Helmet>

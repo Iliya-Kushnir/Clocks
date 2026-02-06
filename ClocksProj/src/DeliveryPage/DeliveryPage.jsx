@@ -76,6 +76,7 @@ const DeliveryPage = () => {
     return (
         <>
             <Helmet>
+            <link rel="icon" type="image/png" href="/compressed/logo.png" />
                 <title>Доставка часов на ремонт по Украине | Мастерская Время</title>
                 <meta name="description" content="Принимаем часы на ремонт со всей Украины через Новую Почту. Надежная упаковка и страховка вашего заказа." />
             </Helmet>

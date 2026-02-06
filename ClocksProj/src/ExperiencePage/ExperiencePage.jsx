@@ -77,6 +77,8 @@ const ExperiencePage = () => {
     return (
         <>
               <Helmet>
+              <link rel="icon" type="image/png" href="/compressed/logo.png" />
+                  <link rel="icon" type="image/png" href="/compressed/logo.png" />
                   <title>Услуги по ремонту швейцарских и советских часов | Мастерская Время</title>
                   <meta name="description" content="Более 10 лет опыта в ремонте часов любой сложности. Полировка корпуса, чистка механизма (репассаж), настройка точности хода в Харькове." />
                   <meta property="og:title" content="Профессиональные услуги часового мастера в Харькове" />

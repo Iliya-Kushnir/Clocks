@@ -72,6 +72,7 @@ const MechanicRepairPage = () => {
         <>
 
             <Helmet>
+            <link rel="icon" type="image/png" href="/compressed/logo.png" />
                 <title>Ремонт механических часов в Харькове | Обслуживание механизмов</title>
                 <meta name="description" content="Профессиональный ремонт механических часов любой сложности. Репассаж, настройка точности, чистка и смазка механизмов в Харькове." />
             </Helmet>

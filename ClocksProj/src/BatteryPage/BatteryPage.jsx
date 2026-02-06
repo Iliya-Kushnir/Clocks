@@ -77,6 +77,7 @@ const BatteryPage = () => {
         <>
 
             <Helmet>
+            <link rel="icon" type="image/png" href="/compressed/logo.png" />
                 <title>Замена батарейки в часах Харьков | Проверка герметичности</title>
                 <meta name="description" content="Быстрая и качественная замена батареек в кварцевых часах. Используем только оригинальные элементы питания. Центр Харькова." />
             </Helmet>

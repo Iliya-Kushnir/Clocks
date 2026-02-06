@@ -47,6 +47,7 @@ const AllServicesPage = () => {
         <>
 
           <Helmet>
+          <link rel="icon" type="image/png" href="/compressed/logo.png" />
               <title>Услуги по обслуживанию часов в Харькове | Мастерская Время</title>
               <meta name="description" content="Полный спектр услуг: от замены батарейки и ремешка до сложного капитального ремонта и восстановления механизмов. Цены и описание услуг." />
           </Helmet>

@@ -95,6 +95,7 @@ const HomePage = () => {
   return (
     <>
     <Helmet>
+    <link rel="icon" type="image/png" href="/compressed/logo.png" />
       <title>Ремонт часов Харьков | Сервисный центр «Время»</title>
       <meta name="description" content="Профессиональный ремонт механических, кварцевых и антикварных часов в Харькове. Полтавский Шлях, 31. Официальная гарантия на все работы." />
       <meta property="og:title" content="Ремонт часов Харьков | Мастерская Время" />

@@ -32,6 +32,7 @@ const PricePage = () => {
         <>
 
             <Helmet>
+            <link rel="icon" type="image/png" href="/compressed/logo.png" />
                 <title>Цены на ремонт часов в Харькове | Прайс-лист 2026</title>
                 <meta name="description" content="Актуальные цены на основные услуги: замена батареек, полировка, ремонт механизмов. Прозрачная стоимость работ." />
             </Helmet>
